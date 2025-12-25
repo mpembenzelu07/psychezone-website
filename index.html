@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychezone International | Mental Health Clinic & Counseling Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a86b5;
+            --primary-light: #5fa8d3;
+            --primary-dark: #1e5a8a;
+            --secondary: #8ecae6;
+            --accent: #ffb703;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #2ecc71;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+
+        .btn-accent:hover {
+            background-color: #e6a500;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(142, 202, 230, 0.1) 0%, rgba(58, 134, 181, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .rating-badge {
+            position: absolute;
+            bottom: 20px;
+            right: -15px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rating-badge i {
+            color: var(--accent);
+            font-size: 24px;
+        }
+
+        .rating-text strong {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+        }
+
+        /* Why Choose Us Section */
+        .why-us {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .why-us-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .why-us-card:hover {
+            background-color: var(--light);
+        }
+
+        .why-us-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 0 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .client-details h4 {
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-container, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .rating-badge {
+                position: relative;
+                right: 0;
+                bottom: 0;
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .service-card, .testimonial-card, .contact-form {
+                padding: 25px;
+            }
+            
+            .hero, .services, .why-us, .testimonials, .contact {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-brain logo-icon"></i>
+                <span class="logo-text">Psychezone International</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn btn-outline">Book Appointment</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Mental Health Support in Dar es Salaam</h1>
+                <p>Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance.</p>
+                
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Book Appointment</a>
+                    <a href="#services" class="btn btn-accent">Our Services</a>
+                </div>
+                
+                <div class="rating-badge">
+                    <i class="fas fa-star"></i>
+                    <div class="rating-text">
+                        <strong>5.0</strong> Rating<br>
+                        <span>12+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional counseling session">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Counseling & Psychotherapy</h3>
+                        <p>Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Family Therapy</h3>
+                        <p>Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Corporate Workshops</h3>
+                        <p>Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Life Coaching</h3>
+                        <p>Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Psychezone International</h2>
+                <p>In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing.</p>
+            </div>
+            
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Expert Practitioners</h3>
+                    <p>Our team consists of licensed and experienced mental health professionals dedicated to your care.</p>
+                </div>
+                
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Holistic Approach</h3>
+                    <p>We address mental health from multiple perspectives, considering emotional, psychological, and social factors.</p>
+                </div>
+                
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Confidential & Safe</h3>
+                    <p>Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>Hear from individuals who have found support and transformation through our services.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The counseling sessions at Psychezone International helped me navigate a difficult period of anxiety. The therapist was understanding and provided practical tools that I still use today."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>Sarah M.</h4>
+                            <p>Individual Therapy Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Book Your Appointment</h2>
+                <p>Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Mabatini Rd, Dar es Salaam, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone & WhatsApp</h4>
+                            <p>Available through our Taplink page</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Weekdays & Saturday: 8:00 AM – 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="counseling">Counseling & Psychotherapy</option>
+                            <option value="family">Family Therapy</option>
+                            <option value="corporate">Corporate Workshops</option>
+                            <option value="coaching">Life Coaching</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Tell us about what you'd like to address..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Psychezone International</div>
+                    <p>Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Counseling & Psychotherapy</a></li>
+                        <li><a href="#">Family Therapy</a></li>
+                        <li><a href="#">Corporate Workshops</a></li>
+                        <li><a href="#">Life Coaching</a></li>
+                        <li><a href="#">Seminars & Training</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Psychezone International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Form submission
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            
+            // In a real implementation, this would send data to a server
+            // For this demo, we'll just show an alert
+            alert(`Thank you ${name}! Your appointment request for ${service} has been received. We will contact you shortly.`);
+            
+            // Reset the form
+            appointmentForm.reset();
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '0';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+</body>
+</html>
