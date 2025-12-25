@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlTag">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,6 +134,7 @@
             display: flex;
             list-style: none;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-menu a {
@@ -160,6 +162,91 @@
 
         .nav-menu a:hover:after {
             width: 100%;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            margin-left: 10px;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light);
+            border: 1px solid var(--light-gray);
+            border-radius: 4px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .language-btn:hover {
+            background: var(--light-gray);
+        }
+
+        .language-btn i {
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .language-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            min-width: 140px;
+            display: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .language-dropdown.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .language-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .language-option:last-child {
+            border-bottom: none;
+        }
+
+        .language-option:hover {
+            background: var(--light);
+        }
+
+        .language-option.active {
+            background: var(--primary-light);
+            color: white;
+        }
+
+        .language-flag {
+            width: 20px;
+            height: 15px;
+            object-fit: cover;
+            border-radius: 2px;
         }
 
         .mobile-menu-btn {
@@ -560,6 +647,7 @@
                 transition: var(--transition);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
                 z-index: 999;
+                gap: 25px;
             }
             
             .nav-menu.active {
@@ -568,6 +656,10 @@
             
             .mobile-menu-btn {
                 display: block;
+            }
+            
+            .language-switcher {
+                margin-top: 20px;
             }
             
             .hero-content h1 {
@@ -621,12 +713,30 @@
             </button>
             
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Choose Us</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="btn btn-outline">Book Appointment</a></li>
+                <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
+                <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
+                <li><a href="#why-us" data-en="Why Choose Us" data-sw="Kwanini Utuchague">Why Choose Us</a></li>
+                <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
+                <li><a href="#contact" data-en="Contact" data-sw="Wasiliana">Contact</a></li>
+                <li><a href="#" class="btn btn-outline" data-en="Book Appointment" data-sw="Panga Mkutano">Book Appointment</a></li>
+                
+                <!-- Language Switcher -->
+                <li class="language-switcher">
+                    <div class="language-btn" id="languageBtn">
+                        <span id="currentLanguage">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option active" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="language-flag">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="sw">
+                            <img src="https://flagcdn.com/w40/tz.png" alt="Swahili" class="language-flag">
+                            <span>Kiswahili</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </header>
@@ -635,19 +745,19 @@
     <section class="hero" id="home">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1>Mental Health Support in Dar es Salaam</h1>
-                <p>Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance.</p>
+                <h1 data-en="Mental Health Support in Dar es Salaam" data-sw="Usaidizi wa Afya ya Akili Dar es Salaam">Mental Health Support in Dar es Salaam</h1>
+                <p data-en="Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance." data-sw="Psychezone International inatoa ushauri wa kitaalam, tiba ya akili, na huduma za afya ya akili kwa watu binafsi, familia, na wateja wa kimkakati wanaotafuta usaidizi wa kihemko na mwongozo wa kitiba.">Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance.</p>
                 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn">Book Appointment</a>
-                    <a href="#services" class="btn btn-accent">Our Services</a>
+                    <a href="#contact" class="btn" data-en="Book Appointment" data-sw="Panga Mkutano">Book Appointment</a>
+                    <a href="#services" class="btn btn-accent" data-en="Our Services" data-sw="Huduma Zetu">Our Services</a>
                 </div>
                 
                 <div class="rating-badge">
                     <i class="fas fa-star"></i>
                     <div class="rating-text">
-                        <strong>5.0</strong> Rating<br>
-                        <span>12+ Reviews</span>
+                        <strong>5.0</strong> <span data-en="Rating" data-sw>Rating</span><br>
+                        <span data-en="12+ Reviews" data-sw="Tathmini 12+">12+ Reviews</span>
                     </div>
                 </div>
             </div>
@@ -662,8 +772,8 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p>We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients.</p>
+                <h2 data-en="Our Services" data-sw="Huduma Zetu">Our Services</h2>
+                <p data-en="We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients." data-sw="Tunatoa huduma kamili za afya ya akili na ushauri zilizobinafsishwa kukidhi mahitaji ya watu binafsi, familia, na wateja wa kimkakati.">We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients.</p>
             </div>
             
             <div class="services-grid">
@@ -672,8 +782,8 @@
                         <i class="fas fa-comments"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Counseling & Psychotherapy</h3>
-                        <p>Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support.</p>
+                        <h3 data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</h3>
+                        <p data-en="Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support." data-sw="Mikutano ya kitaalam binafsi kukusaidia kukabiliana na changamoto za kihemko, wasiwasi, unyogovu, na mabadiliko ya maisha kwa msaada wa siri.">Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support.</p>
                     </div>
                 </div>
                 
@@ -682,8 +792,8 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Family Therapy</h3>
-                        <p>Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding.</p>
+                        <h3 data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</h3>
+                        <p data-en="Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding." data-sw="Kuimarisha mahusiano ya familia na kuboresha mawasiliano kupitia mikutano ya tiba inayoelekezwa inayoshughulikia migogoro na kujenga uelewano.">Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding.</p>
                     </div>
                 </div>
                 
@@ -692,8 +802,8 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Corporate Workshops</h3>
-                        <p>Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs.</p>
+                        <h3 data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</h3>
+                        <p data-en="Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs." data-sw="Boresha afya ya akili mahali pa kazi, mienendo ya timu, na ustawi wa wafanyikazi kupitia semina na mipango ya mafunzo iliyobinafsishwa.">Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs.</p>
                     </div>
                 </div>
                 
@@ -702,8 +812,8 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Life Coaching</h3>
-                        <p>Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path.</p>
+                        <h3 data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</h3>
+                        <p data-en="Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path." data-sw="Mwongozo wa kukusaidia kuweka na kufikia malengo ya kibinafsi na ya kitaalam, kushinda vikwazo, na kuunda njia bora ya maisha.">Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path.</p>
                     </div>
                 </div>
             </div>
@@ -714,8 +824,8 @@
     <section class="why-us" id="why-us">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose Psychezone International</h2>
-                <p>In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing.</p>
+                <h2 data-en="Why Choose Psychezone International" data-sw="Kwanini Uchague Psychezone International">Why Choose Psychezone International</h2>
+                <p data-en="In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing." data-sw="Nchini Tanzania, ambapo huduma za afya ya akili ni chache, tunatoa utunzaji wa kitaalam unaopatikana kusaidia ustawi wako wa kihemko.">In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing.</p>
             </div>
             
             <div class="why-us-grid">
@@ -723,24 +833,24 @@
                     <div class="why-us-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
-                    <h3>Expert Practitioners</h3>
-                    <p>Our team consists of licensed and experienced mental health professionals dedicated to your care.</p>
+                    <h3 data-en="Expert Practitioners" data-sw="Wataalam Walioidhinishwa">Expert Practitioners</h3>
+                    <p data-en="Our team consists of licensed and experienced mental health professionals dedicated to your care." data-sw="Timu yetu ina wataalam wa afya ya akili walioidhinishwa na wenye uzoefu waliowekwa kwenye utunzaji wako.">Our team consists of licensed and experienced mental health professionals dedicated to your care.</p>
                 </div>
                 
                 <div class="why-us-card">
                     <div class="why-us-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Holistic Approach</h3>
-                    <p>We address mental health from multiple perspectives, considering emotional, psychological, and social factors.</p>
+                    <h3 data-en="Holistic Approach" data-sw="Mbinu ya Kujumuisha">Holistic Approach</h3>
+                    <p data-en="We address mental health from multiple perspectives, considering emotional, psychological, and social factors." data-sw="Tunashughulikia afya ya akili kutoka kwa mtazamo mbalimbali, tukizingatia mambo ya kihemko, kisaikolojia, na kijamii.">We address mental health from multiple perspectives, considering emotional, psychological, and social factors.</p>
                 </div>
                 
                 <div class="why-us-card">
                     <div class="why-us-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Confidential & Safe</h3>
-                    <p>Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment.</p>
+                    <h3 data-en="Confidential & Safe" data-sw="Siri na Salama">Confidential & Safe</h3>
+                    <p data-en="Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment." data-sw="Faragha yako ni kipaumbele chetu. Mikutano yote inafanyika katika mazingira salama, yasiyo na kuhukumu.">Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment.</p>
                 </div>
             </div>
         </div>
@@ -750,13 +860,13 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>Client Testimonials</h2>
-                <p>Hear from individuals who have found support and transformation through our services.</p>
+                <h2 data-en="Client Testimonials" data-sw="Usahihi wa Wateja">Client Testimonials</h2>
+                <p data-en="Hear from individuals who have found support and transformation through our services." data-sw="Sikiliza kutoka kwa watu ambao wamepata usaidizi na mabadiliko kupitia huduma zetu.">Hear from individuals who have found support and transformation through our services.</p>
             </div>
             
             <div class="testimonial-slider">
                 <div class="testimonial-card">
-                    <div class="testimonial-text">
+                    <div class="testimonial-text" data-en="&quot;The counseling sessions at Psychezone International helped me navigate a difficult period of anxiety. The therapist was understanding and provided practical tools that I still use today.&quot;" data-sw="&quot;Mikutano ya ushauri katika Psychezone International ilinisaidia kukabiliana na kipindi kigumu cha wasiwasi. Mtaalamu alikuwa mwenye kuelewa na akatoa zana muhimu ambazo bado ninazitumia leo.&quot;">
                         "The counseling sessions at Psychezone International helped me navigate a difficult period of anxiety. The therapist was understanding and provided practical tools that I still use today."
                     </div>
                     <div class="client-info">
@@ -765,7 +875,7 @@
                         </div>
                         <div class="client-details">
                             <h4>Sarah M.</h4>
-                            <p>Individual Therapy Client</p>
+                            <p data-en="Individual Therapy Client" data-sw="Mteja wa Tiba ya Kibinafsi">Individual Therapy Client</p>
                         </div>
                     </div>
                 </div>
@@ -777,8 +887,8 @@
     <section class="contact" id="contact">
         <div class="container contact-container">
             <div class="contact-info">
-                <h2>Book Your Appointment</h2>
-                <p>Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services.</p>
+                <h2 data-en="Book Your Appointment" data-sw="Panga Mkutano Wako">Book Your Appointment</h2>
+                <p data-en="Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services." data-sw="Chukua hatua ya kwanza kuelekea ustawi wa kihemko. Wasiliana nasi kupanga mkutano au kujifunza zaidi kuhusu huduma zetu.">Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -786,7 +896,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4>Location</h4>
+                            <h4 data-en="Location" data-sw="Mahali">Location</h4>
                             <p>Mabatini Rd, Dar es Salaam, Tanzania</p>
                         </div>
                     </div>
@@ -796,8 +906,8 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h4>Phone & WhatsApp</h4>
-                            <p>Available through our Taplink page</p>
+                            <h4 data-en="Phone & WhatsApp" data-sw="Simu & WhatsApp">Phone & WhatsApp</h4>
+                            <p data-en="Available through our Taplink page" data-sw="Inapatikana kupitia ukurasa wetu wa Taplink">Available through our Taplink page</p>
                         </div>
                     </div>
                     
@@ -806,43 +916,43 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div>
-                            <h4>Working Hours</h4>
-                            <p>Weekdays & Saturday: 8:00 AM – 6:00 PM</p>
+                            <h4 data-en="Working Hours" data-sw="Masaa ya Kazi">Working Hours</h4>
+                            <p data-en="Weekdays & Saturday: 8:00 AM – 6:00 PM" data-sw="Jumatatu hadi Ijumaa & Jumamosi: 8:00 asubuhi – 6:00 usiku">Weekdays & Saturday: 8:00 AM – 6:00 PM</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="contact-form">
-                <h3>Send Us a Message</h3>
+                <h3 data-en="Send Us a Message" data-sw="Tutumie Ujumbe">Send Us a Message</h3>
                 <form id="appointmentForm">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
                         <input type="text" id="name" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone" data-en="Phone Number" data-sw="Nambari ya Simu">Phone Number</label>
                         <input type="tel" id="phone" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="service">Service Interested In</label>
+                        <label for="service" data-en="Service Interested In" data-sw="Huduma Unayopenda">Service Interested In</label>
                         <select id="service" class="form-control" required>
-                            <option value="">Select a service</option>
-                            <option value="counseling">Counseling & Psychotherapy</option>
-                            <option value="family">Family Therapy</option>
-                            <option value="corporate">Corporate Workshops</option>
-                            <option value="coaching">Life Coaching</option>
+                            <option value="" data-en="Select a service" data-sw="Chagua huduma">Select a service</option>
+                            <option value="counseling" data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</option>
+                            <option value="family" data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</option>
+                            <option value="corporate" data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</option>
+                            <option value="coaching" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" class="form-control" rows="4" placeholder="Tell us about what you'd like to address..."></textarea>
+                        <label for="message" data-en="Message" data-sw="Ujumbe">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us about what you'd like to address..." data-sw-placeholder="Tuambie kuhusu kile ungependa kushughulikiwa..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn" style="width: 100%;" data-en="Send Message" data-sw="Tuma Ujumbe">Send Message</button>
                 </form>
             </div>
         </div>
@@ -854,7 +964,7 @@
             <div class="footer-container">
                 <div class="footer-about">
                     <div class="footer-logo">Psychezone International</div>
-                    <p>Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania.</p>
+                    <p data-en="Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania." data-sw="Kutoa huduma za kitaalam za afya ya akili, ushauri, na tiba ya akili huko Dar es Salaam, Tanzania.">Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania.</p>
                     
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -864,35 +974,117 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-en="Quick Links" data-sw="Viungo vya Haraka">Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#why-us">Why Choose Us</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
+                        <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
+                        <li><a href="#why-us" data-en="Why Choose Us" data-sw="Kwanini Utuchague">Why Choose Us</a></li>
+                        <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
+                        <li><a href="#contact" data-en="Contact" data-sw="Wasiliana">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Our Services</h4>
+                    <h4 data-en="Our Services" data-sw="Huduma Zetu">Our Services</h4>
                     <ul>
-                        <li><a href="#">Counseling & Psychotherapy</a></li>
-                        <li><a href="#">Family Therapy</a></li>
-                        <li><a href="#">Corporate Workshops</a></li>
-                        <li><a href="#">Life Coaching</a></li>
-                        <li><a href="#">Seminars & Training</a></li>
+                        <li><a href="#" data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</a></li>
+                        <li><a href="#" data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</a></li>
+                        <li><a href="#" data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</a></li>
+                        <li><a href="#" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</a></li>
+                        <li><a href="#" data-en="Seminars & Training" data-sw="Semina na Mafunzo">Seminars & Training</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Psychezone International. All rights reserved.</p>
+                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved." data-sw="Haki zote zimehifadhiwa.">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Language management
+        let currentLang = 'en';
+        
+        // Language switcher toggle
+        const languageBtn = document.getElementById('languageBtn');
+        const languageDropdown = document.getElementById('languageDropdown');
+        const currentLanguageText = document.getElementById('currentLanguage');
+        
+        languageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
+            languageBtn.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('active');
+                languageBtn.classList.remove('active');
+            }
+        });
+        
+        // Language selection
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const selectedLang = option.getAttribute('data-lang');
+                
+                if (selectedLang !== currentLang) {
+                    // Update active state
+                    document.querySelectorAll('.language-option').forEach(opt => {
+                        opt.classList.remove('active');
+                    });
+                    option.classList.add('active');
+                    
+                    // Update current language text
+                    currentLanguageText.textContent = option.querySelector('span').textContent;
+                    
+                    // Change language
+                    changeLanguage(selectedLang);
+                    
+                    // Update HTML lang attribute
+                    document.getElementById('htmlTag').setAttribute('lang', selectedLang);
+                    
+                    // Close dropdown
+                    languageDropdown.classList.remove('active');
+                    languageBtn.classList.remove('active');
+                }
+            });
+        });
+        
+        // Function to change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-en], [data-sw]').forEach(element => {
+                if (element.hasAttribute(`data-${lang}`)) {
+                    const text = element.getAttribute(`data-${lang}`);
+                    
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        // Handle placeholders
+                        if (element.hasAttribute(`data-${lang}-placeholder`)) {
+                            element.setAttribute('placeholder', element.getAttribute(`data-${lang}-placeholder`));
+                        }
+                    } else if (element.tagName === 'OPTION') {
+                        // Handle option values
+                        element.textContent = text;
+                    } else {
+                        // Handle regular text content
+                        element.textContent = text;
+                    }
+                }
+            });
+            
+            // Update button texts
+            document.querySelectorAll('.btn').forEach(btn => {
+                if (btn.hasAttribute(`data-${lang}`)) {
+                    btn.textContent = btn.getAttribute(`data-${lang}`);
+                }
+            });
+        }
+        
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
@@ -920,14 +1112,26 @@
             
             // Get form data
             const name = document.getElementById('name').value;
-            const service = document.getElementById('service').value;
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
             
-            // In a real implementation, this would send data to a server
-            // For this demo, we'll just show an alert
-            alert(`Thank you ${name}! Your appointment request for ${service} has been received. We will contact you shortly.`);
+            // Show success message in current language
+            const successMessage = currentLang === 'en' 
+                ? `Thank you ${name}! Your appointment request for ${serviceText} has been received. We will contact you shortly.`
+                : `Asante ${name}! Ombi lako la mkutano kwa ${serviceText} limepokelewa. Tutawasiliana nawe hivi karibuni.`;
+            
+            alert(successMessage);
             
             // Reset the form
             appointmentForm.reset();
+            
+            // Reset placeholder on textarea
+            const messageTextarea = document.getElementById('message');
+            messageTextarea.setAttribute('placeholder', 
+                currentLang === 'en' 
+                    ? "Tell us about what you'd like to address..." 
+                    : "Tuambie kuhusu kile ungependa kushughulikiwa..."
+            );
         });
         
         // Header scroll effect
@@ -941,6 +1145,9 @@
                 header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
             }
         });
+        
+        // Initialize form placeholder
+        document.getElementById('message').setAttribute('placeholder', "Tell us about what you'd like to address...");
     </script>
 </body>
 </html>
