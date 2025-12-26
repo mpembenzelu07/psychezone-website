@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychezone International | Mental Architecture</title>
+    <title>Psychezone International | Professional Mental Health Clinic</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Neo-Futurist Zen Color Palette */
+        /* Light & Clean Color Palette */
         :root {
-            --void: #0A0A0A;
-            --stone: #1A1A1A;
-            --cloud: #F0F0F0;
-            --mist: #E8E8E8;
-            --zen: #7FDBDA;
-            --zen-dark: #5AAFAE;
-            --zen-light: #A8E6E5;
-            --focus: #FF6B6B;
-            --serenity: #95E1D3;
+            --white: #FFFFFF;
+            --light-bg: #F9FAFB;
+            --light-gray: #F3F4F6;
+            --medium-gray: #E5E7EB;
+            --text-gray: #6B7280;
+            --text-dark: #1F2937;
+            --primary: #3B82F6;
+            --primary-light: #93C5FD;
+            --primary-dark: #1D4ED8;
+            --secondary: #10B981;
+            --secondary-light: #A7F3D0;
+            --accent: #8B5CF6;
+            --accent-light: #C4B5FD;
+            --success: #10B981;
+            --warning: #F59E0B;
             
-            /* Architectural Shadows */
-            --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.12);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-deep: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-arch: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            /* Soft Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             
-            /* Precision Timing */
-            --transition-sharp: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-fluid: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Smooth Transitions */
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
             
-            /* Architectural Proportions */
-            --radius-none: 0;
-            --radius-micro: 2px;
-            --radius-minimal: 4px;
-            --radius-structural: 8px;
+            /* Rounded Corners */
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
             
-            /* Spatial Grid */
-            --space-micro: 0.25rem;
-            --space-mini: 0.5rem;
-            --space-base: 1rem;
-            --space-medium: 1.5rem;
-            --space-large: 2rem;
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space: 1.5rem;
+            --space-lg: 2rem;
             --space-xl: 3rem;
             --space-xxl: 4rem;
-            --space-massive: 6rem;
         }
 
-        /* Structural Reset */
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -57,215 +61,184 @@
 
         html {
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
 
         body {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--cloud);
-            background: var(--void);
+            color: var(--text-dark);
+            background-color: var(--white);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Architectural Typography */
         h1, h2, h3, h4, h5 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 500;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            color: var(--cloud);
-            margin-bottom: var(--space-medium);
+            font-family: 'Merriweather', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-dark);
+            margin-bottom: var(--space);
         }
 
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-size: 3rem;
+            letter-spacing: -0.5px;
         }
 
         h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 400;
+            font-size: 2.25rem;
         }
 
         h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 400;
+            font-size: 1.75rem;
         }
 
-        p, li {
-            font-size: 1.1rem;
-            color: var(--mist);
-            margin-bottom: var(--space-base);
-            font-weight: 300;
-            line-height: 1.7;
+        p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-bottom: var(--space);
         }
 
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--space-large);
+            padding: 0 var(--space);
         }
 
-        /* Architectural Interface Elements */
+        /* Clean Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-mini);
-            padding: var(--space-medium) var(--space-xl);
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border: 1px solid var(--zen);
-            background: transparent;
-            color: var(--zen);
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: var(--transition-sharp);
+            transition: var(--transition);
             text-decoration: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(127, 219, 218, 0.1), transparent);
-            transition: var(--transition-fluid);
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn:hover {
-            border-color: var(--zen-light);
-            color: var(--zen-light);
-            transform: translateY(-1px);
+            border: 2px solid transparent;
         }
 
         .btn-primary {
-            background: var(--zen);
-            color: var(--void);
-            border: 1px solid var(--zen);
+            background-color: var(--primary);
+            color: white;
         }
 
         .btn-primary:hover {
-            background: var(--zen-light);
-            border-color: var(--zen-light);
-            color: var(--void);
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
-        /* Structural Header */
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background-color: #7C3AED;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Clean Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(127, 219, 218, 0.1);
-            transition: var(--transition-sharp);
+            border-bottom: 1px solid var(--medium-gray);
+            transition: var(--transition);
         }
 
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: var(--space-base) var(--space-large);
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 1.25rem var(--space);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: var(--space-base);
+            gap: 0.75rem;
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 32px;
-            height: 32px;
-            position: relative;
-        }
-
-        .logo-icon::before,
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background: var(--zen);
-        }
-
-        .logo-icon::before {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .logo-icon::after {
-            top: 50%;
-            transform: translateY(-50%) rotate(90deg);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
         }
 
         .logo-text {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--cloud);
-            letter-spacing: 0.05em;
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
-        /* Architectural Navigation */
+        /* Navigation */
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: var(--space-xl);
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-link {
-            font-size: 0.9rem;
             font-weight: 500;
-            color: var(--mist);
+            color: var(--text-gray);
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
             position: relative;
-            padding: var(--space-micro) 0;
-            transition: var(--transition-sharp);
+            padding: 0.5rem 0;
+            transition: var(--transition);
         }
 
-        .nav-link::after {
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link.active::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--zen);
-            transition: var(--transition-sharp);
-        }
-
-        .nav-link:hover {
-            color: var(--zen);
-        }
-
-        .nav-link:hover::after {
             width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 2px;
         }
 
-        /* Language Module */
+        /* Language Switcher */
         .language-switcher {
             position: relative;
         }
@@ -273,42 +246,41 @@
         .language-btn {
             display: flex;
             align-items: center;
-            gap: var(--space-mini);
-            padding: var(--space-mini) var(--space-base);
-            background: transparent;
-            border: 1px solid rgba(127, 219, 218, 0.2);
-            color: var(--mist);
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--light-gray);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius-sm);
             cursor: pointer;
-            transition: var(--transition-sharp);
+            transition: var(--transition);
+            font-weight: 500;
         }
 
         .language-btn:hover {
-            border-color: var(--zen);
-            color: var(--zen);
+            background-color: var(--medium-gray);
         }
 
         .language-dropdown {
             position: absolute;
             top: 100%;
             right: 0;
-            background: var(--stone);
-            border: 1px solid rgba(127, 219, 218, 0.2);
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-xl);
             min-width: 140px;
             display: none;
             z-index: 1000;
-            margin-top: var(--space-micro);
+            overflow: hidden;
+            margin-top: 0.5rem;
+            border: 1px solid var(--medium-gray);
         }
 
         .language-dropdown.active {
             display: block;
-            animation: slideDown 0.2s ease;
+            animation: fadeIn 0.2s ease;
         }
 
-        @keyframes slideDown {
+        @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
@@ -316,11 +288,11 @@
         .language-option {
             display: flex;
             align-items: center;
-            gap: var(--space-base);
-            padding: var(--space-medium);
+            gap: 0.75rem;
+            padding: 1rem;
             cursor: pointer;
-            transition: var(--transition-sharp);
-            border-bottom: 1px solid rgba(127, 219, 218, 0.1);
+            transition: var(--transition);
+            border-bottom: 1px solid var(--light-gray);
         }
 
         .language-option:last-child {
@@ -328,573 +300,530 @@
         }
 
         .language-option:hover {
-            background: rgba(127, 219, 218, 0.05);
+            background-color: var(--light-gray);
         }
 
         .language-option.active {
-            background: rgba(127, 219, 218, 0.1);
-            color: var(--zen);
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            font-weight: 600;
         }
 
         .language-flag {
-            width: 20px;
-            height: 14px;
+            width: 24px;
+            height: 16px;
             object-fit: cover;
+            border-radius: 2px;
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            width: 24px;
-            height: 24px;
-            position: relative;
+            font-size: 1.5rem;
+            color: var(--text-dark);
             cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
         }
 
-        .mobile-menu-btn span {
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background: var(--cloud);
-            transition: var(--transition-sharp);
+        .mobile-menu-btn:hover {
+            background-color: var(--light-gray);
         }
 
-        .mobile-menu-btn span:nth-child(1) { top: 6px; }
-        .mobile-menu-btn span:nth-child(2) { top: 12px; }
-        .mobile-menu-btn span:nth-child(3) { top: 18px; }
-
-        .mobile-menu-btn.active span:nth-child(1) { 
-            transform: rotate(45deg); 
-            top: 12px;
-        }
-        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
-        .mobile-menu-btn.active span:nth-child(3) { 
-            transform: rotate(-45deg); 
-            top: 12px;
-        }
-
-        /* Zen Courtyard - Hero Section */
-        .courtyard {
-            min-height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-massive);
-            align-items: center;
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, #F0F9FF 0%, #EFF6FF 100%);
             position: relative;
             overflow: hidden;
-            padding: var(--space-massive) var(--space-large);
         }
 
-        .courtyard::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                linear-gradient(45deg, transparent 65%, rgba(127, 219, 218, 0.03) 65%, rgba(127, 219, 218, 0.03) 70%, transparent 70%),
-                linear-gradient(-45deg, transparent 65%, rgba(127, 219, 218, 0.03) 65%, rgba(127, 219, 218, 0.03) 70%, transparent 70%);
-            background-size: 100px 100px;
-            pointer-events: none;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
         }
 
-        .courtyard-content {
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             position: relative;
             z-index: 1;
         }
 
-        .courtyard-content h1 {
-            margin-bottom: var(--space-large);
-            position: relative;
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
         }
 
-        .courtyard-content h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 1px;
-            background: var(--zen);
-        }
-
-        .courtyard-text {
+        .hero-content p {
             font-size: 1.25rem;
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
+            margin-bottom: 2.5rem;
         }
 
-        .courtyard-actions {
+        .hero-btns {
             display: flex;
-            gap: var(--space-base);
-            margin-top: var(--space-xl);
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .courtyard-vision {
+        .hero-image {
             position: relative;
-            height: 600px;
         }
 
-        .vision-line {
-            position: absolute;
-            background: var(--zen);
-            opacity: 0.3;
-        }
-
-        .vision-line.horizontal {
+        .hero-image img {
             width: 100%;
-            height: 1px;
-            left: 0;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-slow);
         }
 
-        .vision-line.vertical {
-            width: 1px;
-            height: 100%;
-            top: 0;
+        .hero-image img:hover {
+            transform: scale(1.02);
         }
 
-        .vision-line:nth-child(1) { top: 20%; }
-        .vision-line:nth-child(2) { top: 40%; }
-        .vision-line:nth-child(3) { top: 60%; }
-        .vision-line:nth-child(4) { top: 80%; }
-        .vision-line:nth-child(5) { left: 20%; }
-        .vision-line:nth-child(6) { left: 40%; }
-        .vision-line:nth-child(7) { left: 60%; }
-        .vision-line:nth-child(8) { left: 80%; }
-
-        .vision-element {
+        .rating-badge {
             position: absolute;
-            width: 120px;
-            height: 120px;
-            border: 1px solid rgba(127, 219, 218, 0.3);
+            bottom: -1rem;
+            right: -1rem;
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: var(--transition-fluid);
+            gap: 1rem;
         }
 
-        .vision-element:hover {
-            border-color: var(--zen);
-            transform: scale(1.05);
+        .rating-badge i {
+            color: var(--warning);
+            font-size: 2rem;
         }
 
-        .vision-element i {
+        .rating-text strong {
             font-size: 1.5rem;
-            color: var(--zen);
-            opacity: 0.7;
+            color: var(--text-dark);
+            display: block;
         }
 
-        .vision-element:nth-child(9) { top: 25%; left: 25%; }
-        .vision-element:nth-child(10) { top: 25%; left: 75%; }
-        .vision-element:nth-child(11) { top: 75%; left: 25%; }
-        .vision-element:nth-child(12) { top: 75%; left: 75%; }
-
-        /* Pillars Section */
-        .pillars {
-            padding: var(--space-massive) 0;
-            background: var(--stone);
-            position: relative;
+        /* Stats Section */
+        .stats {
+            padding: 5rem 0;
+            background-color: var(--white);
         }
 
-        .pillars::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--zen), transparent);
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background-color: var(--light-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: var(--space-massive);
+            max-width: 800px;
+            margin: 0 auto 5rem;
         }
 
         .section-header h2 {
-            position: relative;
-            display: inline-block;
-            margin-bottom: var(--space-base);
+            margin-bottom: 1rem;
         }
 
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 1px;
-            background: var(--zen);
-        }
-
-        .pillars-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-xl);
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
-        .pillar {
-            padding: var(--space-xl);
-            border: 1px solid rgba(127, 219, 218, 0.1);
-            position: relative;
-            transition: var(--transition-fluid);
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
             height: 100%;
         }
 
-        .pillar:hover {
-            border-color: var(--zen);
-            transform: translateY(-5px);
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary);
         }
 
-        .pillar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: var(--zen);
-            transform: scaleX(0);
-            transition: var(--transition-fluid);
+        .service-icon {
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
         }
 
-        .pillar:hover::before {
-            transform: scaleX(1);
+        .service-content {
+            padding: 2.5rem;
         }
 
-        .pillar-icon {
-            font-size: 2rem;
-            color: var(--zen);
-            margin-bottom: var(--space-large);
+        .service-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
         }
 
-        .pillar h3 {
-            font-size: 1.5rem;
-            margin-bottom: var(--space-medium);
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
         }
 
-        /* Process Path */
-        .process-path {
-            padding: var(--space-massive) 0;
-            background: var(--void);
-            position: relative;
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-gray);
         }
 
-        .process-container {
+        .service-features li i {
+            color: var(--success);
+            font-size: 1rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 0;
+            background-color: var(--white);
+        }
+
+        .process-steps {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-large);
-            position: relative;
-        }
-
-        .process-container::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(127, 219, 218, 0.3) 20%, 
-                rgba(127, 219, 218, 0.3) 80%, 
-                transparent 100%
-            );
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            counter-reset: step-counter;
         }
 
         .process-step {
-            text-align: center;
+            background-color: var(--light-bg);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--medium-gray);
             position: relative;
-            z-index: 1;
+            transition: var(--transition);
         }
 
-        .step-marker {
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--zen);
-            margin: 0 auto var(--space-large);
-            position: relative;
-            background: var(--void);
-            transition: var(--transition-fluid);
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
         }
 
-        .process-step:hover .step-marker {
-            background: var(--zen);
-            transform: rotate(45deg);
-        }
-
-        .step-number {
+        .process-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 0.9rem;
-            color: var(--zen);
+            top: -1.25rem;
+            left: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
         }
 
-        .process-step:hover .step-number {
-            color: var(--void);
+        .process-step h3 {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .step-title {
-            font-size: 1.1rem;
-            margin-bottom: var(--space-base);
-            font-weight: 500;
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
         }
 
-        /* Reflection Chamber - Testimonials */
-        .reflection-chamber {
-            padding: var(--space-massive) 0;
-            background: var(--stone);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .reflection-chamber::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(90deg, transparent 49%, rgba(127, 219, 218, 0.05) 50%, transparent 51%),
-                linear-gradient(0deg, transparent 49%, rgba(127, 219, 218, 0.05) 50%, transparent 51%);
-            background-size: 100px 100px;
-            pointer-events: none;
-        }
-
-        .reflection-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-xl);
-            position: relative;
-            z-index: 1;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
-        .reflection-card {
-            padding: var(--space-xl);
-            border: 1px solid rgba(127, 219, 218, 0.2);
-            position: relative;
-            transition: var(--transition-fluid);
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--medium-gray);
+            transition: var(--transition);
         }
 
-        .reflection-card:hover {
-            border-color: var(--zen);
-            transform: translateX(5px);
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .reflection-quote {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.25rem;
+        .testimonial-text {
             font-style: italic;
-            color: var(--cloud);
-            margin-bottom: var(--space-large);
+            color: var(--text-gray);
+            margin-bottom: 2rem;
             position: relative;
-            padding-left: var(--space-large);
+            padding-left: 1.5rem;
         }
 
-        .reflection-quote::before {
+        .testimonial-text::before {
             content: '"';
             position: absolute;
             left: 0;
-            top: -10px;
+            top: -0.5rem;
             font-size: 3rem;
-            color: var(--zen);
+            color: var(--primary-light);
             opacity: 0.5;
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: serif;
         }
 
-        .reflection-author {
+        .client-info {
             display: flex;
             align-items: center;
-            gap: var(--space-base);
+            gap: 1rem;
         }
 
-        .author-marker {
-            width: 40px;
-            height: 1px;
-            background: var(--zen);
-        }
-
-        /* Portal Section - Contact */
-        .portal {
-            padding: var(--space-massive) 0;
-            background: var(--void);
-            position: relative;
-        }
-
-        .portal-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-massive);
-            align-items: start;
-        }
-
-        .portal-info {
-            position: relative;
-        }
-
-        .portal-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-large);
-            margin-top: var(--space-xl);
-        }
-
-        .portal-node {
-            padding: var(--space-large);
-            border: 1px solid rgba(127, 219, 218, 0.1);
-            transition: var(--transition-sharp);
-        }
-
-        .portal-node:hover {
-            border-color: var(--zen);
-        }
-
-        .node-icon {
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-size: 1.5rem;
-            color: var(--zen);
-            margin-bottom: var(--space-base);
+            font-weight: 600;
         }
 
-        .portal-form {
-            position: relative;
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background-color: var(--white);
         }
 
-        .form-grid {
+        .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-base);
-            margin-bottom: var(--space-base);
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-top: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--light-bg);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .contact-form {
+            background-color: var(--light-bg);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--medium-gray);
         }
 
         .form-group {
-            margin-bottom: var(--space-base);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
         }
 
         .form-control {
             width: 100%;
-            padding: var(--space-medium);
-            background: transparent;
-            border: 1px solid rgba(127, 219, 218, 0.2);
-            color: var(--cloud);
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            transition: var(--transition-sharp);
+            padding: 1rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--white);
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--zen);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
-        .form-control::placeholder {
-            color: var(--mist);
-            opacity: 0.5;
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 4rem 0 2rem;
         }
 
-        .form-submit {
-            width: 100%;
-            margin-top: var(--space-large);
-        }
-
-        /* Foundation - Footer */
-        .foundation {
-            padding: var(--space-massive) 0 var(--space-xl);
-            background: var(--stone);
-            border-top: 1px solid rgba(127, 219, 218, 0.1);
-            position: relative;
-        }
-
-        .foundation-container {
+        .footer-container {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: var(--space-massive);
-            margin-bottom: var(--space-massive);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
-        .foundation-brand .logo-text {
-            margin-bottom: var(--space-medium);
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 1rem;
             display: block;
         }
 
-        .foundation-text {
-            max-width: 400px;
-            color: var(--mist);
-            font-size: 0.9rem;
-            line-height: 1.6;
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
         }
 
-        .foundation-links h4 {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: var(--space-large);
-            color: var(--zen);
+        .social-links {
+            display: flex;
+            gap: 1rem;
         }
 
-        .foundation-links ul {
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-links ul {
             list-style: none;
         }
 
-        .foundation-links li {
-            margin-bottom: var(--space-base);
+        .footer-links li {
+            margin-bottom: 0.75rem;
         }
 
-        .foundation-links a {
-            color: var(--mist);
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: var(--transition-sharp);
+            transition: var(--transition);
         }
 
-        .foundation-links a:hover {
-            color: var(--zen);
+        .footer-links a:hover {
+            color: white;
         }
 
-        .foundation-line {
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(127, 219, 218, 0.2), transparent);
-            margin-bottom: var(--space-large);
-        }
-
-        .foundation-copyright {
+        .copyright {
             text-align: center;
-            font-size: 0.8rem;
-            color: var(--mist);
-            opacity: 0.6;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
 
-        /* Responsive Architecture */
-        @media (max-width: 1200px) {
-            .pillars-grid,
-            .reflection-grid,
-            .portal-grid {
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero-container, .contact-container {
                 grid-template-columns: 1fr;
-                gap: var(--space-large);
+                gap: 3rem;
             }
             
-            .process-container {
+            .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-xl);
-            }
-            
-            .courtyard {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-                padding: var(--space-massive) var(--space-large) var(--space-xl);
-            }
-            
-            .courtyard-vision {
-                height: 400px;
-                order: -1;
             }
         }
 
@@ -905,14 +834,14 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background: var(--void);
+                background-color: var(--white);
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
-                padding: var(--space-xl);
-                transition: var(--transition-fluid);
-                gap: var(--space-large);
-                border-top: 1px solid rgba(127, 219, 218, 0.1);
+                padding: 3rem 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow-xl);
+                gap: 2rem;
             }
             
             .nav-menu.active {
@@ -923,86 +852,90 @@
                 display: block;
             }
             
-            .courtyard-actions {
+            .language-switcher {
+                margin-top: 1rem;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero-btns {
                 flex-direction: column;
             }
             
-            .process-container {
-                grid-template-columns: 1fr;
+            .rating-badge {
+                position: relative;
+                right: 0;
+                bottom: 0;
+                margin-top: 2rem;
+                justify-content: center;
             }
             
-            .portal-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-            }
-            
-            .foundation-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-            }
-            
-            .form-grid {
-                grid-template-columns: 1fr;
+            .services, .process, .testimonials, .contact {
+                padding: 4rem 0;
             }
         }
 
         @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            
             .container {
-                padding: 0 var(--space-base);
+                padding: 0 1rem;
             }
             
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            h3 { font-size: 1.5rem; }
-            
-            .courtyard,
-            .pillars,
-            .process-path,
-            .reflection-chamber,
-            .portal {
-                padding: var(--space-xl) 0;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
             
-            .courtyard-vision {
-                height: 300px;
+            .services-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Structural Header -->
+    <!-- Header -->
     <header>
-        <div class="header-container">
-            <a href="#courtyard" class="logo">
-                <div class="logo-icon"></div>
-                <span class="logo-text">PSYCHEZONE</span>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <span class="logo-text">Psychezone International</span>
             </a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <i class="fas fa-bars"></i>
             </button>
             
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#courtyard" class="nav-link" data-en="Courtyard" data-sw="Ua">Courtyard</a></li>
-                <li><a href="#pillars" class="nav-link" data-en="Pillars" data-sw="Misitu">Pillars</a></li>
+                <li><a href="#home" class="nav-link active" data-en="Home" data-sw="Nyumbani">Home</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-sw="Huduma">Services</a></li>
                 <li><a href="#process" class="nav-link" data-en="Process" data-sw="Mchakato">Process</a></li>
-                <li><a href="#reflections" class="nav-link" data-en="Reflections" data-sw="Tafakari">Reflections</a></li>
-                <li><a href="#portal" class="nav-link" data-en="Portal" data-sw="Mwanga">Portal</a></li>
+                <li><a href="#testimonials" class="nav-link" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
+                <li><a href="#contact" class="btn btn-primary" data-en="Book Appointment" data-sw="Panga Mkutano">Book Appointment</a></li>
                 
-                <!-- Language Module -->
+                <!-- Language Switcher -->
                 <li class="language-switcher">
-                    <button class="language-btn" id="languageBtn">
+                    <div class="language-btn" id="languageBtn">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
                         <span id="currentLanguage">EN</span>
                         <i class="fas fa-chevron-down"></i>
-                    </button>
+                    </div>
                     <div class="language-dropdown" id="languageDropdown">
                         <div class="language-option active" data-lang="en">
-                            <span>ENGLISH</span>
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
+                            <span>English</span>
                         </div>
                         <div class="language-option" data-lang="sw">
-                            <span>KISWAHILI</span>
+                            <img src="https://flagcdn.com/w20/tz.png" alt="Swahili" class="language-flag">
+                            <span>Kiswahili</span>
                         </div>
                     </div>
                 </li>
@@ -1010,159 +943,178 @@
         </div>
     </header>
 
-    <!-- Zen Courtyard -->
-    <section class="courtyard" id="courtyard">
-        <div class="container courtyard-content">
-            <h1 data-en="ARCHITECTURE OF MIND" data-sw="USANIFU WA AKILI">ARCHITECTURE OF MIND</h1>
-            <p class="courtyard-text" data-en="We design mental spaces. Structured serenity through architectural precision. Cognitive clarity through minimalist intervention." data-sw="Tunabuni nafasi za kiakili. Utulivu uliopangwa kupanga usanifu. Uwazi wa utambuzi kupitia uingiliaji wa ufupi.">We design mental spaces. Structured serenity through architectural precision. Cognitive clarity through minimalist intervention.</p>
-            
-            <div class="courtyard-actions">
-                <a href="#portal" class="btn btn-primary" data-en="INITIATE SESSION" data-sw="ANZA MKUTANO">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>INITIATE SESSION</span>
-                </a>
-                <a href="#pillars" class="btn" data-en="EXPLORE STRUCTURE" data-sw>EXPLORE STRUCTURE</a>
-            </div>
-        </div>
-        
-        <div class="courtyard-vision">
-            <!-- Structural Lines -->
-            <div class="vision-line horizontal"></div>
-            <div class="vision-line horizontal"></div>
-            <div class="vision-line horizontal"></div>
-            <div class="vision-line horizontal"></div>
-            <div class="vision-line vertical"></div>
-            <div class="vision-line vertical"></div>
-            <div class="vision-line vertical"></div>
-            <div class="vision-line vertical"></div>
-            
-            <!-- Vision Elements -->
-            <div class="vision-element">
-                <i class="fas fa-brain"></i>
-            </div>
-            <div class="vision-element">
-                <i class="fas fa-balance-scale"></i>
-            </div>
-            <div class="vision-element">
-                <i class="fas fa-mountain"></i>
-            </div>
-            <div class="vision-element">
-                <i class="fas fa-infinity"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pillars of Practice -->
-    <section class="pillars" id="pillars">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-en="PILLARS OF PRACTICE" data-sw>PILLARS OF PRACTICE</h2>
-                <p data-en="Three structural supports for mental architecture" data-sw>Three structural supports for mental architecture</p>
-            </div>
-            
-            <div class="pillars-grid">
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3 data-en="STRUCTURAL THERAPY" data-sw="TIBA YA KIMUUNDO">STRUCTURAL THERAPY</h3>
-                    <p data-en="Cognitive frameworks rebuilt with architectural precision. Methodical deconstruction of thought patterns." data-sw>Miundo ya utambuzi iliyojengwa upya kwa usahihi wa usanifu. Uvunjaji wa kimbinu wa mifumo ya mawazo.</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 data-en="Professional Mental Health Care in Dar es Salaam" data-sw="Utunzaji wa Kitaalam wa Afya ya Akili Dar es Salaam">Professional Mental Health Care in Dar es Salaam</h1>
+                <p data-en="Psychezone International provides expert counseling and psychotherapy services with licensed professionals. We offer confidential, evidence-based therapy in a supportive environment." data-sw="Psychezone International inatoa huduma za ushauri na tiba ya akili na wataalamu walioidhinishwa. Tunatoa tiba ya siri, yenye uthibitisho katika mazingira ya kusaidia.">Psychezone International provides expert counseling and psychotherapy services with licensed professionals. We offer confidential, evidence-based therapy in a supportive environment.</p>
                 
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3 data-en="SYSTEMIC ANALYSIS" data-sw="UCHAMBUAJI WA MFUMO">SYSTEMIC ANALYSIS</h3>
-                    <p data-en="Mapping relational architectures within family and social systems. Identifying load-bearing structures." data-sw>Kuchora ramani za usanifu wa uhusiano ndani ya mifumo ya familia na kijamii. Kutambua miundo inayobeba mzigo.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary" data-en="Schedule Appointment" data-sw="Panga Mkutano">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Schedule Appointment</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary" data-en="Our Services" data-sw="Huduma Zetu">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Our Services</span>
+                    </a>
                 </div>
-                
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-city"></i>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional therapy session">
+                <div class="rating-badge">
+                    <i class="fas fa-star"></i>
+                    <div class="rating-text">
+                        <strong>5.0</strong>
+                        <span data-en="Excellent Rating" data-sw="Ukadiriaji Bora">Excellent Rating</span>
+                        <span data-en="12+ Reviews" data-sw="Tathmini 12+">12+ Reviews</span>
                     </div>
-                    <h3 data-en="CORPORATE ARCHITECTURE" data-sw="USANIFU WA KAMPUNI">CORPORATE ARCHITECTURE</h3>
-                    <p data-en="Designing organizational mental spaces. Structural interventions for workplace cognitive environments." data-sw>Kubuni nafasi za kiakili za shirika. Uingiliaji wa kimuundo kwa mazingira ya utambuzi mahali pa kazi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Path -->
-    <section class="process-path" id="process">
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <div class="section-header">
-                <h2 data-en="PROCESS PATH" data-sw>PROCESS PATH</h2>
-                <p data-en="A structured progression toward mental clarity" data-sw>A structured progression toward mental clarity</p>
-            </div>
-            
-            <div class="process-container">
-                <div class="process-step">
-                    <div class="step-marker">
-                        <span class="step-number">01</span>
-                    </div>
-                    <h4 class="step-title" data-en="FOUNDATION ANALYSIS" data-sw>FOUNDATION ANALYSIS</h4>
-                    <p data-en="Assessment of structural integrity" data-sw>Assessment of structural integrity</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
                 </div>
-                
-                <div class="process-step">
-                    <div class="step-marker">
-                        <span class="step-number">02</span>
-                    </div>
-                    <h4 class="step-title" data-en="BLUEPRINT DESIGN" data-sw>BLUEPRINT DESIGN</h4>
-                    <p data-en="Architectural plan development" data-sw>Architectural plan development</p>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" data-en="Clients Helped" data-sw="Wateja Waliokubaliwa">Clients Helped</span>
                 </div>
-                
-                <div class="process-step">
-                    <div class="step-marker">
-                        <span class="step-number">03</span>
-                    </div>
-                    <h4 class="step-title" data-en="CONSTRUCTION PHASE" data-sw>CONSTRUCTION PHASE</h4>
-                    <p data-en="Implementation of structural changes" data-sw>Implementation of structural changes</p>
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label" data-en="Satisfaction Rate" data-sw="Kiwango cha Kuridhika">Satisfaction Rate</span>
                 </div>
-                
-                <div class="process-step">
-                    <div class="step-marker">
-                        <span class="step-number">04</span>
-                    </div>
-                    <h4 class="step-title" data-en="OCCUPANCY REVIEW" data-sw>OCCUPANCY REVIEW</h4>
-                    <p data-en="Evaluation of new mental space" data-sw>Evaluation of new mental space</p>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label" data-en="Confidential" data-sw="Ya Siri">Confidential</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reflection Chamber -->
-    <section class="reflection-chamber" id="reflections">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="REFLECTION CHAMBER" data-sw>REFLECTION CHAMBER</h2>
-                <p data-en="Structural transformations witnessed" data-sw>Structural transformations witnessed</p>
+                <h2 data-en="Our Professional Services" data-sw="Huduma Zetu za Kitaalamu">Our Professional Services</h2>
+                <p data-en="Comprehensive mental health services tailored to individual needs." data-sw="Huduma kamili za afya ya akili zilizobinafsishwa kulingana na mahitaji ya kibinafsi.">Comprehensive mental health services tailored to individual needs.</p>
             </div>
             
-            <div class="reflection-grid">
-                <div class="reflection-card">
-                    <div class="reflection-quote" data-en="&quot;The architectural approach provided structural clarity where traditional therapy offered only decoration. My mind now has intentional design.&quot;" data-sw="&quot;Mbinu ya usanifu ilitoa uwazi wa kimuundo ambapo tiba ya jadi ilitoa mapambo tu. Akili yangu sasa ina muundo wa kusudi.&quot;">
-                        "The architectural approach provided structural clarity where traditional therapy offered only decoration. My mind now has intentional design."
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <div class="reflection-author">
-                        <div class="author-marker"></div>
+                    <div class="service-content">
+                        <h3 data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</h3>
+                        <p data-en="One-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions." data-sw="Mikutano ya binafsi inayolenga ukuaji wa kibinafsi, wasiwasi, unyogovu, kupona kwa trauma, na mabadiliko ya maisha.">One-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Personalized treatment plans" data-sw="Mipango ya matibabu iliyobinafsishwa">Personalized treatment plans</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Evidence-based approaches" data-sw="Mbinu zilizothibitishwa">Evidence-based approaches</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Confidential sessions" data-sw="Mikutano ya siri">Confidential sessions</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</h3>
+                        <p data-en="Strengthen family relationships and improve communication through guided therapeutic sessions." data-sw="Kuimarisha mahusiano ya familia na kuboresha mawasiliano kupitia mikutano ya tiba inayoelekezwa.">Strengthen family relationships and improve communication through guided therapeutic sessions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Conflict resolution" data-sw="Ufumbuzi wa migogoro">Conflict resolution</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Communication skills" data-sw="Ujuzi wa mawasiliano">Communication skills</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Relationship building" data-sw="Kujenga mahusiano">Relationship building</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</h3>
+                        <p data-en="Enhance workplace mental health through workshops, stress management programs, and employee assistance." data-sw="Boresha afya ya akili mahali pa kazi kupitia warsha, programu za usimamizi wa msongo, na msaada kwa wafanyikazi.">Enhance workplace mental health through workshops, stress management programs, and employee assistance.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Stress management" data-sw="Usimamizi wa msongo">Stress management</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Team building" data-sw="Kujenga timu">Team building</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Leadership coaching" data-sw="Ukocha wa uongozi">Leadership coaching</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Our Professional Process" data-sw="Mchakato Wetu wa Kitaalamu">Our Professional Process</h2>
+                <p data-en="A structured approach to mental wellness with proven results." data-sw="Njia iliyopangwa kwa ustawi wa kiakili na matokeo yaliyothibitishwa.">A structured approach to mental wellness with proven results.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3 data-en="Initial Assessment" data-sw="Tathmini ya Kwanza">Initial Assessment</h3>
+                    <p data-en="Comprehensive evaluation to understand your needs and create a personalized treatment plan." data-sw="Tathmini kamili ya kuelewa mahitaji yako na kuunda mpango wa matibabu uliobinafsishwa.">Comprehensive evaluation to understand your needs and create a personalized treatment plan.</p>
+                </div>
+                
+                <div class="process-step">
+                    <h3 data-en="Personalized Therapy" data-sw="Tiba Iliyobinafsishwa">Personalized Therapy</h3>
+                    <p data-en="Regular sessions with your assigned therapist using evidence-based approaches for sustainable results." data-sw="Mikutano ya kawaida na mtaalamu wako aliyepewa kwa kutumia mbinu zilizothibitishwa kwa matokeo endelevu.">Regular sessions with your assigned therapist using evidence-based approaches for sustainable results.</p>
+                </div>
+                
+                <div class="process-step">
+                    <h3 data-en="Progress Tracking" data-sw="Ufuatiliaji wa Maendeleo">Progress Tracking</h3>
+                    <p data-en="Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes." data-sw="Tathmini endelevu na urekebishaji wa mpango wako wa matibabu ili kuhakikisha matokeo bora.">Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Client Testimonials" data-sw="Usahihi wa Wateja">Client Testimonials</h2>
+                <p data-en="Hear from individuals who have found support and transformation through our services." data-sw="Sikiliza kutoka kwa watu ambao wamepata usaidizi na mabadiliko kupitia huduma zetu.">Hear from individuals who have found support and transformation through our services.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-en="&quot;The team at Psychezone helped me regain control of my life. The personalized approach made all the difference in managing my anxiety.&quot;" data-sw="&quot;Timu ya Psychezone ilinisaidia kurudisha udhibiti wa maisha yangu. Mbinu iliyobinafsishwa ilifanya tofauti yote katika kudhibiti wasiwasi wangu.&quot;">
+                        "The team at Psychezone helped me regain control of my life. The personalized approach made all the difference in managing my anxiety."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">SM</div>
                         <div>
-                            <h4>MICHAEL R.</h4>
-                            <p data-en="STRUCTURAL THERAPY" data-sw>STRUCTURAL THERAPY</p>
+                            <h4>Sarah M.</h4>
+                            <p data-en="Anxiety Management" data-sw="Usimamizi wa Wasiwasi">Anxiety Management</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="reflection-card">
-                    <div class="reflection-quote" data-en="&quot;Our family system was rebuilt with load-bearing supports identified. The architectural mapping revealed critical stress points.&quot;" data-sw="&quot;Mfumo wa familia yetu ulijengwa upya na viunga vya kubeba mzigo vilivyotambuliwa. Uchoraji ramani wa usanifu ulifunua sehemu muhimu za msongo.&quot;">
-                        "Our family system was rebuilt with load-bearing supports identified. The architectural mapping revealed critical stress points."
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-en="&quot;Family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully.&quot;" data-sw="&quot;Mikutano ya ushauri wa familia ilibadilisha uhusiano wetu. Tulijifunza kuwasiliana kwa ufanisi na kutatua migogoro kwa amani.&quot;">
+                        "Family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully."
                     </div>
-                    <div class="reflection-author">
-                        <div class="author-marker"></div>
+                    <div class="client-info">
+                        <div class="client-avatar">JK</div>
                         <div>
-                            <h4>THE KAMAU FAMILY</h4>
-                            <p data-en="SYSTEMIC ANALYSIS" data-sw>SYSTEMIC ANALYSIS</p>
+                            <h4>Juma K.</h4>
+                            <p data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</p>
                         </div>
                     </div>
                 </div>
@@ -1170,122 +1122,132 @@
         </div>
     </section>
 
-    <!-- Portal -->
-    <section class="portal" id="portal">
-        <div class="container portal-container">
-            <div class="portal-info">
-                <h2 data-en="INITIATE CONNECTION" data-sw>INITIATE CONNECTION</h2>
-                <p data-en="Architect your mental space. Begin structural transformation." data-sw>Architect your mental space. Begin structural transformation.</p>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2 data-en="Contact Us Today" data-sw="Wasiliana Nasi Leo">Contact Us Today</h2>
+                <p data-en="Take the first step toward better mental health. Our team is ready to support you with compassionate, professional care." data-sw="Chukua hatua ya kwanza kuelekea afya bora ya akili. Timu yetu iko tayari kukusaidia kwa utunzaji wa huruma na kitaalamu.">Take the first step toward better mental health. Our team is ready to support you with compassionate, professional care.</p>
                 
-                <div class="portal-grid">
-                    <div class="portal-node">
-                        <div class="node-icon">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h4 data-en="LOCATION" data-sw>LOCATION</h4>
-                        <p>Mabatini Road<br>Dar es Salaam</p>
+                        <div>
+                            <h4 data-en="Location" data-sw="Mahali">Location</h4>
+                            <p>Mabatini Road, Dar es Salaam</p>
+                        </div>
                     </div>
                     
-                    <div class="portal-node">
-                        <div class="node-icon">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h4 data-en="TEMPORAL FRAME" data-sw>TEMPORAL FRAME</h4>
-                        <p data-en="Mon-Sat: 0800-1800" data-sw>Mon-Sat: 0800-1800</p>
+                        <div>
+                            <h4 data-en="Working Hours" data-sw="Masaa ya Kazi">Working Hours</h4>
+                            <p data-en="Monday - Saturday: 8:00 AM - 6:00 PM" data-sw="Jumatatu - Jumamosi: 8:00 asubuhi - 6:00 usiku">Monday - Saturday: 8:00 AM - 6:00 PM</p>
+                        </div>
                     </div>
                     
-                    <div class="portal-node">
-                        <div class="node-icon">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <h4 data-en="COMMUNICATION" data-sw>COMMUNICATION</h4>
-                        <p data-en="Voice/Text/Physical" data-sw>Voice/Text/Physical</p>
-                    </div>
-                    
-                    <div class="portal-node">
-                        <div class="node-icon">
-                            <i class="fas fa-building"></i>
+                        <div>
+                            <h4 data-en="Contact" data-sw="Mawasiliano">Contact</h4>
+                            <p data-en="Phone, WhatsApp, Email & In-person" data-sw="Simu, WhatsApp, Barua pepe & Mkutano wa moja kwa moja">Phone, WhatsApp, Email & In-person</p>
                         </div>
-                        <h4 data-en="STRUCTURE" data-sw>STRUCTURE</h4>
-                        <p data-en="Licensed Architects" data-sw>Licensed Architects</p>
                     </div>
                 </div>
             </div>
             
-            <div class="portal-form">
-                <h3 data-en="ARCHITECTURAL BRIEF" data-sw>ARCHITECTURAL BRIEF</h3>
-                <form id="architecturalForm">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" required placeholder="NAME">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" id="contact" required placeholder="CONTACT">
-                        </div>
+            <div class="contact-form">
+                <h3 data-en="Schedule an Appointment" data-sw="Panga Mkutano">Schedule an Appointment</h3>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
+                        <input type="text" id="name" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <select class="form-control" id="service" required>
-                            <option value="" data-en="SELECT ARCHITECTURAL SERVICE" data-sw>SELECT ARCHITECTURAL SERVICE</option>
-                            <option value="structural" data-en="STRUCTURAL THERAPY" data-sw>STRUCTURAL THERAPY</option>
-                            <option value="systemic" data-en="SYSTEMIC ANALYSIS" data-sw>SYSTEMIC ANALYSIS</option>
-                            <option value="corporate" data-en="CORPORATE ARCHITECTURE" data-sw>CORPORATE ARCHITECTURE</option>
+                        <label for="phone" class="form-label" data-en="Phone Number" data-sw="Nambari ya Simu">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label" data-en="Service Interest" data-sw="Huduma Unayotaka">Service Interest</label>
+                        <select id="service" class="form-control" required>
+                            <option value="" data-en="Select a service" data-sw="Chagua huduma">Select a service</option>
+                            <option value="individual" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</option>
+                            <option value="family" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</option>
+                            <option value="corporate" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</option>
+                            <option value="unsure" data-en="Not Sure - Need Guidance" data-sw="Sijui - Nahitaji Mwongozo">Not Sure - Need Guidance</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <textarea class="form-control" id="brief" rows="4" placeholder="ARCHITECTURAL BRIEF" data-en-placeholder="DESCRIBE THE STRUCTURE REQUIRING ATTENTION" data-sw-placeholder="ELEZA MUUNDO UNAOHITAJI MAKINI"></textarea>
+                        <label for="message" class="form-label" data-en="Message" data-sw="Ujumbe">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us about your concerns..." data-sw-placeholder="Tuambie kuhusu wasiwasi wako..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary form-submit" data-en="SUBMIT BRIEF" data-sw>SUBMIT BRIEF</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Send Request" data-sw="Tuma Ombi">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Request</span>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Foundation -->
-    <footer class="foundation">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <div class="foundation-container">
-                <div class="foundation-brand">
-                    <span class="logo-text">PSYCHEZONE</span>
-                    <p class="foundation-text" data-en="Architects of mental space. Structural specialists in cognitive design. Licensed practitioners in psychological architecture since 2008." data-sw>Architects of mental space. Structural specialists in cognitive design. Licensed practitioners in psychological architecture since 2008.</p>
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo-text">Psychezone International</div>
+                    <div class="footer-about">
+                        <p data-en="Professional mental health services in Dar es Salaam since 2008. Licensed therapists providing evidence-based care." data-sw="Huduma za kitaalamu za afya ya akili Dar es Salaam tangu 2008. Wataalamu walioidhinishwa wakitowa utunzaji wenye uthibitisho.">Professional mental health services in Dar es Salaam since 2008. Licensed therapists providing evidence-based care.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="foundation-links">
-                    <h4 data-en="NAVIGATION" data-sw>NAVIGATION</h4>
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-sw="Viungo vya Haraka">Quick Links</h4>
                     <ul>
-                        <li><a href="#courtyard" data-en="Courtyard" data-sw>Courtyard</a></li>
-                        <li><a href="#pillars" data-en="Pillars" data-sw>Pillars</a></li>
-                        <li><a href="#process" data-en="Process" data-sw>Process</a></li>
-                        <li><a href="#reflections" data-en="Reflections" data-sw>Reflections</a></li>
-                        <li><a href="#portal" data-en="Portal" data-sw>Portal</a></li>
+                        <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
+                        <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
+                        <li><a href="#process" data-en="Our Process" data-sw="Mchakato Wetu">Our Process</a></li>
+                        <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
+                        <li><a href="#contact" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="foundation-links">
-                    <h4 data-en="SERVICES" data-sw>SERVICES</h4>
+                <div class="footer-links">
+                    <h4 data-en="Our Services" data-sw="Huduma Zetu">Our Services</h4>
                     <ul>
-                        <li><a href="#" data-en="Structural Therapy" data-sw>Structural Therapy</a></li>
-                        <li><a href="#" data-en="Systemic Analysis" data-sw>Systemic Analysis</a></li>
-                        <li><a href="#" data-en="Corporate Architecture" data-sw>Corporate Architecture</a></li>
-                        <li><a href="#" data-en="Workshop Design" data-sw>Workshop Design</a></li>
-                        <li><a href="#" data-en="Architectural Consultation" data-sw>Architectural Consultation</a></li>
+                        <li><a href="#" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</a></li>
+                        <li><a href="#" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</a></li>
+                        <li><a href="#" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</a></li>
+                        <li><a href="#" data-en="Workshops" data-sw="Warsha">Workshops</a></li>
+                        <li><a href="#" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="foundation-line"></div>
-            
-            <div class="foundation-copyright">
-                <p>&copy; 2023 PSYCHEZONE INTERNATIONAL. <span data-en="ALL STRUCTURES RESERVED." data-sw>ALL STRUCTURES RESERVED.</span></p>
+            <div class="copyright">
+                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved." data-sw="Haki zote zimehifadhiwa.">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Architectural Interface Controller
-        class ArchitecturalUI {
+        // Clean Language Manager
+        class CleanUI {
             constructor() {
                 this.currentLang = 'en';
                 this.init();
@@ -1294,25 +1256,34 @@
             init() {
                 this.bindEvents();
                 this.loadPreferences();
-                this.setupStructuralAnimations();
-                this.createGridLines();
+                this.setupAnimations();
             }
             
             bindEvents() {
-                // Mobile menu
+                // Mobile menu toggle
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
                 const navMenu = document.getElementById('navMenu');
                 
                 mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenuBtn.classList.toggle('active');
                     navMenu.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
                 });
                 
                 // Close mobile menu on link click
-                document.querySelectorAll('.nav-link').forEach(link => {
+                document.querySelectorAll('.nav-link, .btn').forEach(link => {
                     link.addEventListener('click', () => {
-                        mobileMenuBtn.classList.remove('active');
                         navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(nav => {
+                            nav.classList.remove('active');
+                        });
+                        if (link.classList.contains('nav-link')) {
+                            link.classList.add('active');
+                        }
                     });
                 });
                 
@@ -1341,22 +1312,23 @@
                 });
                 
                 // Form submission
-                const form = document.getElementById('architecturalForm');
+                const form = document.getElementById('appointmentForm');
                 if (form) {
-                    form.addEventListener('submit', (e) => this.handleFormSubmission(e));
+                    form.addEventListener('submit', (e) => this.handleFormSubmit(e));
                 }
                 
-                // Smooth scrolling for anchor links
+                // Smooth scrolling
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', (e) => {
+                    anchor.addEventListener('click', function(e) {
                         e.preventDefault();
-                        const targetId = anchor.getAttribute('href');
+                        
+                        const targetId = this.getAttribute('href');
                         if (targetId === '#') return;
                         
                         const targetElement = document.querySelector(targetId);
                         if (targetElement) {
                             window.scrollTo({
-                                top: targetElement.offsetTop - 80,
+                                top: targetElement.offsetTop - 100,
                                 behavior: 'smooth'
                             });
                         }
@@ -1385,13 +1357,13 @@
                 this.updateContent(lang);
                 
                 // Save preference
-                localStorage.setItem('psychezone_arch_lang', lang);
+                localStorage.setItem('psychezone_lang', lang);
                 
-                // Show structural notification
-                this.showStructuralNotification(
+                // Show notification
+                this.showNotification(
                     lang === 'en' 
-                        ? 'LANGUAGE STRUCTURE UPDATED' 
-                        : 'MUUNDO WA LUGHA UMESASISHWA'
+                        ? 'Language updated to English' 
+                        : 'Lugha imesasishwa kuwa Kiswahili'
                 );
                 
                 this.currentLang = lang;
@@ -1408,92 +1380,65 @@
                             }
                         } else if (element.tagName === 'OPTION') {
                             element.textContent = text;
-                        } else if (element.tagName === 'SPAN' || element.tagName === 'DIV' || element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || element.tagName === 'H4' || element.tagName === 'A' || element.tagName === 'BUTTON') {
+                        } else if (element.tagName === 'SPAN' || element.tagName === 'DIV' || element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || element.tagName === 'H4' || element.tagName === 'A' || element.tagName === 'BUTTON' || element.tagName === 'LABEL') {
                             element.textContent = text;
                         }
                     }
                 });
                 
                 // Update textarea placeholder
-                const textarea = document.getElementById('brief');
+                const textarea = document.getElementById('message');
                 if (textarea) {
                     textarea.setAttribute('placeholder', 
                         lang === 'en' 
-                            ? 'DESCRIBE THE STRUCTURE REQUIRING ATTENTION' 
-                            : 'ELEZA MUUNDO UNAOHITAJI MAKINI'
+                            ? 'Tell us about your concerns...' 
+                            : 'Tuambie kuhusu wasiwasi wako...'
                     );
                 }
             }
             
             loadPreferences() {
-                const savedLang = localStorage.getItem('psychezone_arch_lang');
+                const savedLang = localStorage.getItem('psychezone_lang');
                 if (savedLang && (savedLang === 'en' || savedLang === 'sw')) {
                     this.changeLanguage(savedLang);
                 }
             }
             
-            setupStructuralAnimations() {
-                // Intersection Observer for scroll animations
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                        }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -100px 0px'
-                });
-                
-                // Observe structural elements
-                document.querySelectorAll('.pillar, .process-step, .reflection-card, .portal-node').forEach(el => {
-                    observer.observe(el);
-                });
-                
+            setupAnimations() {
                 // Header scroll effect
                 window.addEventListener('scroll', () => {
                     const header = document.querySelector('header');
                     if (window.scrollY > 50) {
-                        header.style.background = 'rgba(10, 10, 10, 0.98)';
-                        header.style.borderBottom = '1px solid rgba(127, 219, 218, 0.2)';
+                        header.style.boxShadow = 'var(--shadow)';
                     } else {
-                        header.style.background = 'rgba(10, 10, 10, 0.95)';
-                        header.style.borderBottom = '1px solid rgba(127, 219, 218, 0.1)';
+                        header.style.boxShadow = 'none';
                     }
+                });
+                
+                // Add fade-in animation to cards on scroll
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+                
+                document.querySelectorAll('.service-card, .stat-card, .process-step, .testimonial-card').forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    observer.observe(card);
                 });
             }
             
-            createGridLines() {
-                // Create dynamic grid lines in courtyard
-                const courtyard = document.querySelector('.courtyard-vision');
-                if (!courtyard) return;
-                
-                // Add additional grid lines on load
-                for (let i = 0; i < 5; i++) {
-                    const line = document.createElement('div');
-                    line.className = 'vision-line';
-                    line.style.position = 'absolute';
-                    line.style.background = 'rgba(127, 219, 218, 0.1)';
-                    
-                    if (i % 2 === 0) {
-                        // Horizontal line
-                        line.style.width = '100%';
-                        line.style.height = '1px';
-                        line.style.top = `${(i + 1) * 16.666}%`;
-                        line.style.left = '0';
-                    } else {
-                        // Vertical line
-                        line.style.width = '1px';
-                        line.style.height = '100%';
-                        line.style.left = `${(i) * 16.666}%`;
-                        line.style.top = '0';
-                    }
-                    
-                    courtyard.appendChild(line);
-                }
-            }
-            
-            handleFormSubmission(e) {
+            handleFormSubmit(e) {
                 e.preventDefault();
                 
                 // Get form data
@@ -1501,73 +1446,71 @@
                 const serviceSelect = document.getElementById('service');
                 const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
                 
-                // Show structural notification
+                // Show success message
                 const message = this.currentLang === 'en'
-                    ? `ARCHITECTURAL BRIEF RECEIVED. STRUCTURAL ANALYSIS INITIATED FOR ${name.toUpperCase()}.`
-                    : `BRIEFI YA USANIFU IMEPOKELEWA. UCHAMBUAJI WA KIMUUNDO UMEANZISHWA KWA ${name.toUpperCase()}.`;
+                    ? `Thank you ${name}. Your appointment request for ${serviceText} has been received. We will contact you within 24 hours.`
+                    : `Asante ${name}. Ombi lako la mkutano kwa ${serviceText} limepokelewa. Tutawasiliana nawe ndani ya masaa 24.`;
                 
-                this.showStructuralNotification(message);
+                this.showNotification(message, 'success');
                 
                 // Reset form
                 e.target.reset();
                 
                 // Update placeholder
-                const textarea = document.getElementById('brief');
+                const textarea = document.getElementById('message');
                 textarea.setAttribute('placeholder', 
                     this.currentLang === 'en' 
-                        ? 'DESCRIBE THE STRUCTURE REQUIRING ATTENTION' 
-                        : 'ELEZA MUUNDO UNAOHITAJI MAKINI'
+                        ? 'Tell us about your concerns...' 
+                        : 'Tuambie kuhusu wasiwasi wako...'
                 );
             }
             
-            showStructuralNotification(message) {
-                // Create notification element
+            showNotification(message, type = 'info') {
+                // Create notification
                 const notification = document.createElement('div');
                 notification.style.cssText = `
                     position: fixed;
                     bottom: 30px;
                     right: 30px;
-                    background: var(--stone);
-                    border: 1px solid var(--zen);
-                    padding: var(--space-medium) var(--space-large);
-                    font-family: 'Space Grotesk', sans-serif;
-                    font-size: 0.8rem;
-                    color: var(--zen);
-                    text-transform: uppercase;
-                    letter-spacing: 0.1em;
+                    background-color: ${type === 'success' ? 'var(--success)' : 'var(--primary)'};
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    border-radius: var(--radius);
+                    box-shadow: var(--shadow-lg);
                     z-index: 10000;
-                    animation: structuralSlideIn 0.3s ease;
+                    animation: slideIn 0.3s ease;
                     max-width: 400px;
-                    line-height: 1.4;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
                 `;
                 
                 notification.innerHTML = `
-                    <div style="display: flex; align-items: center; gap: var(--space-base);">
-                        <div style="width: 10px; height: 10px; border: 1px solid var(--zen);"></div>
-                        <span>${message}</span>
-                    </div>
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
                 `;
                 
                 document.body.appendChild(notification);
                 
-                // Remove after 5 seconds
+                // Remove after 4 seconds
                 setTimeout(() => {
-                    notification.style.animation = 'structuralSlideOut 0.3s ease';
+                    notification.style.animation = 'slideOut 0.3s ease';
                     setTimeout(() => {
                         document.body.removeChild(notification);
                     }, 300);
-                }, 5000);
+                }, 4000);
                 
                 // Add animation styles if not present
-                if (!document.querySelector('#structural-animations')) {
+                if (!document.querySelector('#notification-styles')) {
                     const style = document.createElement('style');
-                    style.id = 'structural-animations';
+                    style.id = 'notification-styles';
                     style.textContent = `
-                        @keyframes structuralSlideIn {
+                        @keyframes slideIn {
                             from { transform: translateX(100%); opacity: 0; }
                             to { transform: translateX(0); opacity: 1; }
                         }
-                        @keyframes structuralSlideOut {
+                        @keyframes slideOut {
                             from { transform: translateX(0); opacity: 1; }
                             to { transform: translateX(100%); opacity: 0; }
                         }
@@ -1577,31 +1520,9 @@
             }
         }
         
-        // Initialize on DOM load
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            window.architecturalUI = new ArchitecturalUI();
-            
-            // Add initial animation for vision elements
-            setTimeout(() => {
-                document.querySelectorAll('.vision-element').forEach((el, i) => {
-                    setTimeout(() => {
-                        el.style.animation = `fadeIn 0.5s ease ${i * 0.2}s forwards`;
-                    }, i * 200);
-                });
-                
-                // Add fadeIn animation
-                if (!document.querySelector('#vision-animations')) {
-                    const style = document.createElement('style');
-                    style.id = 'vision-animations';
-                    style.textContent = `
-                        @keyframes fadeIn {
-                            from { opacity: 0; transform: scale(0.8); }
-                            to { opacity: 1; transform: scale(1); }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-            }, 500);
+            window.cleanUI = new CleanUI();
         });
     </script>
 </body>
