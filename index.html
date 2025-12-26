@@ -9,29 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Premium Color System */
+        /* Updated Premium Professional Color System */
         :root {
-            --premium-navy: #1A365D;
-            --navy-light: #2D4A7C;
-            --navy-dark: #0F1F3D;
-            --professional-teal: #2C9CA6;
-            --teal-light: #38B2AC;
-            --teal-dark: #1D7879;
-            --accent-gold: #D4A017;
-            --gold-light: #F0C14B;
-            --light-bg: #F8FAFC;
+            --deep-slate: #2D3748;
+            --slate-light: #4A5568;
+            --slate-dark: #1A202C;
+            --professional-emerald: #059669;
+            --emerald-light: #10B981;
+            --emerald-dark: #047857;
+            --accent-amber: #D97706;
+            --amber-light: #F59E0B;
+            --light-bg: #F9FAFB;
             --light-surface: #FFFFFF;
-            --light-border: #E2E8F0;
-            --medium-text: #4A5568;
-            --dark-text: #1A202C;
+            --light-border: #E5E7EB;
+            --medium-text: #6B7280;
+            --dark-text: #111827;
             --subtle-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             --elevation-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 5px 10px -5px rgba(0, 0, 0, 0.04);
-            --accent-shadow: 0 0 0 3px rgba(44, 156, 166, 0.15);
+            --accent-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
             
             /* Premium Effects */
-            --gradient-navy: linear-gradient(135deg, var(--premium-navy), var(--navy-light));
-            --gradient-teal: linear-gradient(135deg, var(--professional-teal), var(--teal-light));
-            --gradient-gold: linear-gradient(135deg, var(--accent-gold), var(--gold-light));
+            --gradient-slate: linear-gradient(135deg, var(--deep-slate), var(--slate-light));
+            --gradient-emerald: linear-gradient(135deg, var(--professional-emerald), var(--emerald-light));
+            --gradient-amber: linear-gradient(135deg, var(--accent-amber), var(--amber-light));
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             
@@ -156,7 +156,7 @@
         .logo-icon {
             width: 48px;
             height: 48px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -188,13 +188,13 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             font-size: 1.75rem;
-            color: var(--premium-navy);
+            color: var(--deep-slate);
             letter-spacing: -0.01em;
         }
 
         .logo-tagline {
             font-size: 0.75rem;
-            color: var(--professional-teal);
+            color: var(--professional-emerald);
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -233,13 +233,13 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             transition: var(--transition-smooth);
             border-radius: 1px;
         }
 
         .nav-link:hover {
-            color: var(--premium-navy);
+            color: var(--deep-slate);
         }
 
         .nav-link:hover::after {
@@ -269,8 +269,8 @@
 
         .language-toggle:hover {
             background: var(--light-surface);
-            border-color: var(--professional-teal);
-            color: var(--premium-navy);
+            border-color: var(--professional-emerald);
+            color: var(--deep-slate);
         }
 
         .language-dropdown {
@@ -314,12 +314,12 @@
 
         .language-option:hover {
             background: var(--light-bg);
-            color: var(--premium-navy);
+            color: var(--deep-slate);
         }
 
         .language-option.active {
-            background: rgba(44, 156, 166, 0.08);
-            color: var(--professional-teal);
+            background: rgba(5, 150, 105, 0.08);
+            color: var(--professional-emerald);
             font-weight: 600;
         }
 
@@ -340,7 +340,7 @@
 
         .hero-content h1 {
             margin-bottom: var(--space-lg);
-            background: linear-gradient(90deg, var(--premium-navy), var(--professional-teal));
+            background: linear-gradient(90deg, var(--deep-slate), var(--professional-emerald));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -403,7 +403,7 @@
         .accreditation-icon {
             width: 56px;
             height: 56px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -447,7 +447,7 @@
         }
 
         .btn-primary {
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             color: white;
         }
 
@@ -458,12 +458,12 @@
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid var(--professional-teal);
-            color: var(--professional-teal);
+            border: 2px solid var(--professional-emerald);
+            color: var(--professional-emerald);
         }
 
         .btn-secondary:hover {
-            background: rgba(44, 156, 166, 0.1);
+            background: rgba(5, 150, 105, 0.1);
             transform: translateY(-2px);
             box-shadow: var(--subtle-shadow);
         }
@@ -475,8 +475,8 @@
         }
 
         .btn-outline:hover {
-            border-color: var(--professional-teal);
-            color: var(--professional-teal);
+            border-color: var(--professional-emerald);
+            color: var(--professional-emerald);
             transform: translateY(-2px);
         }
 
@@ -516,7 +516,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             transform: scaleX(0);
             transform-origin: left;
             transition: var(--transition-smooth);
@@ -525,7 +525,7 @@
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--subtle-shadow);
-            border-color: var(--professional-teal);
+            border-color: var(--professional-emerald);
         }
 
         .stat-card:hover::before {
@@ -535,7 +535,7 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 700;
-            color: var(--professional-teal);
+            color: var(--professional-emerald);
             display: block;
             margin-bottom: var(--space-xs);
             font-family: 'Montserrat', sans-serif;
@@ -574,7 +574,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             border-radius: 2px;
         }
 
@@ -604,12 +604,12 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--elevation-shadow);
-            border-color: var(--professional-teal);
+            border-color: var(--professional-emerald);
         }
 
         .service-header {
             height: 180px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -645,7 +645,7 @@
 
         .service-content h3 {
             margin-bottom: var(--space-sm);
-            color: var(--premium-navy);
+            color: var(--deep-slate);
         }
 
         .service-features {
@@ -663,7 +663,7 @@
         }
 
         .service-features li i {
-            color: var(--professional-teal);
+            color: var(--professional-emerald);
             font-size: 0.875rem;
         }
 
@@ -692,14 +692,14 @@
 
         .process-step:hover {
             transform: translateY(-5px);
-            border-color: var(--professional-teal);
+            border-color: var(--professional-emerald);
             box-shadow: var(--subtle-shadow);
         }
 
         .step-number {
             width: 60px;
             height: 60px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -715,7 +715,7 @@
 
         .process-step h3 {
             margin-bottom: var(--space-sm);
-            color: var(--premium-navy);
+            color: var(--deep-slate);
         }
 
         /* Testimonials */
@@ -741,7 +741,7 @@
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            border-color: var(--professional-teal);
+            border-color: var(--professional-emerald);
             box-shadow: var(--subtle-shadow);
         }
 
@@ -756,7 +756,7 @@
             left: 0;
             top: -10px;
             font-size: 3rem;
-            color: var(--professional-teal);
+            color: var(--professional-emerald);
             opacity: 0.3;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -779,7 +779,7 @@
         .client-avatar {
             width: 56px;
             height: 56px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -822,7 +822,7 @@
         .contact-icon {
             width: 56px;
             height: 56px;
-            background: var(--gradient-teal);
+            background: var(--gradient-emerald);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -866,13 +866,13 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var(--professional-teal);
+            border-color: var(--professional-emerald);
             box-shadow: var(--accent-shadow);
             background: var(--light-surface);
         }
 
         select.form-control {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232C9CA6' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23059669' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 16px;
@@ -881,7 +881,7 @@
 
         /* Footer */
         .premium-footer {
-            background: var(--premium-navy);
+            background: var(--deep-slate);
             color: white;
             padding: var(--space-4xl) 0 var(--space-2xl);
             position: relative;
@@ -902,7 +902,7 @@
         }
 
         .footer-brand .logo-tagline {
-            color: var(--teal-light);
+            color: var(--emerald-light);
         }
 
         .footer-description {
@@ -932,7 +932,7 @@
         }
 
         .social-link:hover {
-            background: var(--professional-teal);
+            background: var(--professional-emerald);
             transform: translateY(-2px);
         }
 
@@ -952,7 +952,7 @@
             left: 0;
             width: 30px;
             height: 2px;
-            background: var(--professional-teal);
+            background: var(--professional-emerald);
         }
 
         .footer-links ul {
@@ -1019,7 +1019,7 @@
                 background: none;
                 border: none;
                 font-size: 1.5rem;
-                color: var(--premium-navy);
+                color: var(--deep-slate);
                 cursor: pointer;
             }
             
@@ -1269,7 +1269,7 @@
                 <div class="process-step">
                     <div class="step-number">03</div>
                     <h3 data-en="Progress & Outcome Evaluation" data-sw="Tathmini ya Maendeleo na Matokeo">Progress & Outcome Evaluation</h3>
-                    <p data-en="Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks." data wpraw>Ufuatiliaji wa kawaida wa ufanisi wa matibabu, marekebisho ya mikakati inapohitajika, na kupima matokeo dhidi ya viwango vya kiwango vilivyowekwa.">Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks.</p>
+                    <p data-en="Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks." data-sw="Ufuatiliaji wa kawaida wa ufanisi wa matibabu, marekebisho ya mikakati inapohitajika, na kupima matokeo dhidi ya viwango vya kiwango vilivyowekwa.">Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks.</p>
                 </div>
             </div>
         </div>
@@ -1709,7 +1709,7 @@
                     position: fixed;
                     bottom: 30px;
                     right: 30px;
-                    background: ${type === 'success' ? 'var(--professional-teal)' : 'var(--premium-navy)'};
+                    background: ${type === 'success' ? 'var(--professional-emerald)' : 'var(--deep-slate)'};
                     color: white;
                     padding: 1.25rem 1.75rem;
                     border-radius: var(--radius-md);
@@ -1721,7 +1721,7 @@
                     display: flex;
                     align-items: center;
                     gap: 0.75rem;
-                    border-left: 4px solid var(--accent-gold);
+                    border-left: 4px solid var(--accent-amber);
                 `;
                 
                 notification.innerHTML = `
