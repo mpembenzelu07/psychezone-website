@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychezone International | Exclusive Mental Health Consultancy</title>
+    <title>Psychezone International | Premium Mental Health Consultancy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Exclusive Color System */
+        /* Premium Color System */
         :root {
-            --luxury-gold: #D4AF37;
-            --gold-light: #F4E4BC;
-            --gold-dark: #B8951E;
-            --charcoal: #1A1A1A;
-            --charcoal-light: #2A2A2A;
-            --charcoal-medium: #3A3A3A;
-            --cream: #F8F5F0;
-            --cream-dark: #E8E5E0;
-            --ivory: #FFFEF9;
-            --ivory-dark: #F5F4EF;
-            --platinum: #E5E4E2;
-            --bronze: #CD7F32;
-            --burgundy: #800020;
+            --premium-navy: #1A365D;
+            --navy-light: #2D4A7C;
+            --navy-dark: #0F1F3D;
+            --professional-teal: #2C9CA6;
+            --teal-light: #38B2AC;
+            --teal-dark: #1D7879;
+            --accent-gold: #D4A017;
+            --gold-light: #F0C14B;
+            --light-bg: #F8FAFC;
+            --light-surface: #FFFFFF;
+            --light-border: #E2E8F0;
+            --medium-text: #4A5568;
+            --dark-text: #1A202C;
+            --subtle-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --elevation-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 5px 10px -5px rgba(0, 0, 0, 0.04);
+            --accent-shadow: 0 0 0 3px rgba(44, 156, 166, 0.15);
             
-            /* Sophisticated Effects */
-            --gradient-gold: linear-gradient(135deg, var(--luxury-gold), var(--gold-light));
-            --gradient-charcoal: linear-gradient(135deg, var(--charcoal), var(--charcoal-light));
-            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.08);
-            --shadow-luxury: 0 10px 40px rgba(0, 0, 0, 0.15);
-            --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.2);
-            --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slower: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Premium Effects */
+            --gradient-navy: linear-gradient(135deg, var(--premium-navy), var(--navy-light));
+            --gradient-teal: linear-gradient(135deg, var(--professional-teal), var(--teal-light));
+            --gradient-gold: linear-gradient(135deg, var(--accent-gold), var(--gold-light));
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             
-            /* Spacing */
+            /* Spacing System */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 1.5rem;
@@ -45,10 +46,11 @@
             --space-4xl: 8rem;
             
             /* Border Radius */
-            --radius-sm: 0.25rem;
-            --radius-md: 0.5rem;
+            --radius-sm: 0.375rem;
+            --radius-md: 0.75rem;
             --radius-lg: 1rem;
             --radius-xl: 1.5rem;
+            --radius-full: 9999px;
         }
 
         /* Reset & Base */
@@ -65,69 +67,45 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--charcoal);
-            background-color: var(--ivory);
-            line-height: 1.7;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            letter-spacing: 0.01em;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-            font-weight: 500;
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 600;
             line-height: 1.2;
-            color: var(--charcoal);
+            color: var(--dark-text);
             margin-bottom: var(--space-md);
-            letter-spacing: 0.02em;
         }
 
         h1 {
-            font-size: clamp(3.5rem, 7vw, 5rem);
-            font-weight: 400;
-            position: relative;
-            display: inline-block;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background: var(--luxury-gold);
+            font-size: clamp(3rem, 6vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 400;
-            position: relative;
-            display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background: var(--luxury-gold);
+            font-size: clamp(2.25rem, 4.5vw, 3rem);
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
         h3 {
-            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-            font-weight: 500;
+            font-size: clamp(1.5rem, 3vw, 1.875rem);
+            font-weight: 600;
         }
 
         p {
             font-size: 1.125rem;
-            color: var(--charcoal-medium);
+            color: var(--medium-text);
             margin-bottom: var(--space-md);
-            font-weight: 300;
-            line-height: 1.8;
+            font-weight: 400;
+            line-height: 1.7;
         }
 
         .container {
@@ -143,28 +121,28 @@
         }
 
         .section-alt {
-            background-color: var(--cream);
+            background-color: var(--light-surface);
         }
 
-        /* Exclusive Header */
-        .exclusive-header {
+        /* Premium Header */
+        .premium-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 254, 249, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--light-border);
             z-index: 1000;
             transition: var(--transition-smooth);
-            padding: var(--space-sm) 0;
+            box-shadow: var(--subtle-shadow);
         }
 
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 var(--space-lg);
+            padding: var(--space-md) 0;
         }
 
         .logo {
@@ -176,53 +154,56 @@
         }
 
         .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--charcoal);
-            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-teal);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--luxury-gold);
+            color: white;
             font-size: 1.25rem;
             position: relative;
             overflow: hidden;
-            border: 1px solid var(--luxury-gold);
+            transition: var(--transition-smooth);
         }
 
-        .logo-icon::before {
+        .logo-icon::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, transparent 30%, rgba(212, 175, 55, 0.1) 100%);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .logo:hover .logo-icon::after {
+            transform: translateX(100%);
         }
 
         .logo-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             font-size: 1.75rem;
-            color: var(--charcoal);
-            letter-spacing: 0.05em;
-            position: relative;
+            color: var(--premium-navy);
+            letter-spacing: -0.01em;
         }
 
-        .logo-text::after {
-            content: 'INTERNATIONAL';
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-            font-size: 0.6rem;
-            font-weight: 400;
-            color: var(--luxury-gold);
-            letter-spacing: 0.2em;
-            font-family: 'Inter', sans-serif;
+        .logo-tagline {
+            font-size: 0.75rem;
+            color: var(--professional-teal);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 0.25rem;
+            display: block;
         }
 
-        /* Exclusive Navigation */
-        .exclusive-nav {
+        /* Premium Navigation */
+        .premium-nav {
             display: flex;
             align-items: center;
             gap: var(--space-xl);
@@ -230,44 +211,42 @@
 
         .nav-links {
             display: flex;
-            gap: var(--space-xl);
+            gap: var(--space-lg);
             list-style: none;
         }
 
         .nav-link {
             text-decoration: none;
-            color: var(--charcoal-medium);
-            font-weight: 400;
+            color: var(--medium-text);
+            font-weight: 500;
             font-size: 0.95rem;
             position: relative;
             padding: var(--space-xs) 0;
             transition: var(--transition-smooth);
-            font-family: 'Inter', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.85rem;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .nav-link::before {
+        .nav-link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 0;
-            height: 1px;
-            background: var(--luxury-gold);
+            height: 2px;
+            background: var(--gradient-teal);
             transition: var(--transition-smooth);
+            border-radius: 1px;
         }
 
         .nav-link:hover {
-            color: var(--charcoal);
+            color: var(--premium-navy);
         }
 
-        .nav-link:hover::before {
+        .nav-link:hover::after {
             width: 100%;
         }
 
-        /* Exclusive Language Selector */
+        /* Premium Language Selector */
         .language-selector {
             position: relative;
         }
@@ -277,57 +256,56 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1.25rem;
-            background: transparent;
-            border: 1px solid var(--cream-dark);
+            background: var(--light-bg);
+            border: 1px solid var(--light-border);
             border-radius: var(--radius-sm);
-            color: var(--charcoal);
-            font-weight: 400;
-            font-size: 0.85rem;
+            color: var(--medium-text);
+            font-weight: 500;
+            font-size: 0.875rem;
             cursor: pointer;
             transition: var(--transition-smooth);
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.05em;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .language-toggle:hover {
-            border-color: var(--luxury-gold);
-            background: rgba(212, 175, 55, 0.02);
+            background: var(--light-surface);
+            border-color: var(--professional-teal);
+            color: var(--premium-navy);
         }
 
         .language-dropdown {
             position: absolute;
             top: 100%;
             right: 0;
-            background: var(--ivory);
-            border: 1px solid var(--cream-dark);
-            border-radius: var(--radius-sm);
-            min-width: 140px;
-            box-shadow: var(--shadow-subtle);
+            background: var(--light-surface);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-md);
+            min-width: 160px;
+            box-shadow: var(--elevation-shadow);
             display: none;
             z-index: 1000;
             margin-top: 0.5rem;
             overflow: hidden;
+            animation: dropdownFade 0.3s ease;
+        }
+
+        @keyframes dropdownFade {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .language-dropdown.active {
             display: block;
-            animation: fadeInDown 0.3s ease;
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .language-option {
             padding: 0.875rem 1.25rem;
             cursor: pointer;
             transition: var(--transition-smooth);
-            border-bottom: 1px solid var(--cream);
-            font-size: 0.85rem;
-            color: var(--charcoal-medium);
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--light-border);
+            font-size: 0.875rem;
+            color: var(--medium-text);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .language-option:last-child {
@@ -335,25 +313,22 @@
         }
 
         .language-option:hover {
-            background: var(--cream);
-            color: var(--charcoal);
+            background: var(--light-bg);
+            color: var(--premium-navy);
         }
 
         .language-option.active {
-            background: rgba(212, 175, 55, 0.05);
-            color: var(--luxury-gold);
-            font-weight: 500;
+            background: rgba(44, 156, 166, 0.08);
+            color: var(--professional-teal);
+            font-weight: 600;
         }
 
-        /* Exclusive Hero */
-        .exclusive-hero {
-            padding: 16rem 0 12rem;
+        /* Premium Hero */
+        .premium-hero {
+            padding: 15rem 0 10rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--light-surface) 100%);
             position: relative;
             overflow: hidden;
-            background: var(--ivory);
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
         }
 
         .hero-container {
@@ -365,14 +340,18 @@
 
         .hero-content h1 {
             margin-bottom: var(--space-lg);
+            background: linear-gradient(90deg, var(--premium-navy), var(--professional-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-content p {
             font-size: 1.25rem;
-            color: var(--charcoal-medium);
+            color: var(--medium-text);
             margin-bottom: var(--space-xl);
             max-width: 500px;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .hero-actions {
@@ -383,66 +362,71 @@
 
         .hero-image {
             position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--elevation-shadow);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
 
         .hero-image img {
             width: 100%;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-luxury);
-            transition: var(--transition-slower);
-            filter: grayscale(20%);
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-smooth);
         }
 
         .hero-image:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.01);
+            transform: scale(1.05);
         }
 
         .accreditation-badge {
             position: absolute;
-            bottom: -2rem;
-            right: -2rem;
-            background: var(--ivory);
-            padding: var(--space-xl);
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--light-surface);
+            padding: var(--space-lg);
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-luxury);
+            box-shadow: var(--elevation-shadow);
             display: flex;
             align-items: center;
             gap: var(--space-md);
-            max-width: 280px;
-            border: 1px solid var(--cream-dark);
+            max-width: 300px;
+            border: 1px solid var(--light-border);
         }
 
         .accreditation-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--charcoal);
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-teal);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--luxury-gold);
+            color: white;
             font-size: 1.5rem;
-            border: 1px solid var(--luxury-gold);
         }
 
-        /* Exclusive Buttons */
+        /* Premium Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 1.25rem 2.5rem;
-            font-size: 0.95rem;
-            font-weight: 400;
-            border-radius: var(--radius-sm);
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
             cursor: pointer;
             transition: var(--transition-smooth);
             text-decoration: none;
             border: none;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
             position: relative;
             overflow: hidden;
         }
@@ -463,46 +447,48 @@
         }
 
         .btn-primary {
-            background: var(--charcoal);
-            color: var(--ivory);
-            border: 1px solid var(--charcoal);
+            background: var(--gradient-teal);
+            color: white;
         }
 
         .btn-primary:hover {
-            background: var(--charcoal-light);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-subtle);
+            box-shadow: var(--elevation-shadow);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 1px solid var(--charcoal);
-            color: var(--charcoal);
+            border: 2px solid var(--professional-teal);
+            color: var(--professional-teal);
         }
 
         .btn-secondary:hover {
-            background: rgba(26, 26, 26, 0.05);
+            background: rgba(44, 156, 166, 0.1);
             transform: translateY(-2px);
-            border-color: var(--luxury-gold);
-            color: var(--luxury-gold);
+            box-shadow: var(--subtle-shadow);
         }
 
-        .btn-gold {
+        .btn-outline {
             background: transparent;
-            border: 1px solid var(--luxury-gold);
-            color: var(--luxury-gold);
+            border: 2px solid var(--light-border);
+            color: var(--medium-text);
         }
 
-        .btn-gold:hover {
-            background: rgba(212, 175, 55, 0.05);
+        .btn-outline:hover {
+            border-color: var(--professional-teal);
+            color: var(--professional-teal);
             transform: translateY(-2px);
         }
 
-        /* Exclusive Stats */
-        .exclusive-stats {
-            background: var(--charcoal);
-            color: var(--ivory);
-            padding: var(--space-3xl) 0;
+        /* Premium Stats */
+        .premium-stats {
+            background: var(--light-surface);
+            border-radius: var(--radius-xl);
+            margin-top: -4rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--elevation-shadow);
+            border: 1px solid var(--light-border);
         }
 
         .stats-grid {
@@ -515,8 +501,12 @@
         .stat-card {
             text-align: center;
             padding: var(--space-xl);
-            position: relative;
+            background: var(--light-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--light-border);
             transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
         }
 
         .stat-card::before {
@@ -525,11 +515,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 1px;
-            background: var(--luxury-gold);
+            height: 4px;
+            background: var(--gradient-teal);
             transform: scaleX(0);
-            transition: var(--transition-smooth);
             transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--subtle-shadow);
+            border-color: var(--professional-teal);
         }
 
         .stat-card:hover::before {
@@ -537,42 +533,55 @@
         }
 
         .stat-number {
-            font-size: 3.5rem;
-            font-weight: 300;
-            color: var(--luxury-gold);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--professional-teal);
             display: block;
             margin-bottom: var(--space-xs);
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.02em;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .stat-label {
-            font-size: 0.85rem;
-            color: var(--platinum);
-            font-weight: 400;
+            font-size: 0.875rem;
+            color: var(--medium-text);
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.05em;
         }
 
         /* Services Section */
-        .exclusive-services {
+        .premium-services {
             position: relative;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto var(--space-3xl);
         }
 
         .section-header h2 {
             margin-bottom: var(--space-md);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-teal);
+            border-radius: 2px;
         }
 
         .section-header p {
             font-size: 1.25rem;
-            color: var(--charcoal-medium);
-            font-weight: 300;
+            color: var(--medium-text);
+            font-weight: 400;
         }
 
         .services-grid {
@@ -583,10 +592,10 @@
         }
 
         .service-card {
-            background: var(--ivory);
+            background: var(--light-surface);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            border: 1px solid var(--cream-dark);
+            border: 1px solid var(--light-border);
             transition: var(--transition-smooth);
             height: 100%;
             position: relative;
@@ -594,13 +603,13 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-luxury);
-            border-color: var(--luxury-gold);
+            box-shadow: var(--elevation-shadow);
+            border-color: var(--professional-teal);
         }
 
         .service-header {
-            height: 200px;
-            background: var(--charcoal);
+            height: 180px;
+            background: var(--gradient-teal);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -615,7 +624,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transform: translateX(-100%);
             transition: 0.8s;
         }
@@ -625,18 +634,18 @@
         }
 
         .service-icon {
-            font-size: 3.5rem;
-            color: var(--luxury-gold);
+            font-size: 3rem;
+            color: white;
             z-index: 1;
         }
 
         .service-content {
-            padding: var(--space-2xl);
+            padding: var(--space-xl);
         }
 
         .service-content h3 {
             margin-bottom: var(--space-sm);
-            color: var(--charcoal);
+            color: var(--premium-navy);
         }
 
         .service-features {
@@ -649,20 +658,19 @@
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 0.75rem;
-            color: var(--charcoal-medium);
+            color: var(--medium-text);
             font-size: 0.95rem;
-            font-weight: 300;
         }
 
         .service-features li i {
-            color: var(--luxury-gold);
-            font-size: 0.75rem;
+            color: var(--professional-teal);
+            font-size: 0.875rem;
         }
 
         /* Process Section */
-        .exclusive-process {
+        .premium-process {
+            background: var(--light-bg);
             position: relative;
-            background: var(--cream);
         }
 
         .process-container {
@@ -676,45 +684,44 @@
             text-align: center;
             padding: var(--space-xl);
             position: relative;
-            background: var(--ivory);
+            background: var(--light-surface);
             border-radius: var(--radius-lg);
-            border: 1px solid var(--cream-dark);
+            border: 1px solid var(--light-border);
             transition: var(--transition-smooth);
         }
 
         .process-step:hover {
             transform: translateY(-5px);
-            border-color: var(--luxury-gold);
-            box-shadow: var(--shadow-subtle);
+            border-color: var(--professional-teal);
+            box-shadow: var(--subtle-shadow);
         }
 
         .step-number {
-            width: 80px;
-            height: 80px;
-            background: var(--ivory);
-            color: var(--luxury-gold);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-teal);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: 700;
             margin: 0 auto var(--space-lg);
             position: relative;
             z-index: 1;
-            border: 2px solid var(--luxury-gold);
-            font-family: 'Cormorant Garamond', serif;
+            border: 4px solid var(--light-bg);
         }
 
         .process-step h3 {
             margin-bottom: var(--space-sm);
-            color: var(--charcoal);
+            color: var(--premium-navy);
         }
 
         /* Testimonials */
-        .exclusive-testimonials {
+        .premium-testimonials {
+            background: var(--light-surface);
             position: relative;
-            background: var(--ivory);
         }
 
         .testimonials-grid {
@@ -725,36 +732,17 @@
         }
 
         .testimonial-card {
-            background: var(--ivory);
-            padding: var(--space-2xl);
+            background: var(--light-bg);
+            padding: var(--space-xl);
             border-radius: var(--radius-lg);
-            border: 1px solid var(--cream-dark);
+            border: 1px solid var(--light-border);
             transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--luxury-gold);
-            transform: scaleY(0);
-            transition: var(--transition-smooth);
-            transform-origin: top;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-subtle);
-            border-color: var(--luxury-gold);
-        }
-
-        .testimonial-card:hover::before {
-            transform: scaleY(1);
+            border-color: var(--professional-teal);
+            box-shadow: var(--subtle-shadow);
         }
 
         .testimonial-content {
@@ -766,20 +754,19 @@
             content: '"';
             position: absolute;
             left: 0;
-            top: -20px;
-            font-size: 4rem;
-            color: var(--luxury-gold);
-            opacity: 0.2;
-            font-family: 'Cormorant Garamond', serif;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--professional-teal);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
         }
 
         .testimonial-text {
             font-style: italic;
-            color: var(--charcoal-medium);
+            color: var(--medium-text);
             margin-bottom: var(--space-lg);
             line-height: 1.8;
-            font-weight: 300;
             font-size: 1.125rem;
         }
 
@@ -787,29 +774,25 @@
             display: flex;
             align-items: center;
             gap: var(--space-md);
-            padding-top: var(--space-md);
-            border-top: 1px solid var(--cream-dark);
         }
 
         .client-avatar {
-            width: 60px;
-            height: 60px;
-            background: var(--charcoal);
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-teal);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--luxury-gold);
-            font-weight: 400;
+            color: white;
+            font-weight: 600;
             font-size: 1.25rem;
-            border: 1px solid var(--luxury-gold);
-            font-family: 'Cormorant Garamond', serif;
         }
 
         /* Contact Section */
-        .exclusive-contact {
+        .premium-contact {
+            background: var(--light-bg);
             position: relative;
-            background: var(--cream);
         }
 
         .contact-container {
@@ -833,66 +816,63 @@
             gap: var(--space-md);
             margin-bottom: var(--space-lg);
             padding-bottom: var(--space-lg);
-            border-bottom: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--light-border);
         }
 
         .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--ivory);
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-teal);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--luxury-gold);
+            color: white;
             flex-shrink: 0;
-            border: 1px solid var(--cream-dark);
         }
 
         .contact-form {
-            background: var(--ivory);
-            padding: var(--space-2xl);
+            background: var(--light-surface);
+            padding: var(--space-xl);
             border-radius: var(--radius-lg);
-            border: 1px solid var(--cream-dark);
-            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--light-border);
+            box-shadow: var(--subtle-shadow);
         }
 
         .form-group {
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-md);
         }
 
         .form-label {
             display: block;
             margin-bottom: var(--space-xs);
-            font-weight: 400;
-            color: var(--charcoal);
+            font-weight: 600;
+            color: var(--dark-text);
             font-size: 0.95rem;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .form-control {
             width: 100%;
             padding: 1rem 1.25rem;
-            border: 1px solid var(--cream-dark);
-            border-radius: var(--radius-sm);
+            border: 1px solid var(--light-border);
+            border-radius: var(--radius-md);
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            color: var(--charcoal);
+            color: var(--dark-text);
             transition: var(--transition-smooth);
-            background: var(--ivory);
-            font-weight: 300;
+            background: var(--light-bg);
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--luxury-gold);
-            background: var(--ivory);
+            border-color: var(--professional-teal);
+            box-shadow: var(--accent-shadow);
+            background: var(--light-surface);
         }
 
         select.form-control {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23D4AF37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232C9CA6' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 16px;
@@ -900,9 +880,9 @@
         }
 
         /* Footer */
-        .exclusive-footer {
-            background: var(--charcoal);
-            color: var(--ivory);
+        .premium-footer {
+            background: var(--premium-navy);
+            color: white;
             padding: var(--space-4xl) 0 var(--space-2xl);
             position: relative;
             overflow: hidden;
@@ -916,21 +896,20 @@
         }
 
         .footer-brand .logo-text {
-            color: var(--ivory);
+            color: white;
             margin-bottom: var(--space-md);
             display: block;
         }
 
-        .footer-brand .logo-text::after {
-            color: var(--luxury-gold);
+        .footer-brand .logo-tagline {
+            color: var(--teal-light);
         }
 
         .footer-description {
-            color: var(--platinum);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 1rem;
-            line-height: 1.8;
+            line-height: 1.7;
             margin-bottom: var(--space-lg);
-            font-weight: 300;
             max-width: 300px;
         }
 
@@ -942,32 +921,28 @@
         .social-link {
             width: 44px;
             height: 44px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--platinum);
+            color: white;
             text-decoration: none;
             transition: var(--transition-smooth);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .social-link:hover {
-            background: var(--luxury-gold);
-            color: var(--charcoal);
+            background: var(--professional-teal);
             transform: translateY(-2px);
-            border-color: var(--luxury-gold);
         }
 
         .footer-links h4 {
-            color: var(--ivory);
+            color: white;
             font-size: 1.125rem;
             margin-bottom: var(--space-lg);
             position: relative;
             display: inline-block;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .footer-links h4::after {
@@ -976,8 +951,8 @@
             bottom: -8px;
             left: 0;
             width: 30px;
-            height: 1px;
-            background: var(--luxury-gold);
+            height: 2px;
+            background: var(--professional-teal);
         }
 
         .footer-links ul {
@@ -989,17 +964,15 @@
         }
 
         .footer-links a {
-            color: var(--platinum);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-size: 0.95rem;
             transition: var(--transition-smooth);
             display: inline-block;
-            font-weight: 300;
-            letter-spacing: 0.02em;
         }
 
         .footer-links a:hover {
-            color: var(--luxury-gold);
+            color: white;
             transform: translateX(5px);
         }
 
@@ -1011,28 +984,8 @@
 
         .copyright {
             text-align: center;
-            color: var(--platinum);
-            font-size: 0.85rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        /* Background Elements */
-        .bg-element {
-            position: absolute;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .bg-pattern {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-            z-index: -2;
-            opacity: 0.3;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
         }
 
         /* Responsive Design */
@@ -1043,27 +996,8 @@
                 gap: var(--space-3xl);
             }
             
-            .exclusive-hero {
-                padding: 14rem 0 10rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .exclusive-nav {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-                font-size: 1.5rem;
-                color: var(--charcoal);
-                cursor: pointer;
-            }
-            
-            .hero-actions {
-                flex-direction: column;
+            .premium-hero {
+                padding: 12rem 0 8rem;
             }
             
             .accreditation-badge {
@@ -1073,6 +1007,25 @@
                 margin-top: var(--space-xl);
                 max-width: 100%;
             }
+        }
+
+        @media (max-width: 768px) {
+            .premium-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--premium-navy);
+                cursor: pointer;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+            }
             
             .services-grid {
                 grid-template-columns: 1fr;
@@ -1080,6 +1033,10 @@
             
             .section {
                 padding: var(--space-3xl) 0;
+            }
+            
+            .premium-stats {
+                margin-top: 0;
             }
         }
 
@@ -1089,11 +1046,11 @@
             }
             
             h1 {
-                font-size: 2.75rem;
+                font-size: 2.5rem;
             }
             
             h2 {
-                font-size: 2.25rem;
+                font-size: 2rem;
             }
             
             .stats-grid,
@@ -1102,7 +1059,7 @@
             }
             
             .contact-form {
-                padding: var(--space-xl);
+                padding: var(--space-lg);
             }
             
             .footer-container {
@@ -1113,25 +1070,25 @@
     </style>
 </head>
 <body>
-    <!-- Background Pattern -->
-    <div class="bg-pattern"></div>
-    
-    <!-- Exclusive Header -->
-    <header class="exclusive-header">
+    <!-- Premium Header -->
+    <header class="premium-header">
         <div class="container">
             <div class="header-container">
                 <a href="#home" class="logo">
                     <div class="logo-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <div class="logo-text">Psychezone</div>
+                    <div>
+                        <div class="logo-text">Psychezone</div>
+                        <span class="logo-tagline">INTERNATIONAL CONSULTANCY</span>
+                    </div>
                 </a>
                 
-                <nav class="exclusive-nav">
+                <nav class="premium-nav">
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link" data-en="Home" data-sw="Nyumbani">Home</a></li>
                         <li><a href="#services" class="nav-link" data-en="Services" data-sw="Huduma">Services</a></li>
-                        <li><a href="#process" class="nav-link" data-en="Process" data-sw="Mchakato">Process</a></li>
+                        <li><a href="#process" class="nav-link" data-en="Our Approach" data-sw="Mbinu Yetu">Our Approach</a></li>
                         <li><a href="#contact" class="nav-link" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
                     
@@ -1146,9 +1103,9 @@
                         </div>
                     </div>
                     
-                    <a href="#contact" class="btn btn-gold" data-en="Private Consultation" data-sw="Usuluhishi wa Kibinafsi">
-                        <i class="fas fa-lock"></i>
-                        <span>Private Consultation</span>
+                    <a href="#contact" class="btn btn-primary" data-en="Book Consultation" data-sw="Panga Usuluhishi">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Book Consultation</span>
                     </a>
                 </nav>
                 
@@ -1160,35 +1117,35 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="exclusive-hero" id="home">
+    <section class="premium-hero" id="home">
         <div class="container">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 data-en="Discreet Mental Wellness Consultancy" data-sw="Usuluhishi wa Ustawi wa Akili wa Kihimili">Discreet Mental Wellness Consultancy</h1>
-                    <p data-en="Psychezone International offers exclusive, confidential mental health services for discerning individuals and families. Our discreet approach combines traditional psychotherapy with exclusive wellness practices in private, serene settings." data-sw="Psychezone International inatoa huduma za kipekee, za siri za afya ya akili kwa watu na familia wenye busara. Mbinu yetu ya kihimili inachanganya tiba ya akili ya kawaida na mazoezi ya kipekee ya ustawi katika mazingira ya kibinafsi, yenye utulivu.">Psychezone International offers exclusive, confidential mental health services for discerning individuals and families. Our discreet approach combines traditional psychotherapy with exclusive wellness practices in private, serene settings.</p>
+                    <h1 data-en="Premium Mental Health Consultancy" data-sw="Usuluhishi wa Hali ya Juu wa Afya ya Akili">Premium Mental Health Consultancy</h1>
+                    <p data-en="Psychezone International delivers expert psychological services through a premium, confidential approach. Our licensed professionals provide evidence-based therapy in modern, supportive environments designed for optimal wellbeing." data-sw="Psychezone International inatoa huduma za kitaalamu za kisaikolojia kupitia mbinu ya hali ya juu, ya siri. Wataalamu wetu walioidhinishwa hutoa tiba yenye uthibitisho katika mazingira ya kisasa, yenye kusaidia yaliyoundwa kwa ustawi bora.">Psychezone International delivers expert psychological services through a premium, confidential approach. Our licensed professionals provide evidence-based therapy in modern, supportive environments designed for optimal wellbeing.</p>
                     
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary" data-en="Request Appointment" data-sw="Omba Mkutano">
+                        <a href="#contact" class="btn btn-primary" data-en="Schedule Consultation" data-sw="Panga Usuluhishi">
                             <i class="fas fa-calendar-alt"></i>
-                            <span>Request Appointment</span>
+                            <span>Schedule Consultation</span>
                         </a>
-                        <a href="#services" class="btn btn-secondary" data-en="Explore Services" data-sw="Chunguza Huduma">
+                        <a href="#services" class="btn btn-secondary" data-en="View Services" data-sw="Tazama Huduma">
                             <i class="fas fa-arrow-right"></i>
-                            <span>Explore Services</span>
+                            <span>View Services</span>
                         </a>
                     </div>
                 </div>
                 
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luxury therapy session">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional therapy session">
                     
                     <div class="accreditation-badge">
                         <div class="accreditation-icon">
                             <i class="fas fa-award"></i>
                         </div>
                         <div>
-                            <strong data-en="International Accreditation" data-sw="Uthibitisho wa Kimataifa">International Accreditation</strong>
-                            <p style="font-size: 0.875rem; margin-top: 0.25rem; color: var(--charcoal-medium);" data-en="Gold Standard in Private Mental Health" data-sw="Kiwango cha Dhahabu katika Afya ya Akili ya Kibinafsi">Gold Standard in Private Mental Health</p>
+                            <strong data-en="Internationally Accredited" data-sw="Imethibitishwa Kimataifa">Internationally Accredited</strong>
+                            <p style="font-size: 0.875rem; margin-top: 0.25rem; color: var(--medium-text);" data-en="15+ years clinical excellence" data-sw="Ubora wa kliniki wa miaka 15+">15+ years clinical excellence</p>
                         </div>
                     </div>
                 </div>
@@ -1197,56 +1154,56 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section exclusive-stats">
+    <section class="section premium-stats">
         <div class="container">
-            <div class="section-header" style="text-align: center;">
-                <h2 style="color: var(--ivory);">Excellence in Numbers</h2>
-                <p style="color: var(--platinum); font-size: 1.25rem;" data-en="Our commitment to exceptional, confidential care for select clients" data-sw="Ahadi yetu kwa utunzaji bora, wa siri kwa wateja wachagua">Our commitment to exceptional, confidential care for select clients</p>
+            <div class="section-header">
+                <h2 data-en="Professional Excellence" data-sw="Ubora wa Kitaalamu">Professional Excellence</h2>
+                <p data-en="Our commitment to quality mental health care and measurable client outcomes" data-sw="Ahadi yetu kwa utunzaji wa ubora wa afya ya akili na matokeo yanayoweza kupimika ya wateja">Our commitment to quality mental health care and measurable client outcomes</p>
             </div>
             
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-number">15+</span>
-                    <span class="stat-label" data-en="Years of Excellence" data-sw="Miaka ya Ubora">Years of Excellence</span>
+                    <span class="stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">99%</span>
-                    <span class="stat-label" data-en="Discretion Maintained" data-sw="Uhimili Ulidumishwa">Discretion Maintained</span>
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" data-en="Clients Supported" data-sw="Wateja Waliokubaliwa">Clients Supported</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">1:1</span>
-                    <span class="stat-label" data-en="Exclusive Client Ratio" data-sw="Uwiano wa Kipekee wa Mteja">Exclusive Client Ratio</span>
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label" data-en="Client Satisfaction" data-sw="Kuridhika kwa Mteja">Client Satisfaction</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label" data-en="Private Sessions" data-sw="Mikutano ya Kibinafsi">Private Sessions</span>
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" data-en="Support Available" data-sw="Usaidizi Unaopatikana">Support Available</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section exclusive-services" id="services">
+    <section class="section premium-services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Exclusive Services" data-sw="Huduma za Kipekee">Exclusive Services</h2>
-                <p data-en="Tailored mental wellness solutions for executives, high-profile individuals, and families seeking discretion and excellence" data-sw="Suluhisho za ustawi wa akili zilizobinafsishwa kwa watendaji, watu wenye hadhi, na familia zinazotaka uhimi na ubora">Tailored mental wellness solutions for executives, high-profile individuals, and families seeking discretion and excellence</p>
+                <h2 data-en="Premium Services" data-sw="Huduma za Hali ya Juu">Premium Services</h2>
+                <p data-en="Comprehensive mental health solutions designed for individuals, families, and organizations seeking professional, confidential care" data-sw="Suluhisho kamili za afya ya akili zilizoundwa kwa watu binafsi, familia, na mashirika yanayotafuta utunzaji wa kitaalamu, wa siri">Comprehensive mental health solutions designed for individuals, families, and organizations seeking professional, confidential care</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <i class="fas fa-user-tie"></i>
+                            <i class="fas fa-user-md"></i>
                         </div>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Executive Wellness" data-sw="Ustawi wa Mtendaji">Executive Wellness</h3>
-                        <p data-en="Completely confidential mental health support for C-suite executives and high-profile professionals, focusing on stress management, leadership challenges, and discreet crisis intervention." data-sw="Usaidizi kamili wa siri wa afya ya akili kwa watendaji wa C-suite na wataalamu wenye hadhi, ukizingatia usimamizi wa msongo, changamoto za uongozi, na kuingilia kati kwa kihimili kwa krisis.">Completely confidential mental health support for C-suite executives and high-profile professionals, focusing on stress management, leadership challenges, and discreet crisis intervention.</p>
+                        <h3 data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</h3>
+                        <p data-en="Personalized one-on-one sessions with licensed psychologists focusing on anxiety, depression, trauma, and personal growth in a confidential setting." data-sw="Mikutano ya kibinafsi ya moja kwa moja na wanasaikolojia walioidhinishwa wakilenga wasiwasi, unyogovu, trauma, na ukuaji wa kibinafsi katika mazingira ya siri.">Personalized one-on-one sessions with licensed psychologists focusing on anxiety, depression, trauma, and personal growth in a confidential setting.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> <span data-en="Absolute confidentiality guaranteed" data-sw="Usiri kamili umehakikishiwa">Absolute confidentiality guaranteed</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Flexible scheduling options" data-sw="Chaguo rahisi za ratiba">Flexible scheduling options</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Discrete off-site locations" data-sw="Maeneo ya kihimili nje ya tovuti">Discrete off-site locations</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Evidence-based approaches" data-sw="Mbinu zilizothibitishwa">Evidence-based approaches</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Personalized treatment plans" data-sw="Mipango ya matibabu iliyobinafsishwa">Personalized treatment plans</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Confidential sessions" data-sw="Mikutano ya siri">Confidential sessions</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1254,16 +1211,16 @@
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-users"></i>
                         </div>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Private Family Consultations" data-sw="Usuluhishi wa Kibinafsi wa Familia">Private Family Consultations</h3>
-                        <p data-en="Exclusive family therapy conducted in complete privacy, addressing delicate family dynamics, legacy planning, and intergenerational wealth transitions with utmost discretion." data-sw="Tiba ya familia ya kipekee inayofanywa kwa usiri kamili, ikishughulikia mienendo nyeti ya familia, upangaji wa urithi, na mabadiliko ya mali ya kizazi kwa kizazi kwa uhimili mkubwa.">Exclusive family therapy conducted in complete privacy, addressing delicate family dynamics, legacy planning, and intergenerational wealth transitions with utmost discretion.</p>
+                        <h3 data-en="Family & Relationship Counseling" data-sw="Ushauri wa Familia na Mahusiano">Family & Relationship Counseling</h3>
+                        <p data-en="Professional guidance to strengthen family dynamics, improve communication, and resolve conflicts through therapeutic interventions and relationship building." data-sw="Mwongozo wa kitaalamu wa kuimarisha mienendo ya familia, kuboresha mawasiliano, na kutatua migogoro kupitia kuingilia kati kwa kitiba na kujenga mahusiano.">Professional guidance to strengthen family dynamics, improve communication, and resolve conflicts through therapeutic interventions and relationship building.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> <span data-en="Complete privacy protocols" data-sw="Itifaki kamili za faragha">Complete privacy protocols</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Multi-generational approach" data-sw="Mbinu ya vizazi vingi">Multi-generational approach</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Wealth psychology integration" data-sw="Unganisho wa saikolojia ya utajiri">Wealth psychology integration</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Family systems therapy" data-sw="Tiba ya mifumo ya familia">Family systems therapy</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Conflict resolution strategies" data-sw="Mikakati ya ufumbuzi wa migogoro">Conflict resolution strategies</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Communication skill development" data-sw="Maendeleo ya ujuzi wa mawasiliano">Communication skill development</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1271,16 +1228,16 @@
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">
-                            <i class="fas fa-spa"></i>
+                            <i class="fas fa-briefcase"></i>
                         </div>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Luxury Wellness Retreats" data-sw="Makimbilio ya Anasa ya Ustawi">Luxury Wellness Retreats</h3>
-                        <p data-en="Exclusive, small-group retreats in serene locations, combining psychotherapy with luxury wellness practices, nutrition counseling, and mindfulness in complete privacy." data-sw="Makimbilio ya kipekee, ya vikundi vidogo katika maeneo yenye utulivu, yanayochanganya tiba ya akili na mazoezi ya anasa ya ustawi, ushauri wa lishe, na uangalifu katika faragha kamili.">Exclusive, small-group retreats in serene locations, combining psychotherapy with luxury wellness practices, nutrition counseling, and mindfulness in complete privacy.</p>
+                        <h3 data-en="Corporate Wellness Programs" data-sw="Programu za Ustawi wa Kikampuni">Corporate Wellness Programs</h3>
+                        <p data-en="Comprehensive workplace mental health initiatives designed to enhance employee wellbeing, productivity, and organizational resilience through customized programs." data-sw="Mikakati kamili ya afya ya akili mahali pa kazi iliyoundwa kuboresha ustawi wa wafanyikazi, tija, na ustahimilivu wa shirika kupitia programu zilizobinafsishwa.">Comprehensive workplace mental health initiatives designed to enhance employee wellbeing, productivity, and organizational resilience through customized programs.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> <span data-en="Limited to 6 participants" data-sw="Imewekewa kikomo kwa washiriki 6">Limited to 6 participants</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Private luxury accommodations" data-sw="Malazi ya anasa ya kibinafsi">Private luxury accommodations</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Holistic wellness integration" data-sw="Unganisho kamili wa ustawi">Holistic wellness integration</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Stress management workshops" data-sw="Warsha za usimamizi wa msongo">Stress management workshops</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Leadership coaching" data-sw="Ufundishaji wa uongozi">Leadership coaching</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Organizational consulting" data-sw="Ushauri wa shirika">Organizational consulting</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1289,70 +1246,70 @@
     </section>
 
     <!-- Process Section -->
-    <section class="section exclusive-process" id="process">
+    <section class="section premium-process" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Our Exclusive Process" data-sw="Mchakato Wetu wa Kipekee">Our Exclusive Process</h2>
-                <p data-en="A discreet, personalized approach ensuring confidentiality and exceptional care at every stage" data-sw="Mbinu ya kihimili, iliyobinafsishwa inayohakikisha usiri na utunzaji bora katika kila hatua">A discreet, personalized approach ensuring confidentiality and exceptional care at every stage</p>
+                <h2 data-en="Our Professional Approach" data-sw="Mbinu Yetu ya Kitaalamu">Our Professional Approach</h2>
+                <p data-en="A structured, evidence-based methodology that ensures effective treatment and measurable outcomes" data-sw="Njia iliyopangwa, yenye uthibitisho inayohakikisha matibabu yenye ufanisi na matokeo yanayoweza kupimika">A structured, evidence-based methodology that ensures effective treatment and measurable outcomes</p>
             </div>
             
             <div class="process-container">
                 <div class="process-step">
-                    <div class="step-number">I</div>
-                    <h3 data-en="Private Consultation" data-sw="Usuluhishi wa Kibinafsi">Private Consultation</h3>
-                    <p data-en="Discreet initial assessment in a secure, private setting to understand specific needs and establish complete confidentiality protocols." data-sw="Tathmini ya kwanza ya kihimili katika mazingira salama, ya kibinafsi kuelewa mahitaji maalum na kuanzisha itifaki kamili za usiri.">Discreet initial assessment in a secure, private setting to understand specific needs and establish complete confidentiality protocols.</p>
+                    <div class="step-number">01</div>
+                    <h3 data-en="Comprehensive Assessment" data-sw="Tathmini Kamili">Comprehensive Assessment</h3>
+                    <p data-en="Detailed evaluation by licensed professionals to understand individual needs, establish baselines, and develop personalized treatment objectives." data-sw="Tathmini ya kina na wataalamu walioidhinishwa kuelewa mahitaji ya kibinafsi, kuanzisha viwango vya msingi, na kukuza malengo ya matibabu yaliyobinafsishwa.">Detailed evaluation by licensed professionals to understand individual needs, establish baselines, and develop personalized treatment objectives.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">II</div>
-                    <h3 data-en="Tailored Strategy" data-sw="Mkakati Ulioletwa">Tailored Strategy</h3>
-                    <p data-en="Development of a completely personalized wellness plan, incorporating discreet monitoring and exclusive therapeutic approaches." data-sw="Ukuzaji wa mpango kamili wa ustawi ulioletwa, ukijumuisha ufuatiliaji wa kihimili na mbinu za kipekee za kitiba.">Development of a completely personalized wellness plan, incorporating discreet monitoring and exclusive therapeutic approaches.</p>
+                    <div class="step-number">02</div>
+                    <h3 data-en="Personalized Treatment Plan" data-sw="Mpango wa Matibabu Uliobinafsishwa">Personalized Treatment Plan</h3>
+                    <p data-en="Development of customized treatment strategies incorporating evidence-based therapeutic modalities and measurable goals for progress tracking." data-sw="Ukuzaji wa mikakati ya matibabu iliyobinafsishwa ikijumuisha njia za kitiba zilizothibitishwa na malengo yanayoweza kupimika kwa ufuatiliaji wa maendeleo.">Development of customized treatment strategies incorporating evidence-based therapeutic modalities and measurable goals for progress tracking.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">III</div>
-                    <h3 data-en="Discreet Implementation" data-sw="Utendaji wa Kihimili">Discreet Implementation</h3>
-                    <p data-en="Private sessions conducted with utmost discretion, with flexible scheduling and secure communication channels to protect client privacy." data-sw="Mikutano ya kibinafsi inayofanywa kwa uhimili mkubwa, na ratiba rahisi na njia salama za mawasiliano kuhifadhi faragha ya mteja.">Private sessions conducted with utmost discretion, with flexible scheduling and secure communication channels to protect client privacy.</p>
+                    <div class="step-number">03</div>
+                    <h3 data-en="Progress & Outcome Evaluation" data-sw="Tathmini ya Maendeleo na Matokeo">Progress & Outcome Evaluation</h3>
+                    <p data-en="Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks." data wpraw>Ufuatiliaji wa kawaida wa ufanisi wa matibabu, marekebisho ya mikakati inapohitajika, na kupima matokeo dhidi ya viwango vya kiwango vilivyowekwa.">Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section exclusive-testimonials">
+    <section class="section premium-testimonials">
         <div class="container">
             <div class="section-header">
                 <h2 data-en="Client Experiences" data-sw="Uzoefu wa Wateja">Client Experiences</h2>
-                <p data-en="Discreet testimonials from our exclusive clientele who value privacy and exceptional care" data-sw="Kushuhudia kwa kihimili kutoka kwa wateja wetu wa kipekee wanaothamini faragha na utunzaji bora">Discreet testimonials from our exclusive clientele who value privacy and exceptional care</p>
+                <p data-en="Feedback from individuals and organizations who have experienced our premium mental health services" data-sw="Maoni kutoka kwa watu binafsi na mashirika ambao wamepata huduma zetu za hali ya juu za afya ya akili">Feedback from individuals and organizations who have experienced our premium mental health services</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <div class="testimonial-text" data-en="&quot;The absolute discretion and professionalism at Psychezone allowed me to address sensitive leadership challenges without concern. Their private approach to executive wellness is unparalleled.&quot;" data-sw="&quot;Uhimili kamili na utaalamu huko Psychezone uliniruhusu kushughulikia changamoto nyeti za uongozi bila wasiwasi. Mbinu yao ya kibinafsi ya ustawi wa mtendaji haina kifani.&quot;">
-                            "The absolute discretion and professionalism at Psychezone allowed me to address sensitive leadership challenges without concern. Their private approach to executive wellness is unparalleled."
+                        <div class="testimonial-text" data-en="&quot;The professional approach and evidence-based techniques at Psychezone provided me with effective tools to manage anxiety. The structured sessions and measurable progress tracking made a significant difference.&quot;" data-sw="&quot;Mbinu ya kitaalamu na mbinu zilizothibitishwa huko Psychezone zilinipa zana zenye ufanisi za kudhibiti wasiwasi. Mikutano iliyopangwa na ufuatiliaji wa maendeleo yanayoweza kupimika ilifanya tofauti kubwa.&quot;">
+                            "The professional approach and evidence-based techniques at Psychezone provided me with effective tools to manage anxiety. The structured sessions and measurable progress tracking made a significant difference."
                         </div>
                     </div>
                     <div class="client-info">
-                        <div class="client-avatar">CE</div>
+                        <div class="client-avatar">SM</div>
                         <div>
-                            <h4>Corporate Executive</h4>
-                            <p data-en="Fortune 500 Company" data-sw="Kampuni ya Fortune 500">Fortune 500 Company</p>
+                            <h4>Sarah M.</h4>
+                            <p data-en="Anxiety Management Program" data-sw="Programu ya Usimamizi wa Wasiwasi">Anxiety Management Program</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <div class="testimonial-text" data-en="&quot;Our family needed complete discretion during a delicate transition. Psychezone provided exceptional care while maintaining our privacy at every step. The luxury retreat was transformative.&quot;" data-sw="&quot;Familia yetu ilihitaji uhimili kamili wakati wa mpito nyeti. Psychezone ilitoa utunzaji bora huku ikidumisha faragha yetu katika kila hatua. Kimbilio la anasa lilikuwa la mabadiliko.&quot;">
-                            "Our family needed complete discretion during a delicate transition. Psychezone provided exceptional care while maintaining our privacy at every step. The luxury retreat was transformative."
+                        <div class="testimonial-text" data-en="&quot;Our organization's wellness program developed by Psychezone International resulted in measurable improvements in employee satisfaction and productivity. The professional approach and data-driven outcomes were impressive.&quot;" data-sw="&quot;Programu ya ustawi ya shirika letu iliyotengenezwa na Psychezone International ilisababisha uboreshaji unaoweza kupimika wa kuridhika kwa wafanyikazi na tija. Mbinu ya kitaalamu na matokeo yanayoendeshwa na data yalikuwa ya kuvutia.&quot;">
+                            "Our organization's wellness program developed by Psychezone International resulted in measurable improvements in employee satisfaction and productivity. The professional approach and data-driven outcomes were impressive."
                         </div>
                     </div>
                     <div class="client-info">
-                        <div class="client-avatar">FW</div>
+                        <div class="client-avatar">JK</div>
                         <div>
-                            <h4>Family Representative</h4>
-                            <p data-en="Multi-generational Family" data-sw="Familia ya Vizazi Vingi">Multi-generational Family</p>
+                            <h4>Juma K.</h4>
+                            <p data-en="Corporate Director" data-sw="Mkurugenzi wa Kampuni">Corporate Director</p>
                         </div>
                     </div>
                 </div>
@@ -1361,17 +1318,17 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section exclusive-contact" id="contact">
+    <section class="section premium-contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Request Private Consultation" data-sw="Omba Usuluhishi wa Kibinafsi">Request Private Consultation</h2>
-                <p data-en="Begin your journey with complete discretion. Our team will contact you through secure channels to arrange a private consultation." data-sw="Anza safari yako kwa uhimili kamili. Timu yetu itawasiliana nawe kupitia njia salama kupanga usuluhishi wa kibinafsi.">Begin your journey with complete discretion. Our team will contact you through secure channels to arrange a private consultation.</p>
+                <h2 data-en="Contact Our Consultancy" data-sw="Wasiliana na Usuluhishi Wetu">Contact Our Consultancy</h2>
+                <p data-en="Schedule a consultation with our professional team to discuss your mental health needs and explore our premium services" data-sw="Panga usuluhishi na timu yetu ya kitaalamu kujadili mahitaji yako ya afya ya akili na kuchunguza huduma zetu za hali ya juu">Schedule a consultation with our professional team to discuss your mental health needs and explore our premium services</p>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 data-en="Our Private Facility" data-sw="Kituo Chetu cha Kibinafsi">Our Private Facility</h3>
-                    <p data-en="Located in a discreet, serene setting in Dar es Salaam, our private facility offers complete confidentiality and luxury amenities for our exclusive clientele." data-sw="Iko katika mazingira ya kihimili, yenye utulivu Dar es Salaam, kituo chetu cha kibinafsi kinatoa usiri kamili na vifaa vya anasa kwa wateja wetu wa kipekee.">Located in a discreet, serene setting in Dar es Salaam, our private facility offers complete confidentiality and luxury amenities for our exclusive clientele.</p>
+                    <h3 data-en="Consultancy Information" data-sw="Taarifa ya Usuluhishi">Consultancy Information</h3>
+                    <p data-en="Our premium facility in Dar es Salaam provides a professional, confidential environment for mental health consultations and therapeutic sessions." data-sw="Kituo chetu cha hali ya juu huko Dar es Salaam kinatoa mazingira ya kitaalamu, ya siri kwa usuluhishi wa afya ya akili na mikutano ya kitiba.">Our premium facility in Dar es Salaam provides a professional, confidential environment for mental health consultations and therapeutic sessions.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -1379,9 +1336,9 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 data-en="Private Location" data-sw="Mahali Pa Kibinafsi">Private Location</h4>
-                                <p>Exclusive Address, Dar es Salaam</p>
-                                <small style="color: var(--charcoal-medium);" data-en="Disclosed upon appointment confirmation" data-sw="Inafichuliwa kwa uthibitisho wa mkutano">Disclosed upon appointment confirmation</small>
+                                <h4 data-en="Professional Facility" data-sw="Kituo cha Kitaalamu">Professional Facility</h4>
+                                <p>Mabatini Road, Dar es Salaam</p>
+                                <small style="color: var(--medium-text);" data-en="Modern, confidential setting" data-sw="Mazingira ya kisasa, ya siri">Modern, confidential setting</small>
                             </div>
                         </div>
                         
@@ -1391,25 +1348,25 @@
                             </div>
                             <div>
                                 <h4 data-en="Consultation Hours" data-sw="Masaa ya Usuluhishi">Consultation Hours</h4>
-                                <p data-en="By appointment only" data-sw="Kwa mkutano tu">By appointment only</p>
-                                <small style="color: var(--charcoal-medium);" data-en="Flexible scheduling available" data-sw="Ratiba rahisi inapatikana">Flexible scheduling available</small>
+                                <p data-en="Monday - Saturday: 8:00 AM - 7:00 PM" data-sw="Jumatatu - Jumamosi: 8:00 asubuhi - 7:00 jioni">Monday - Saturday: 8:00 AM - 7:00 PM</p>
+                                <small style="color: var(--medium-text);" data-en="By appointment" data-sw="Kwa mkutano">By appointment</small>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-lock"></i>
+                                <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <h4 data-en="Secure Communication" data-sw="Mawasiliano Salama">Secure Communication</h4>
-                                <p data-en="Encrypted channels and private consultations" data-sw="Njia zilizosimbwa na usuluhishi wa kibinafsi">Encrypted channels and private consultations</p>
+                                <h4 data-en="Contact Options" data-sw="Chaguo za Mawasiliano">Contact Options</h4>
+                                <p data-en="Phone, secure messaging, email, and in-person consultations" data-sw="Simu, ujumbe salama, barua pepe, na usuluhishi wa moja kwa moja">Phone, secure messaging, email, and in-person consultations</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3 data-en="Request Private Consultation" data-sw="Omba Usuluhishi wa Kibinafsi">Request Private Consultation</h3>
+                    <h3 data-en="Schedule Consultation" data-sw="Panga Usuluhishi">Schedule Consultation</h3>
                     <form id="consultationForm">
                         <div class="form-group">
                             <label for="name" class="form-label" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
@@ -1417,29 +1374,29 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="form-label" data-en="Secure Contact" data-sw="Mawasiliano Salama">Secure Contact</label>
-                            <input type="tel" id="phone" class="form-control" required placeholder="" data-en-placeholder="Preferred secure contact method" data-sw-placeholder="Njia salama ya mawasiliano unayopendelea">
+                            <label for="phone" class="form-label" data-en="Contact Number" data-sw="Nambari ya Mawasiliano">Contact Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="service" class="form-label" data-en="Service Interest" data-sw="Huduma Unayotaka">Service Interest</label>
                             <select id="service" class="form-control" required>
-                                <option value="" data-en="Select exclusive service" data-sw="Chagua huduma ya kipekee">Select exclusive service</option>
-                                <option value="executive" data-en="Executive Wellness" data-sw="Ustawi wa Mtendaji">Executive Wellness</option>
-                                <option value="family" data-en="Private Family Consultations" data-sw="Usuluhishi wa Kibinafsi wa Familia">Private Family Consultations</option>
-                                <option value="retreat" data-en="Luxury Wellness Retreat" data-sw="Kimbilio la Anasa la Ustawi">Luxury Wellness Retreat</option>
-                                <option value="consultation" data-en="Private Consultation" data-sw="Usuluhishi wa Kibinafsi">Private Consultation</option>
+                                <option value="" data-en="Select service of interest" data-sw="Chagua huduma unayotaka">Select service of interest</option>
+                                <option value="individual" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</option>
+                                <option value="family" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</option>
+                                <option value="corporate" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</option>
+                                <option value="consultation" data-en="Initial Consultation" data-sw="Usuluhishi wa Kwanza">Initial Consultation</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="message" class="form-label" data-en="Additional Information" data-sw="Taarifa ya Ziada">Additional Information</label>
-                            <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Please provide any relevant information about your requirements for discretion..." data-sw-placeholder="Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako ya uhimili..."></textarea>
+                            <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Please provide any relevant information about your needs or preferences..." data-sw-placeholder="Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako au upendeleo..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Submit Secure Request" data-sw="Tuma Ombi Salama">
-                            <i class="fas fa-lock"></i>
-                            <span>Submit Secure Request</span>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Submit Request" data-sw="Tuma Ombi">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Submit Request</span>
                         </button>
                     </form>
                 </div>
@@ -1448,12 +1405,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="exclusive-footer">
+    <footer class="premium-footer">
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
                     <div class="logo-text">Psychezone</div>
-                    <p class="footer-description" data-en="An exclusive mental wellness consultancy offering discreet, personalized services to select clients since 2008. Our commitment to confidentiality and excellence defines our approach." data-sw="Usuluhishi wa kipekee wa ustawi wa akili unaotoa huduma za kihimili, zilizobinafsishwa kwa wateja wachagua tangu 2008. Ahadi yetu ya usiri na ubora inafafanua mbinu yetu.">An exclusive mental wellness consultancy offering discreet, personalized services to select clients since 2008. Our commitment to confidentiality and excellence defines our approach.</p>
+                    <span class="logo-tagline">INTERNATIONAL CONSULTANCY</span>
+                    <p class="footer-description" data-en="Providing premium mental health services in Dar es Salaam since 2008. Licensed professionals offering evidence-based care in modern, confidential settings." data-sw="Kutoa huduma za hali ya juu za afya ya akili Dar es Salaam tangu 2008. Wataalamu walioidhinishwa wakitowa utunzaji wenye uthibitisho katika mazingira ya kisasa, ya siri.">Providing premium mental health services in Dar es Salaam since 2008. Licensed professionals offering evidence-based care in modern, confidential settings.</p>
                     
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -1464,23 +1422,23 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-en="Navigation" data-sw="Urambazaji">Navigation</h4>
+                    <h4 data-en="Quick Links" data-sw="Viungo vya Haraka">Quick Links</h4>
                     <ul>
                         <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
                         <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
-                        <li><a href="#process" data-en="Process" data-sw="Mchakato">Process</a></li>
+                        <li><a href="#process" data-en="Our Approach" data-sw="Mbinu Yetu">Our Approach</a></li>
                         <li><a href="#contact" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-en="Exclusive Services" data-sw="Huduma za Kipekee">Exclusive Services</h4>
+                    <h4 data-en="Premium Services" data-sw="Huduma za Hali ya Juu">Premium Services</h4>
                     <ul>
-                        <li><a href="#" data-en="Executive Wellness" data-sw="Ustawi wa Mtendaji">Executive Wellness</a></li>
-                        <li><a href="#" data-en="Private Family Consultations" data-sw="Usuluhishi wa Kibinafsi wa Familia">Private Family Consultations</a></li>
-                        <li><a href="#" data-en="Luxury Wellness Retreats" data-sw="Makimbilio ya Anasa ya Ustawi">Luxury Wellness Retreats</a></li>
-                        <li><a href="#" data-en="Discreet Crisis Management" data-sw="Usimamizi wa Kihimili wa Mgogoro">Discreet Crisis Management</a></li>
-                        <li><a href="#" data-en="Legacy & Wealth Psychology" data-sw="Saikolojia ya Urithi na Utajiri">Legacy & Wealth Psychology</a></li>
+                        <li><a href="#" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</a></li>
+                        <li><a href="#" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</a></li>
+                        <li><a href="#" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</a></li>
+                        <li><a href="#" data-en="Professional Workshops" data-sw="Warsha za Kitaalamu">Professional Workshops</a></li>
+                        <li><a href="#" data-en="Consultation Services" data-sw="Huduma za Usuluhishi">Consultation Services</a></li>
                     </ul>
                 </div>
             </div>
@@ -1488,14 +1446,14 @@
             <div class="footer-divider"></div>
             
             <div class="copyright">
-                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved. Complete confidentiality assured." data-sw="Haki zote zimehifadhiwa. Usiri kamili umehakikishiwa.">All rights reserved. Complete confidentiality assured.</span></p>
+                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved. Professional confidentiality assured." data-sw="Haki zote zimehifadhiwa. Usiri wa kitaalamu umehakikishiwa.">All rights reserved. Professional confidentiality assured.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Exclusive UI Manager
-        class ExclusiveUI {
+        // Premium UI Manager
+        class PremiumUI {
             constructor() {
                 this.currentLang = 'en';
                 this.init();
@@ -1559,7 +1517,7 @@
             
             setupMobileMenu() {
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                const nav = document.querySelector('.exclusive-nav');
+                const nav = document.querySelector('.premium-nav');
                 
                 mobileMenuBtn.addEventListener('click', () => {
                     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
@@ -1567,14 +1525,15 @@
                     nav.style.top = '100%';
                     nav.style.left = '0';
                     nav.style.right = '0';
-                    nav.style.background = 'var(--ivory)';
+                    nav.style.background = 'var(--light-surface)';
                     nav.style.padding = 'var(--space-xl)';
                     nav.style.flexDirection = 'column';
                     nav.style.alignItems = 'flex-start';
                     nav.style.gap = 'var(--space-lg)';
-                    nav.style.boxShadow = 'var(--shadow-luxury)';
-                    nav.style.borderTop = '1px solid var(--cream-dark)';
-                    nav.style.borderBottom = '1px solid var(--cream-dark)';
+                    nav.style.boxShadow = 'var(--elevation-shadow)';
+                    nav.style.borderTop = '1px solid var(--light-border)';
+                    nav.style.borderBottom = '1px solid var(--light-border)';
+                    nav.style.backdropFilter = 'blur(10px)';
                     
                     const navLinks = document.querySelector('.nav-links');
                     if (navLinks) {
@@ -1608,7 +1567,7 @@
                 // Save preference to localStorage
                 localStorage.setItem('psychezone_lang', lang);
                 
-                // Show exclusive notification
+                // Show premium notification
                 this.showNotification(
                     lang === 'en' 
                         ? 'Language updated to English' 
@@ -1656,8 +1615,8 @@
                 if (textarea) {
                     textarea.setAttribute('placeholder', 
                         lang === 'en' 
-                            ? 'Please provide any relevant information about your requirements for discretion...' 
-                            : 'Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako ya uhimili...'
+                            ? 'Please provide any relevant information about your needs or preferences...' 
+                            : 'Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako au upendeleo...'
                     );
                 }
             }
@@ -1672,15 +1631,13 @@
             setupAnimations() {
                 // Header scroll effect
                 window.addEventListener('scroll', () => {
-                    const header = document.querySelector('.exclusive-header');
+                    const header = document.querySelector('.premium-header');
                     if (window.scrollY > 50) {
-                        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                        header.style.background = 'rgba(255, 254, 249, 0.98)';
-                        header.style.padding = '0.5rem 0';
+                        header.style.boxShadow = 'var(--elevation-shadow)';
+                        header.style.background = 'rgba(255, 255, 255, 0.98)';
                     } else {
-                        header.style.boxShadow = 'none';
-                        header.style.background = 'rgba(255, 254, 249, 0.95)';
-                        header.style.padding = '1rem 0';
+                        header.style.boxShadow = 'var(--subtle-shadow)';
+                        header.style.background = 'rgba(255, 255, 255, 0.98)';
                     }
                 });
                 
@@ -1700,22 +1657,20 @@
                 // Observe cards for animation
                 document.querySelectorAll('.service-card, .stat-card, .process-step, .testimonial-card').forEach(card => {
                     card.style.opacity = '0';
-                    card.style.transform = 'translateY(30px)';
-                    card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                     observer.observe(card);
                 });
                 
-                // Gold hover effect for logo
+                // Logo hover effect
                 const logoIcon = document.querySelector('.logo-icon');
                 if (logoIcon) {
                     logoIcon.addEventListener('mouseenter', () => {
-                        logoIcon.style.transform = 'scale(1.1)';
-                        logoIcon.style.boxShadow = '0 0 0 2px var(--luxury-gold)';
+                        logoIcon.style.transform = 'rotate(5deg) scale(1.1)';
                     });
                     
                     logoIcon.addEventListener('mouseleave', () => {
-                        logoIcon.style.transform = 'scale(1)';
-                        logoIcon.style.boxShadow = 'none';
+                        logoIcon.style.transform = 'rotate(0) scale(1)';
                     });
                 }
             }
@@ -1730,8 +1685,8 @@
                 
                 // Show success message
                 const message = this.currentLang === 'en'
-                    ? `Thank you ${name}. Your private consultation request for ${serviceText} has been received securely. Our team will contact you through encrypted channels within 24 hours.`
-                    : `Asante ${name}. Ombi lako la usuluhishi wa kibinafsi kwa ${serviceText} limepokelewa kwa usalama. Timu yetu itawasiliana nawe kupitia njia zilizosimbwa ndani ya masaa 24.`;
+                    ? `Thank you ${name}. Your consultation request for ${serviceText} has been received. Our professional team will contact you within 24 hours.`
+                    : `Asante ${name}. Ombi lako la usuluhishi kwa ${serviceText} limepokelewa. Timu yetu ya kitaalamu itawasiliana nawe ndani ya masaa 24.`;
                 
                 this.showNotification(message, 'success');
                 
@@ -1742,8 +1697,8 @@
                 const textarea = document.getElementById('message');
                 textarea.setAttribute('placeholder', 
                     this.currentLang === 'en' 
-                        ? 'Please provide any relevant information about your requirements for discretion...' 
-                        : 'Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako ya uhimili...'
+                        ? 'Please provide any relevant information about your needs or preferences...' 
+                        : 'Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako au upendeleo...'
                 );
             }
             
@@ -1754,23 +1709,23 @@
                     position: fixed;
                     bottom: 30px;
                     right: 30px;
-                    background: var(--charcoal);
-                    color: var(--ivory);
+                    background: ${type === 'success' ? 'var(--professional-teal)' : 'var(--premium-navy)'};
+                    color: white;
                     padding: 1.25rem 1.75rem;
-                    border-radius: var(--radius-sm);
-                    box-shadow: var(--shadow-luxury);
+                    border-radius: var(--radius-md);
+                    box-shadow: var(--elevation-shadow);
                     z-index: 10000;
-                    animation: slideIn 0.4s ease;
+                    animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                     max-width: 400px;
-                    font-weight: 400;
+                    font-weight: 500;
                     display: flex;
                     align-items: center;
                     gap: 0.75rem;
-                    border: 1px solid var(--luxury-gold);
+                    border-left: 4px solid var(--accent-gold);
                 `;
                 
                 notification.innerHTML = `
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}" style="color: var(--luxury-gold);"></i>
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
                     <span>${message}</span>
                 `;
                 
@@ -1778,7 +1733,7 @@
                 
                 // Remove after 5 seconds
                 setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.4s ease';
+                    notification.style.animation = 'slideOut 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
                     setTimeout(() => {
                         document.body.removeChild(notification);
                     }, 400);
@@ -1805,7 +1760,7 @@
         
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            window.exclusiveUI = new ExclusiveUI();
+            window.premiumUI = new PremiumUI();
         });
     </script>
 </body>
