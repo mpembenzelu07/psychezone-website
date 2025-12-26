@@ -1,28 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en" id="htmlTag">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychezone International | Mental Health Clinic & Counseling Services</title>
+    <title>Psychezone International | Premium Mental Health Clinic Dar es Salaam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #3a86b5;
-            --primary-light: #5fa8d3;
-            --primary-dark: #1e5a8a;
-            --secondary: #8ecae6;
-            --accent: #ffb703;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-            --success: #2ecc71;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            /* Modern Color Palette */
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #8b5cf6;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            
+            /* Shadows & Effects */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Transitions */
+            --transition-fast: all 0.15s ease;
             --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-xxl: 4rem;
         }
 
         * {
@@ -31,77 +55,118 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #ffffff;
+        html {
+            scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
             font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--gray);
+            margin-bottom: var(--space);
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--space-lg);
         }
 
+        /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius);
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
-            text-align: center;
+            border: none;
+            outline: none;
+            position: relative;
+            overflow: hidden;
         }
 
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--light-gray);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
 
         .btn-accent {
-            background-color: var(--accent);
-            color: var(--dark);
-        }
-
-        .btn-accent:hover {
-            background-color: #e6a500;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--accent), #a78bfa);
             color: white;
         }
 
-        /* Header Styles */
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition);
         }
 
@@ -109,75 +174,83 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 1.5rem var(--space-lg);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            text-decoration: none;
         }
 
         .logo-icon {
-            color: var(--primary);
-            font-size: 28px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
         }
 
         .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: var(--dark);
         }
 
         .nav-menu {
             display: flex;
-            list-style: none;
-            gap: 30px;
             align-items: center;
+            gap: 2.5rem;
+            list-style: none;
         }
 
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark);
+        .nav-link {
             font-weight: 500;
-            transition: var(--transition);
+            color: var(--dark);
+            text-decoration: none;
             position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
         }
 
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-
-        .nav-menu a:after {
+        .nav-link::after {
             content: '';
             position: absolute;
+            bottom: 0;
+            left: 0;
             width: 0;
             height: 2px;
             background: var(--primary);
-            left: 0;
-            bottom: -5px;
             transition: var(--transition);
         }
 
-        .nav-menu a:hover:after {
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
             width: 100%;
         }
 
         /* Language Switcher */
         .language-switcher {
             position: relative;
-            margin-left: 10px;
         }
 
         .language-btn {
             display: flex;
             align-items: center;
             gap: 8px;
+            padding: 0.75rem 1rem;
             background: var(--light);
             border: 1px solid var(--light-gray);
-            border-radius: 4px;
-            padding: 8px 15px;
+            border-radius: var(--radius-sm);
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
@@ -185,15 +258,7 @@
 
         .language-btn:hover {
             background: var(--light-gray);
-        }
-
-        .language-btn i {
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .language-btn.active i {
-            transform: rotate(180deg);
+            border-color: var(--primary);
         }
 
         .language-dropdown {
@@ -201,20 +266,21 @@
             top: 100%;
             right: 0;
             background: white;
-            border-radius: 4px;
-            box-shadow: var(--shadow);
-            min-width: 140px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-xl);
+            min-width: 160px;
             display: none;
-            z-index: 100;
+            z-index: 1000;
             overflow: hidden;
+            margin-top: 8px;
         }
 
         .language-dropdown.active {
             display: block;
-            animation: fadeIn 0.3s ease;
+            animation: slideDown 0.3s ease;
         }
 
-        @keyframes fadeIn {
+        @keyframes slideDown {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
@@ -222,10 +288,10 @@
         .language-option {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 12px 15px;
+            gap: 12px;
+            padding: 1rem 1.25rem;
             cursor: pointer;
-            transition: var(--transition);
+            transition: var(--transition-fast);
             border-bottom: 1px solid var(--light-gray);
         }
 
@@ -238,56 +304,80 @@
         }
 
         .language-option.active {
-            background: var(--primary-light);
-            color: white;
+            background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), transparent);
+            color: var(--primary);
+            font-weight: 600;
         }
 
         .language-flag {
-            width: 20px;
-            height: 15px;
+            width: 24px;
+            height: 16px;
             object-fit: cover;
             border-radius: 2px;
+            box-shadow: var(--shadow-sm);
         }
 
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            font-size: 24px;
-            color: var(--primary);
+            font-size: 1.5rem;
+            color: var(--dark);
             cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--light);
         }
 
         /* Hero Section */
         .hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(135deg, rgba(142, 202, 230, 0.1) 0%, rgba(58, 134, 181, 0.1) 100%);
+            padding: 12rem 0 8rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             position: relative;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%25232563eb' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
         }
 
         .hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-content h1 {
-            font-size: 3.2rem;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--dark) 30%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero-content p {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
             color: var(--gray);
-            margin-bottom: 30px;
         }
 
         .hero-btns {
             display: flex;
-            gap: 15px;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
@@ -297,280 +387,376 @@
 
         .hero-image img {
             width: 100%;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition-slow);
+        }
+
+        .hero-image img:hover {
+            transform: perspective(1000px) rotateY(0deg);
         }
 
         .rating-badge {
             position: absolute;
-            bottom: 20px;
-            right: -15px;
+            bottom: -1.5rem;
+            right: -1.5rem;
             background: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .rating-badge i {
-            color: var(--accent);
-            font-size: 24px;
+            color: var(--warning);
+            font-size: 2rem;
         }
 
         .rating-text strong {
-            font-size: 1.2rem;
-            color: var(--primary-dark);
+            font-size: 1.5rem;
+            color: var(--dark);
+            display: block;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 500;
         }
 
         /* Services Section */
         .services {
-            padding: 100px 0;
-            background-color: var(--light);
+            padding: 8rem 0;
+            background: white;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            max-width: 800px;
+            margin: 0 auto 5rem;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-dark);
-        }
-
-        .section-header p {
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--gray);
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
             background: white;
-            border-radius: 10px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--light-gray);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
         }
 
         .service-icon {
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 32px;
+            font-size: 2.5rem;
         }
 
         .service-content {
-            padding: 30px;
+            padding: 2rem;
         }
 
         .service-content h3 {
-            color: var(--primary-dark);
-            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
         }
 
-        /* Why Choose Us Section */
-        .why-us {
-            padding: 100px 0;
-            background-color: white;
+        /* Process Section */
+        .process {
+            padding: 8rem 0;
+            background: var(--light);
         }
 
-        .why-us-grid {
+        .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            counter-reset: step-counter;
         }
 
-        .why-us-card {
-            text-align: center;
-            padding: 40px 30px;
-            border-radius: 10px;
+        .process-step {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            position: relative;
             transition: var(--transition);
         }
 
-        .why-us-card:hover {
-            background-color: var(--light);
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .why-us-icon {
-            font-size: 48px;
-            color: var(--primary);
-            margin-bottom: 20px;
+        .process-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            top: -1.5rem;
+            left: 2rem;
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
         }
 
-        /* Testimonials Section */
+        .process-step h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
         .testimonials {
-            padding: 100px 0;
-            background-color: var(--light);
+            padding: 8rem 0;
+            background: white;
         }
 
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
         .testimonial-card {
             background: white;
-            padding: 40px;
-            border-radius: 10px;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow);
-            margin: 0 20px;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
         }
 
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 25px;
             color: var(--gray);
-            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -1rem;
+            font-size: 4rem;
+            color: var(--primary-light);
+            opacity: 0.3;
+            font-family: serif;
         }
 
         .client-info {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 1rem;
         }
 
         .client-avatar {
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background-color: var(--light-gray);
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            color: var(--primary);
-        }
-
-        .client-details h4 {
-            margin-bottom: 5px;
-            color: var(--primary-dark);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         /* Contact Section */
         .contact {
-            padding: 100px 0;
-            background-color: white;
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
         }
 
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 4rem;
         }
 
-        .contact-info h3 {
-            color: var(--primary-dark);
-            margin-bottom: 20px;
+        .contact-info h2 {
+            margin-bottom: 1.5rem;
         }
 
         .contact-details {
-            margin-top: 40px;
+            margin-top: 3rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-lg);
         }
 
         .contact-icon {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            background-color: var(--light);
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary);
-            font-size: 20px;
+            color: white;
+            font-size: 1.25rem;
         }
 
         .contact-form {
-            background-color: var(--light);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
         }
 
-        .form-group label {
+        .form-label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             font-weight: 500;
+            color: var(--dark);
         }
 
         .form-control {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--light-gray);
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
             transition: var(--transition);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary-dark);
+            background: var(--dark);
             color: white;
-            padding: 70px 0 30px;
+            padding: 5rem 0 2rem;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
+        .footer-brand .logo-text {
             color: white;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .footer-about p {
-            margin-bottom: 20px;
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
         }
 
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 1rem;
         }
 
         .social-link {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -580,14 +766,14 @@
         }
 
         .social-link:hover {
-            background-color: var(--primary-light);
+            background: var(--primary);
             transform: translateY(-3px);
         }
 
         .footer-links h4 {
             color: white;
-            margin-bottom: 25px;
-            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
         }
 
         .footer-links ul {
@@ -595,40 +781,40 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 0.75rem;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
+            display: inline-block;
         }
 
         .footer-links a:hover {
             color: white;
-            padding-left: 5px;
+            transform: translateX(5px);
         }
 
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
+            
             .hero-container, .contact-container {
                 grid-template-columns: 1fr;
             }
             
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -639,15 +825,14 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background-color: white;
+                background: white;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
-                padding-top: 50px;
+                padding-top: 3rem;
                 transition: var(--transition);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-                z-index: 999;
-                gap: 25px;
+                box-shadow: var(--shadow-xl);
+                gap: 1.5rem;
             }
             
             .nav-menu.active {
@@ -659,42 +844,49 @@
             }
             
             .language-switcher {
-                margin-top: 20px;
+                margin-top: 1rem;
             }
             
-            .hero-content h1 {
-                font-size: 2.3rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
+            .hero {
+                padding: 9rem 0 5rem;
             }
             
             .hero-btns {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
             }
             
             .rating-badge {
                 position: relative;
                 right: 0;
                 bottom: 0;
-                margin-top: 20px;
+                margin-top: 2rem;
                 justify-content: center;
+            }
+            
+            .services, .process, .testimonials, .contact {
+                padding: 5rem 0;
             }
         }
 
-        @media (max-width: 576px) {
-            .hero-content h1 {
-                font-size: 2rem;
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .container {
+                padding: 0 var(--space);
             }
             
-            .service-card, .testimonial-card, .contact-form {
-                padding: 25px;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
             
-            .hero, .services, .why-us, .testimonials, .contact {
-                padding: 80px 0;
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .hero-image img {
+                transform: none;
             }
         }
     </style>
@@ -703,27 +895,30 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-brain logo-icon"></i>
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
                 <span class="logo-text">Psychezone International</span>
-            </div>
+            </a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
             
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
-                <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
-                <li><a href="#why-us" data-en="Why Choose Us" data-sw="Kwanini Utuchague">Why Choose Us</a></li>
-                <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
-                <li><a href="#contact" data-en="Contact" data-sw="Wasiliana">Contact</a></li>
-                <li><a href="#" class="btn btn-outline" data-en="Book Appointment" data-sw="Panga Mkutano">Book Appointment</a></li>
+                <li><a href="#home" class="nav-link" data-en="Home" data-sw="Nyumbani">Home</a></li>
+                <li><a href="#services" class="nav-link" data-en="Services" data-sw="Huduma">Services</a></li>
+                <li><a href="#process" class="nav-link" data-en="Process" data-sw="Mchakato">Process</a></li>
+                <li><a href="#testimonials" class="nav-link" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary" data-en="Book Session" data-sw="Panga Mkutano">Book Session</a></li>
                 
                 <!-- Language Switcher -->
                 <li class="language-switcher">
                     <div class="language-btn" id="languageBtn">
-                        <span id="currentLanguage">English</span>
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English" class="language-flag">
+                        <span id="currentLanguage">EN</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="language-dropdown" id="languageDropdown">
@@ -745,25 +940,56 @@
     <section class="hero" id="home">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 data-en="Mental Health Support in Dar es Salaam" data-sw="Usaidizi wa Afya ya Akili Dar es Salaam">Mental Health Support in Dar es Salaam</h1>
-                <p data-en="Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance." data-sw="Psychezone International inatoa ushauri wa kitaalam, tiba ya akili, na huduma za afya ya akili kwa watu binafsi, familia, na wateja wa kimkakati wanaotafuta usaidizi wa kihemko na mwongozo wa kitiba.">Psychezone International provides professional counseling, psychotherapy, and mental health services for individuals, families, and corporate clients seeking emotional support and therapeutic guidance.</p>
+                <h1 data-en="Transform Your Mental Wellbeing in Dar es Salaam" data-sw="Badilisha Ustawi Wako wa Kiakili Dar es Salaam">Transform Your Mental Wellbeing in Dar es Salaam</h1>
+                <p data-en="Psychezone International provides premium mental health services with licensed professionals. We offer confidential counseling, psychotherapy, and wellness programs tailored to your needs." data-sw="Psychezone International inatoa huduma bora za afya ya akili na wataalamu walioidhinishwa. Tunatoa ushauri wa siri, tiba ya akili, na programu za ustawi zilizobinafsishwa kulingana na mahitaji yako.">Psychezone International provides premium mental health services with licensed professionals. We offer confidential counseling, psychotherapy, and wellness programs tailored to your needs.</p>
                 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn" data-en="Book Appointment" data-sw="Panga Mkutano">Book Appointment</a>
-                    <a href="#services" class="btn btn-accent" data-en="Our Services" data-sw="Huduma Zetu">Our Services</a>
+                    <a href="#contact" class="btn btn-primary" data-en="Start Your Journey" data-sw="Anza Safari Yako">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Start Your Journey</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary" data-en="Explore Services" data-sw="Gundua Huduma">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Explore Services</span>
+                    </a>
                 </div>
                 
                 <div class="rating-badge">
                     <i class="fas fa-star"></i>
                     <div class="rating-text">
-                        <strong>5.0</strong> <span data-en="Rating" data-sw>Rating</span><br>
-                        <span data-en="12+ Reviews" data-sw="Tathmini 12+">12+ Reviews</span>
+                        <strong>5.0</strong>
+                        <span data-en="Excellent Rating" data-sw="Ukadiriaji Bora">Excellent Rating</span>
+                        <span data-en="12+ Client Reviews" data-sw="Tathmini 12+ za Wateja">12+ Client Reviews</span>
                     </div>
                 </div>
             </div>
             
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional counseling session">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional therapy session">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" data-en="Clients Helped" data-sw="Wateja Waliokubaliwa">Clients Helped</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label" data-en="Satisfaction Rate" data-sw="Kiwango cha Kuridhika">Satisfaction Rate</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" data-en="Support Available" data-sw="Msaada Unaopatikana">Support Available</span>
+                </div>
             </div>
         </div>
     </section>
@@ -772,8 +998,8 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Our Services" data-sw="Huduma Zetu">Our Services</h2>
-                <p data-en="We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients." data-sw="Tunatoa huduma kamili za afya ya akili na ushauri zilizobinafsishwa kukidhi mahitaji ya watu binafsi, familia, na wateja wa kimkakati.">We offer comprehensive mental health and counseling services tailored to meet the needs of individuals, families, and corporate clients.</p>
+                <h2 data-en="Premium Mental Health Services" data-sw="Huduma Bora za Afya ya Akili">Premium Mental Health Services</h2>
+                <p data-en="Comprehensive therapeutic solutions for individuals, families, and organizations in Tanzania." data-sw="Suluhisho kamili za kitiba kwa watu binafsi, familia, na mashirika nchini Tanzania.">Comprehensive therapeutic solutions for individuals, families, and organizations in Tanzania.</p>
             </div>
             
             <div class="services-grid">
@@ -782,8 +1008,8 @@
                         <i class="fas fa-comments"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</h3>
-                        <p data-en="Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support." data-sw="Mikutano ya kitaalam binafsi kukusaidia kukabiliana na changamoto za kihemko, wasiwasi, unyogovu, na mabadiliko ya maisha kwa msaada wa siri.">Professional one-on-one sessions to help you navigate emotional challenges, anxiety, depression, and life transitions with confidential support.</p>
+                        <h3 data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</h3>
+                        <p data-en="Personalized one-on-one sessions with licensed therapists to address anxiety, depression, trauma, and life transitions." data-sw="Mikutano ya kibinafsi na wataalamu walioidhinishwa kushughulikia wasiwasi, unyogovu, trauma, na mabadiliko ya maisha.">Personalized one-on-one sessions with licensed therapists to address anxiety, depression, trauma, and life transitions.</p>
                     </div>
                 </div>
                 
@@ -792,8 +1018,8 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</h3>
-                        <p data-en="Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding." data-sw="Kuimarisha mahusiano ya familia na kuboresha mawasiliano kupitia mikutano ya tiba inayoelekezwa inayoshughulikia migogoro na kujenga uelewano.">Strengthen family relationships and improve communication through guided therapy sessions that address conflicts and build understanding.</p>
+                        <h3 data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</h3>
+                        <p data-en="Strengthen family bonds and improve communication with guided sessions that resolve conflicts and build understanding." data-sw="Kuimarisha uhusiano wa familia na kuboresha mawasiliano kwa mikutano inayoelekezwa inayomaliza migogoro na kujenga uelewano.">Strengthen family bonds and improve communication with guided sessions that resolve conflicts and build understanding.</p>
                     </div>
                 </div>
                 
@@ -802,80 +1028,72 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</h3>
-                        <p data-en="Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs." data-sw="Boresha afya ya akili mahali pa kazi, mienendo ya timu, na ustawi wa wafanyikazi kupitia semina na mipango ya mafunzo iliyobinafsishwa.">Improve workplace mental health, team dynamics, and employee wellbeing through tailored seminars and training programs.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</h3>
-                        <p data-en="Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path." data-sw="Mwongozo wa kukusaidia kuweka na kufikia malengo ya kibinafsi na ya kitaalam, kushinda vikwazo, na kuunda njia bora ya maisha.">Guidance to help you set and achieve personal and professional goals, overcome obstacles, and create a more fulfilling life path.</p>
+                        <h3 data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</h3>
+                        <p data-en="Enhance workplace mental health through workshops, stress management programs, and employee assistance programs." data-sw="Boresha afya ya akili mahali pa kazi kupitia warsha, programu za usimamizi wa msongo, na programu ya msaada kwa wafanyikazi.">Enhance workplace mental health through workshops, stress management programs, and employee assistance programs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us" id="why-us">
+    <!-- Process Section -->
+    <section class="process" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Why Choose Psychezone International" data-sw="Kwanini Uchague Psychezone International">Why Choose Psychezone International</h2>
-                <p data-en="In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing." data-sw="Nchini Tanzania, ambapo huduma za afya ya akili ni chache, tunatoa utunzaji wa kitaalam unaopatikana kusaidia ustawi wako wa kihemko.">In Tanzania, where mental health services are limited, we provide accessible, professional care to support your emotional wellbeing.</p>
+                <h2 data-en="Your Healing Journey" data-sw="Safari Yako ya Uponyaji">Your Healing Journey</h2>
+                <p data-en="A structured approach to mental wellness with proven results." data-sw="Njia iliyopangwa kwa ustawi wa kiakili na matokeo yaliyothibitishwa.">A structured approach to mental wellness with proven results.</p>
             </div>
             
-            <div class="why-us-grid">
-                <div class="why-us-card">
-                    <div class="why-us-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3 data-en="Expert Practitioners" data-sw="Wataalam Walioidhinishwa">Expert Practitioners</h3>
-                    <p data-en="Our team consists of licensed and experienced mental health professionals dedicated to your care." data-sw="Timu yetu ina wataalam wa afya ya akili walioidhinishwa na wenye uzoefu waliowekwa kwenye utunzaji wako.">Our team consists of licensed and experienced mental health professionals dedicated to your care.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3 data-en="Initial Consultation" data-sw="Majadiliano ya Kwanza">Initial Consultation</h3>
+                    <p data-en="Comprehensive assessment to understand your needs and create a personalized treatment plan." data-sw="Tathmini kamili ya kuelewa mahitaji yako na kuunda mpango wa matibabu uliobinafsishwa.">Comprehensive assessment to understand your needs and create a personalized treatment plan.</p>
                 </div>
                 
-                <div class="why-us-card">
-                    <div class="why-us-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 data-en="Holistic Approach" data-sw="Mbinu ya Kujumuisha">Holistic Approach</h3>
-                    <p data-en="We address mental health from multiple perspectives, considering emotional, psychological, and social factors." data-sw="Tunashughulikia afya ya akili kutoka kwa mtazamo mbalimbali, tukizingatia mambo ya kihemko, kisaikolojia, na kijamii.">We address mental health from multiple perspectives, considering emotional, psychological, and social factors.</p>
+                <div class="process-step">
+                    <h3 data-en="Personalized Therapy" data-sw="Tiba Iliyobinafsishwa">Personalized Therapy</h3>
+                    <p data-en="Regular sessions with your assigned therapist using evidence-based approaches for sustainable results." data-sw="Mikutano ya kawaida na mtaalamu wako aliyepewa kwa kutumia mbinu zilizothibitishwa kwa matokeo endelevu.">Regular sessions with your assigned therapist using evidence-based approaches for sustainable results.</p>
                 </div>
                 
-                <div class="why-us-card">
-                    <div class="why-us-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 data-en="Confidential & Safe" data-sw="Siri na Salama">Confidential & Safe</h3>
-                    <p data-en="Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment." data-sw="Faragha yako ni kipaumbele chetu. Mikutano yote inafanyika katika mazingira salama, yasiyo na kuhukumu.">Your privacy is our priority. All sessions are conducted in a secure, non-judgmental environment.</p>
+                <div class="process-step">
+                    <h3 data-en="Progress Tracking" data-sw="Ufuatiliaji wa Maendeleo">Progress Tracking</h3>
+                    <p data-en="Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes." data-sw="Tathmini endelevu na urekebishaji wa mpango wako wa matibabu ili kuhakikisha matokeo bora.">Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Client Testimonials" data-sw="Usahihi wa Wateja">Client Testimonials</h2>
-                <p data-en="Hear from individuals who have found support and transformation through our services." data-sw="Sikiliza kutoka kwa watu ambao wamepata usaidizi na mabadiliko kupitia huduma zetu.">Hear from individuals who have found support and transformation through our services.</p>
+                <h2 data-en="Client Success Stories" data-sw="Hadithi za Mafanikio ya Wateja">Client Success Stories</h2>
+                <p data-en="Real experiences from individuals who transformed their lives with our support." data-sw="Uzoefu halisi kutoka kwa watu ambao walibadilisha maisha yao kwa msaada wetu.">Real experiences from individuals who transformed their lives with our support.</p>
             </div>
             
-            <div class="testimonial-slider">
+            <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-text" data-en="&quot;The counseling sessions at Psychezone International helped me navigate a difficult period of anxiety. The therapist was understanding and provided practical tools that I still use today.&quot;" data-sw="&quot;Mikutano ya ushauri katika Psychezone International ilinisaidia kukabiliana na kipindi kigumu cha wasiwasi. Mtaalamu alikuwa mwenye kuelewa na akatoa zana muhimu ambazo bado ninazitumia leo.&quot;">
-                        "The counseling sessions at Psychezone International helped me navigate a difficult period of anxiety. The therapist was understanding and provided practical tools that I still use today."
+                    <div class="testimonial-text" data-en="&quot;After struggling with anxiety for years, the team at Psychezone helped me regain control of my life. The personalized approach made all the difference.&quot;" data-sw="&quot;Baada ya kukabiliana na wasiwasi kwa miaka mingi, timu ya Psychezone ilinisaidia kurudisha udhibiti wa maisha yangu. Mbinu iliyobinafsishwa ilifanya tofauti yote.&quot;">
+                        "After struggling with anxiety for years, the team at Psychezone helped me regain control of my life. The personalized approach made all the difference."
                     </div>
                     <div class="client-info">
-                        <div class="client-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="client-details">
+                        <div class="client-avatar">SM</div>
+                        <div>
                             <h4>Sarah M.</h4>
-                            <p data-en="Individual Therapy Client" data-sw="Mteja wa Tiba ya Kibinafsi">Individual Therapy Client</p>
+                            <p data-en="Anxiety Management" data-sw="Usimamizi wa Wasiwasi">Anxiety Management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text" data-en="&quot;The family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully.&quot;" data-sw="&quot;Mikutano ya ushauri wa familia ilibadilisha uhusiano wetu. Tulijifunza kuwasiliana kwa ufanisi na kutatua migogoro kwa amani.&quot;">
+                        "The family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">JK</div>
+                        <div>
+                            <h4>Juma K.</h4>
+                            <p data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</p>
                         </div>
                     </div>
                 </div>
@@ -887,8 +1105,8 @@
     <section class="contact" id="contact">
         <div class="container contact-container">
             <div class="contact-info">
-                <h2 data-en="Book Your Appointment" data-sw="Panga Mkutano Wako">Book Your Appointment</h2>
-                <p data-en="Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services." data-sw="Chukua hatua ya kwanza kuelekea ustawi wa kihemko. Wasiliana nasi kupanga mkutano au kujifunza zaidi kuhusu huduma zetu.">Take the first step toward emotional wellbeing. Contact us to schedule a session or learn more about our services.</p>
+                <h2 data-en="Begin Your Healing Journey Today" data-sw="Anza Safari Yako ya Uponyaji Leo">Begin Your Healing Journey Today</h2>
+                <p data-en="Take the first step towards better mental health. Our team is ready to support you with compassionate, professional care." data-sw="Chukua hatua ya kwanza kuelekea afya bora ya akili. Timu yetu iko tayari kukusaidia kwa utunzaji wa huruma na kitaalamu.">Take the first step towards better mental health. Our team is ready to support you with compassionate, professional care.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -896,18 +1114,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4 data-en="Location" data-sw="Mahali">Location</h4>
-                            <p>Mabatini Rd, Dar es Salaam, Tanzania</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4 data-en="Phone & WhatsApp" data-sw="Simu & WhatsApp">Phone & WhatsApp</h4>
-                            <p data-en="Available through our Taplink page" data-sw="Inapatikana kupitia ukurasa wetu wa Taplink">Available through our Taplink page</p>
+                            <h4 data-en="Clinic Location" data-sw="Eneo la Kliniki">Clinic Location</h4>
+                            <p>Mabatini Road, Dar es Salaam, Tanzania</p>
                         </div>
                     </div>
                     
@@ -917,42 +1125,55 @@
                         </div>
                         <div>
                             <h4 data-en="Working Hours" data-sw="Masaa ya Kazi">Working Hours</h4>
-                            <p data-en="Weekdays & Saturday: 8:00 AM – 6:00 PM" data-sw="Jumatatu hadi Ijumaa & Jumamosi: 8:00 asubuhi – 6:00 usiku">Weekdays & Saturday: 8:00 AM – 6:00 PM</p>
+                            <p data-en="Mon-Sat: 8:00 AM - 6:00 PM" data-sw="Jum-Ijum: 8:00 asubuhi - 6:00 usiku">Mon-Sat: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 data-en="Contact Channels" data-sw="Njia za Mawasiliano">Contact Channels</h4>
+                            <p data-en="Phone, WhatsApp & Online Booking" data-sw="Simu, WhatsApp & Upangaji Mtandaoni">Phone, WhatsApp & Online Booking</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="contact-form">
-                <h3 data-en="Send Us a Message" data-sw="Tutumie Ujumbe">Send Us a Message</h3>
+                <h3 data-en="Schedule Your Consultation" data-sw="Panga Majadiliano Yako">Schedule Your Consultation</h3>
                 <form id="appointmentForm">
                     <div class="form-group">
-                        <label for="name" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
+                        <label for="name" class="form-label" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
                         <input type="text" id="name" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="phone" data-en="Phone Number" data-sw="Nambari ya Simu">Phone Number</label>
+                        <label for="phone" class="form-label" data-en="Phone Number" data-sw="Nambari ya Simu">Phone Number</label>
                         <input type="tel" id="phone" class="form-control" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="service" data-en="Service Interested In" data-sw="Huduma Unayopenda">Service Interested In</label>
+                        <label for="service" class="form-label" data-en="Service Interest" data-sw="Huduma Unayotaka">Service Interest</label>
                         <select id="service" class="form-control" required>
                             <option value="" data-en="Select a service" data-sw="Chagua huduma">Select a service</option>
-                            <option value="counseling" data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</option>
-                            <option value="family" data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</option>
-                            <option value="corporate" data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</option>
-                            <option value="coaching" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</option>
+                            <option value="individual" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</option>
+                            <option value="family" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</option>
+                            <option value="corporate" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</option>
+                            <option value="other" data-en="Other Inquiry" data-sw="Uchunguzi Mwingine">Other Inquiry</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" data-en="Message" data-sw="Ujumbe">Message</label>
-                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us about what you'd like to address..." data-sw-placeholder="Tuambie kuhusu kile ungependa kushughulikiwa..."></textarea>
+                        <label for="message" class="form-label" data-en="Your Message" data-sw="Ujumbe Wako">Your Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us what you're seeking support with..." data-sw-placeholder="Tuambie unatafuta msaada gani..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn" style="width: 100%;" data-en="Send Message" data-sw="Tuma Ujumbe">Send Message</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Request Consultation" data-sw="Omba Majadiliano">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Request Consultation</span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -962,14 +1183,16 @@
     <footer>
         <div class="container">
             <div class="footer-container">
-                <div class="footer-about">
-                    <div class="footer-logo">Psychezone International</div>
-                    <p data-en="Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania." data-sw="Kutoa huduma za kitaalam za afya ya akili, ushauri, na tiba ya akili huko Dar es Salaam, Tanzania.">Providing professional mental health, counseling, and psychotherapy services in Dar es Salaam, Tanzania.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-link"></i></a>
+                <div class="footer-brand">
+                    <div class="logo-text">Psychezone International</div>
+                    <div class="footer-about">
+                        <p data-en="Leading mental health clinic in Dar es Salaam providing premium counseling and psychotherapy services since 2008." data-sw="Kliniki inayoongoza ya afya ya akili Dar es Salaam inayotoa huduma bora za ushauri na tiba ya akili tangu 2008.">Leading mental health clinic in Dar es Salaam providing premium counseling and psychotherapy services since 2008.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-link"></i></a>
+                        </div>
                     </div>
                 </div>
                 
@@ -978,20 +1201,20 @@
                     <ul>
                         <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
                         <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
-                        <li><a href="#why-us" data-en="Why Choose Us" data-sw="Kwanini Utuchague">Why Choose Us</a></li>
+                        <li><a href="#process" data-en="Our Process" data-sw="Mchakato Wetu">Our Process</a></li>
                         <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
-                        <li><a href="#contact" data-en="Contact" data-sw="Wasiliana">Contact</a></li>
+                        <li><a href="#contact" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4 data-en="Our Services" data-sw="Huduma Zetu">Our Services</h4>
                     <ul>
-                        <li><a href="#" data-en="Counseling & Psychotherapy" data-sw="Ushauri & Tiba ya Akili">Counseling & Psychotherapy</a></li>
-                        <li><a href="#" data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</a></li>
-                        <li><a href="#" data-en="Corporate Workshops" data-sw="Warsha za Kikampuni">Corporate Workshops</a></li>
+                        <li><a href="#" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</a></li>
+                        <li><a href="#" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</a></li>
+                        <li><a href="#" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</a></li>
+                        <li><a href="#" data-en="Workshops" data-sw="Warsha">Workshops</a></li>
                         <li><a href="#" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</a></li>
-                        <li><a href="#" data-en="Seminars & Training" data-sw="Semina na Mafunzo">Seminars & Training</a></li>
                     </ul>
                 </div>
             </div>
@@ -1003,151 +1226,342 @@
     </footer>
 
     <script>
-        // Language management
-        let currentLang = 'en';
-        
-        // Language switcher toggle
-        const languageBtn = document.getElementById('languageBtn');
-        const languageDropdown = document.getElementById('languageDropdown');
-        const currentLanguageText = document.getElementById('currentLanguage');
-        
-        languageBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            languageDropdown.classList.toggle('active');
-            languageBtn.classList.toggle('active');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
-                languageDropdown.classList.remove('active');
-                languageBtn.classList.remove('active');
+        // Professional Language Management System
+        class LanguageManager {
+            constructor() {
+                this.currentLang = 'en';
+                this.init();
             }
-        });
-        
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', () => {
-                const selectedLang = option.getAttribute('data-lang');
+            
+            init() {
+                this.bindEvents();
+                this.loadLanguagePreference();
+            }
+            
+            bindEvents() {
+                // Language switcher toggle
+                const languageBtn = document.getElementById('languageBtn');
+                const languageDropdown = document.getElementById('languageDropdown');
                 
-                if (selectedLang !== currentLang) {
-                    // Update active state
-                    document.querySelectorAll('.language-option').forEach(opt => {
-                        opt.classList.remove('active');
-                    });
-                    option.classList.add('active');
-                    
-                    // Update current language text
-                    currentLanguageText.textContent = option.querySelector('span').textContent;
-                    
-                    // Change language
-                    changeLanguage(selectedLang);
-                    
-                    // Update HTML lang attribute
-                    document.getElementById('htmlTag').setAttribute('lang', selectedLang);
-                    
-                    // Close dropdown
-                    languageDropdown.classList.remove('active');
-                    languageBtn.classList.remove('active');
-                }
-            });
-        });
-        
-        // Function to change language
-        function changeLanguage(lang) {
-            currentLang = lang;
-            
-            // Update all elements with data attributes
-            document.querySelectorAll('[data-en], [data-sw]').forEach(element => {
-                if (element.hasAttribute(`data-${lang}`)) {
-                    const text = element.getAttribute(`data-${lang}`);
-                    
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        // Handle placeholders
-                        if (element.hasAttribute(`data-${lang}-placeholder`)) {
-                            element.setAttribute('placeholder', element.getAttribute(`data-${lang}-placeholder`));
-                        }
-                    } else if (element.tagName === 'OPTION') {
-                        // Handle option values
-                        element.textContent = text;
-                    } else {
-                        // Handle regular text content
-                        element.textContent = text;
+                languageBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    languageDropdown.classList.toggle('active');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                        languageDropdown.classList.remove('active');
                     }
-                }
-            });
+                });
+                
+                // Language selection
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.addEventListener('click', () => {
+                        const selectedLang = option.getAttribute('data-lang');
+                        this.changeLanguage(selectedLang);
+                        languageDropdown.classList.remove('active');
+                    });
+                });
+                
+                // Mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const navMenu = document.getElementById('navMenu');
+                
+                mobileMenuBtn.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+                
+                // Close mobile menu on link click
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                });
+            }
             
-            // Update button texts
-            document.querySelectorAll('.btn').forEach(btn => {
-                if (btn.hasAttribute(`data-${lang}`)) {
-                    btn.textContent = btn.getAttribute(`data-${lang}`);
+            changeLanguage(lang) {
+                if (lang === this.currentLang) return;
+                
+                this.currentLang = lang;
+                
+                // Update active language in dropdown
+                document.querySelectorAll('.language-option').forEach(option => {
+                    option.classList.remove('active');
+                    if (option.getAttribute('data-lang') === lang) {
+                        option.classList.add('active');
+                    }
+                });
+                
+                // Update current language text
+                const currentLanguageText = document.getElementById('currentLanguage');
+                currentLanguageText.textContent = lang.toUpperCase();
+                
+                // Update HTML lang attribute
+                document.getElementById('htmlTag').setAttribute('lang', lang);
+                
+                // Update all translatable elements
+                this.updateContent();
+                
+                // Save preference to localStorage
+                localStorage.setItem('psychezone_lang', lang);
+                
+                // Show subtle notification
+                this.showLanguageNotification(lang);
+            }
+            
+            updateContent() {
+                document.querySelectorAll('[data-en], [data-sw]').forEach(element => {
+                    if (element.hasAttribute(`data-${this.currentLang}`)) {
+                        const text = element.getAttribute(`data-${this.currentLang}`);
+                        
+                        // Handle different element types
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            // Handle placeholders
+                            if (element.hasAttribute(`data-${this.currentLang}-placeholder`)) {
+                                element.setAttribute('placeholder', element.getAttribute(`data-${this.currentLang}-placeholder`));
+                            }
+                        } else if (element.tagName === 'OPTION') {
+                            // Handle option text
+                            element.textContent = text;
+                        } else if (element.tagName === 'SPAN' || element.tagName === 'DIV' || element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || element.tagName === 'H4' || element.tagName === 'A' || element.tagName === 'BUTTON' || element.tagName === 'LABEL') {
+                            // Handle text content
+                            if (element.children.length === 0) {
+                                element.textContent = text;
+                            } else {
+                                // Handle elements with children (like buttons with icons)
+                                const span = element.querySelector('span');
+                                if (span) {
+                                    span.textContent = text;
+                                } else {
+                                    element.textContent = text;
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // Update form placeholders
+                const messageTextarea = document.getElementById('message');
+                if (messageTextarea) {
+                    messageTextarea.setAttribute('placeholder', 
+                        this.currentLang === 'en' 
+                            ? "Tell us what you're seeking support with..." 
+                            : "Tuambie unatafuta msaada gani..."
+                    );
                 }
-            });
+            }
+            
+            loadLanguagePreference() {
+                const savedLang = localStorage.getItem('psychezone_lang');
+                if (savedLang && (savedLang === 'en' || savedLang === 'sw')) {
+                    this.changeLanguage(savedLang);
+                }
+            }
+            
+            showLanguageNotification(lang) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    background: var(--primary);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    box-shadow: var(--shadow-lg);
+                    z-index: 10000;
+                    animation: slideIn 0.3s ease;
+                    font-weight: 500;
+                `;
+                
+                notification.textContent = lang === 'en' 
+                    ? 'Language changed to English' 
+                    : 'Lugha imebadilishwa kuwa Kiswahili';
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 3 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+                
+                // Add CSS for animations
+                if (!document.querySelector('#notification-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'notification-styles';
+                    style.textContent = `
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                        @keyframes slideOut {
+                            from { transform: translateX(0); opacity: 1; }
+                            to { transform: translateX(100%); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
         }
         
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
+        // Form Handling
+        class FormHandler {
+            constructor() {
+                this.form = document.getElementById('appointmentForm');
+                this.languageManager = languageManager;
+                this.init();
+            }
+            
+            init() {
+                if (this.form) {
+                    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                }
+            }
+            
+            handleSubmit(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('name').value;
+                const serviceSelect = document.getElementById('service');
+                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                
+                // Create success message based on current language
+                const messages = {
+                    en: `Thank you ${name}! Your consultation request for ${serviceText} has been received. Our team will contact you within 24 hours.`,
+                    sw: `Asante ${name}! Ombi lako la majadiliano kwa ${serviceText} limepokelewa. Timu yetu itawasiliana nawe ndani ya masaa 24.`
+                };
+                
+                // Show success message
+                this.showSuccessMessage(messages[this.languageManager.currentLang]);
+                
+                // Reset form
+                this.form.reset();
+                
+                // Reset textarea placeholder
+                const messageTextarea = document.getElementById('message');
+                messageTextarea.setAttribute('placeholder', 
+                    this.languageManager.currentLang === 'en' 
+                        ? "Tell us what you're seeking support with..." 
+                        : "Tuambie unatafuta msaada gani..."
+                );
+                
+                // Log submission (in real implementation, send to server)
+                console.log('Form submitted:', { name, service: serviceText });
+            }
+            
+            showSuccessMessage(message) {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--success);
+                    color: white;
+                    padding: 16px 32px;
+                    border-radius: 12px;
+                    box-shadow: var(--shadow-xl);
+                    z-index: 10000;
+                    animation: fadeInDown 0.3s ease;
+                    font-weight: 500;
+                    max-width: 500px;
+                    width: 90%;
+                    text-align: center;
+                `;
+                
+                notification.innerHTML = `
+                    <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                    ${message}
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'fadeOutUp 0.3s ease';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 5000);
+                
+                // Add CSS for animations if not already present
+                if (!document.querySelector('#success-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'success-styles';
+                    style.textContent = `
+                        @keyframes fadeInDown {
+                            from { transform: translate(-50%, -20px); opacity: 0; }
+                            to { transform: translate(-50%, 0); opacity: 1; }
+                        }
+                        @keyframes fadeOutUp {
+                            from { transform: translate(-50%, 0); opacity: 1; }
+                            to { transform: translate(-50%, -20px); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+        }
         
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize language manager
+            window.languageManager = new LanguageManager();
+            
+            // Initialize form handler
+            window.formHandler = new FormHandler();
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.boxShadow = 'var(--shadow-lg)';
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    header.style.boxShadow = 'none';
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add hover effect to service cards
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
             });
         });
-        
-        // Form submission
-        const appointmentForm = document.getElementById('appointmentForm');
-        
-        appointmentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const serviceSelect = document.getElementById('service');
-            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
-            
-            // Show success message in current language
-            const successMessage = currentLang === 'en' 
-                ? `Thank you ${name}! Your appointment request for ${serviceText} has been received. We will contact you shortly.`
-                : `Asante ${name}! Ombi lako la mkutano kwa ${serviceText} limepokelewa. Tutawasiliana nawe hivi karibuni.`;
-            
-            alert(successMessage);
-            
-            // Reset the form
-            appointmentForm.reset();
-            
-            // Reset placeholder on textarea
-            const messageTextarea = document.getElementById('message');
-            messageTextarea.setAttribute('placeholder', 
-                currentLang === 'en' 
-                    ? "Tell us about what you'd like to address..." 
-                    : "Tuambie kuhusu kile ungependa kushughulikiwa..."
-            );
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.padding = '0';
-                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
-            }
-        });
-        
-        // Initialize form placeholder
-        document.getElementById('message').setAttribute('placeholder', "Tell us about what you'd like to address...");
     </script>
 </body>
 </html>
