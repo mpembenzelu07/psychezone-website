@@ -3,52 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychezone International | Premium Mental Health Clinic Dar es Salaam</title>
+    <title>Psychezone International | Mental Wellness Center - Dar es Salaam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Modern Minimalist Color Palette */
         :root {
-            /* Modern Color Palette */
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --secondary: #0ea5e9;
-            --accent: #8b5cf6;
-            --light: #f8fafc;
-            --dark: #0f172a;
-            --gray: #64748b;
-            --light-gray: #e2e8f0;
-            --success: #10b981;
-            --warning: #f59e0b;
+            --primary: #2a9d8f;
+            --primary-dark: #1d7879;
+            --primary-light: #76c7c0;
+            --secondary: #264653;
+            --accent: #e9c46a;
+            --accent-dark: #e76f51;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #2a9d8f;
+            --warning: #f4a261;
             
-            /* Shadows & Effects */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            /* Elegant Shadows */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
             
-            /* Transitions */
-            --transition-fast: all 0.15s ease;
-            --transition: all 0.3s ease;
-            --transition-slow: all 0.5s ease;
+            /* Smooth Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             
-            /* Border Radius */
-            --radius-sm: 8px;
+            /* Rounded Corners */
+            --radius-sm: 6px;
             --radius: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
             
             /* Spacing */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-xxl: 4rem;
+            --space-xs: 0.75rem;
+            --space-sm: 1.5rem;
+            --space: 2rem;
+            --space-lg: 3rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
         }
 
+        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -61,30 +62,31 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
             color: var(--dark);
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 100%);
+            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Source Serif Pro', Georgia, serif;
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.3;
+            color: var(--secondary);
             margin-bottom: var(--space);
         }
 
         h1 {
-            font-size: 3.5rem;
-            letter-spacing: -0.02em;
+            font-size: 3.25rem;
+            letter-spacing: -0.5px;
         }
 
         h2 {
             font-size: 2.5rem;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.3px;
         }
 
         h3 {
@@ -92,25 +94,25 @@
         }
 
         p {
-            font-size: 1.125rem;
+            font-size: 1.1rem;
             color: var(--gray);
             margin-bottom: var(--space);
         }
 
         .container {
             width: 100%;
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--space-lg);
+            padding: 0 var(--space);
         }
 
-        /* Buttons */
+        /* Elegant Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 1rem 2rem;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
             font-size: 1rem;
             font-weight: 600;
             border-radius: var(--radius);
@@ -124,7 +126,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
             box-shadow: var(--shadow);
         }
@@ -136,20 +138,19 @@
         }
 
         .btn-secondary {
-            background: white;
+            background: transparent;
             color: var(--primary);
-            border: 2px solid var(--light-gray);
+            border: 2px solid var(--primary);
         }
 
         .btn-secondary:hover {
-            border-color: var(--primary);
+            background: rgba(42, 157, 143, 0.1);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
         }
 
         .btn-accent {
-            background: linear-gradient(135deg, var(--accent), #a78bfa);
-            color: white;
+            background: linear-gradient(135deg, var(--accent), var(--warning));
+            color: var(--secondary);
         }
 
         .btn-accent:hover {
@@ -157,16 +158,16 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Header */
+        /* Sophisticated Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             transition: var(--transition);
         }
 
@@ -174,35 +175,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem var(--space-lg);
+            padding: 1.25rem var(--space);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
             text-decoration: none;
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: var(--radius);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
 
         .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--secondary);
+            letter-spacing: -0.5px;
         }
 
+        /* Elegant Navigation */
         .nav-menu {
             display: flex;
             align-items: center;
@@ -212,11 +215,13 @@
 
         .nav-link {
             font-weight: 500;
-            color: var(--dark);
+            color: var(--secondary);
             text-decoration: none;
             position: relative;
             padding: 0.5rem 0;
             transition: var(--transition);
+            font-size: 0.95rem;
+            letter-spacing: 0.2px;
         }
 
         .nav-link::after {
@@ -246,19 +251,20 @@
         .language-btn {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 0.75rem 1rem;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
             background: var(--light);
             border: 1px solid var(--light-gray);
             border-radius: var(--radius-sm);
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
+            font-size: 0.9rem;
         }
 
         .language-btn:hover {
             background: var(--light-gray);
-            border-color: var(--primary);
+            border-color: var(--primary-light);
         }
 
         .language-dropdown {
@@ -268,30 +274,30 @@
             background: white;
             border-radius: var(--radius);
             box-shadow: var(--shadow-xl);
-            min-width: 160px;
+            min-width: 140px;
             display: none;
             z-index: 1000;
             overflow: hidden;
-            margin-top: 8px;
+            margin-top: 0.5rem;
         }
 
         .language-dropdown.active {
             display: block;
-            animation: slideDown 0.3s ease;
+            animation: fadeIn 0.2s ease;
         }
 
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .language-option {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 1rem 1.25rem;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
             cursor: pointer;
-            transition: var(--transition-fast);
+            transition: var(--transition);
             border-bottom: 1px solid var(--light-gray);
         }
 
@@ -304,17 +310,15 @@
         }
 
         .language-option.active {
-            background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), transparent);
+            background: rgba(42, 157, 143, 0.1);
             color: var(--primary);
-            font-weight: 600;
         }
 
         .language-flag {
-            width: 24px;
-            height: 16px;
+            width: 20px;
+            height: 14px;
             object-fit: cover;
             border-radius: 2px;
-            box-shadow: var(--shadow-sm);
         }
 
         .mobile-menu-btn {
@@ -322,21 +326,16 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--dark);
+            color: var(--secondary);
             cursor: pointer;
             padding: 0.5rem;
-            border-radius: var(--radius-sm);
             transition: var(--transition);
         }
 
-        .mobile-menu-btn:hover {
-            background: var(--light);
-        }
-
-        /* Hero Section */
+        /* Serene Hero Section */
         .hero {
-            padding: 12rem 0 8rem;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             position: relative;
             overflow: hidden;
         }
@@ -345,11 +344,11 @@
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%25232563eb' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.5;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 157, 143, 0.03) 0%, rgba(38, 70, 83, 0.03) 100%);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
         }
 
         .hero-container {
@@ -363,14 +362,11 @@
 
         .hero-content h1 {
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--dark) 30%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--secondary);
         }
 
         .hero-content p {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             margin-bottom: 2.5rem;
             color: var(--gray);
         }
@@ -378,7 +374,7 @@
         .hero-btns {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
         }
 
         .hero-image {
@@ -387,107 +383,64 @@
 
         .hero-image img {
             width: 100%;
-            border-radius: var(--radius-xl);
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow-xl);
             transform: perspective(1000px) rotateY(-5deg);
             transition: var(--transition-slow);
         }
 
         .hero-image img:hover {
-            transform: perspective(1000px) rotateY(0deg);
+            transform: perspective(1000px) rotateY(0);
         }
 
-        .rating-badge {
-            position: absolute;
-            bottom: -1.5rem;
-            right: -1.5rem;
-            background: white;
-            padding: 1.5rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .rating-badge i {
-            color: var(--warning);
-            font-size: 2rem;
-        }
-
-        .rating-text strong {
-            font-size: 1.5rem;
-            color: var(--dark);
-            display: block;
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 5rem 0;
-            background: var(--light);
-        }
-
-        .stats-grid {
+        .hero-stats {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
         }
 
-        .stat-card {
+        .hero-stat {
             text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .stat-number {
-            font-size: 3rem;
+        .hero-stat-number {
+            font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 0.5rem;
             display: block;
+            margin-bottom: 0.25rem;
         }
 
-        .stat-label {
-            font-size: 1rem;
+        .hero-stat-label {
+            font-size: 0.9rem;
             color: var(--gray);
             font-weight: 500;
         }
 
-        /* Services Section */
+        /* Elegant Services Section */
         .services {
-            padding: 8rem 0;
+            padding: 6rem 0;
             background: white;
         }
 
         .section-header {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 5rem;
+            max-width: 700px;
+            margin: 0 auto 4rem;
         }
 
         .section-header h2 {
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: var(--secondary);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
@@ -500,19 +453,19 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
             border-color: var(--primary-light);
         }
 
         .service-icon {
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .service-content {
@@ -520,21 +473,40 @@
         }
 
         .service-content h3 {
-            color: var(--dark);
+            color: var(--secondary);
             margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+        }
+
+        .service-features li i {
+            color: var(--primary);
+            font-size: 0.9rem;
         }
 
         /* Process Section */
         .process {
-            padding: 8rem 0;
-            background: var(--light);
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         }
 
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             counter-reset: step-counter;
+            position: relative;
         }
 
         .process-step {
@@ -555,10 +527,10 @@
             counter-increment: step-counter;
             content: counter(step-counter);
             position: absolute;
-            top: -1.5rem;
+            top: -1.25rem;
             left: 2rem;
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border-radius: 50%;
@@ -566,24 +538,25 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
         }
 
         .process-step h3 {
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             margin-bottom: 1rem;
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 8rem 0;
+            padding: 6rem 0;
             background: white;
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .testimonial-card {
@@ -593,6 +566,7 @@
             box-shadow: var(--shadow);
             border: 1px solid var(--light-gray);
             transition: var(--transition);
+            position: relative;
         }
 
         .testimonial-card:hover {
@@ -613,8 +587,8 @@
             content: '"';
             position: absolute;
             left: 0;
-            top: -1rem;
-            font-size: 4rem;
+            top: -0.5rem;
+            font-size: 3rem;
             color: var(--primary-light);
             opacity: 0.3;
             font-family: serif;
@@ -627,22 +601,21 @@
         }
 
         .client-avatar {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
             font-weight: 600;
         }
 
         /* Contact Section */
         .contact {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
         }
 
         .contact-container {
@@ -656,12 +629,12 @@
         }
 
         .contact-details {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
             margin-bottom: 1.5rem;
             padding: 1.5rem;
@@ -677,20 +650,21 @@
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: var(--radius);
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.25rem;
+            font-size: 1rem;
+            flex-shrink: 0;
         }
 
         .contact-form {
             background: white;
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-xl);
         }
@@ -703,30 +677,33 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: var(--dark);
+            color: var(--secondary);
+            font-size: 0.95rem;
         }
 
         .form-control {
             width: 100%;
             padding: 1rem;
-            border: 2px solid var(--light-gray);
+            border: 1px solid var(--light-gray);
             border-radius: var(--radius);
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             transition: var(--transition);
+            background: var(--light);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
         }
 
-        /* Footer */
+        /* Elegant Footer */
         footer {
-            background: var(--dark);
+            background: var(--secondary);
             color: white;
-            padding: 5rem 0 2rem;
+            padding: 4rem 0 2rem;
         }
 
         .footer-container {
@@ -753,8 +730,8 @@
         }
 
         .social-link {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             display: flex;
@@ -767,13 +744,13 @@
 
         .social-link:hover {
             background: var(--primary);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         .footer-links h4 {
             color: white;
             margin-bottom: 1.5rem;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
         }
 
         .footer-links ul {
@@ -788,12 +765,12 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
-            display: inline-block;
+            font-size: 0.95rem;
         }
 
         .footer-links a:hover {
             color: white;
-            transform: translateX(5px);
+            padding-left: 5px;
         }
 
         .copyright {
@@ -806,30 +783,37 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            h1 { font-size: 3rem; }
+            h1 { font-size: 2.75rem; }
             h2 { font-size: 2.25rem; }
             
             .hero-container, .contact-container {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
             
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero::before {
+                width: 100%;
+                clip-path: none;
+                opacity: 0.1;
             }
         }
 
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
-                top: 80px;
+                top: 70px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 70px);
                 background: white;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
-                padding-top: 3rem;
+                padding: 3rem 1rem;
                 transition: var(--transition);
                 box-shadow: var(--shadow-xl);
                 gap: 1.5rem;
@@ -847,42 +831,34 @@
                 margin-top: 1rem;
             }
             
-            .hero {
-                padding: 9rem 0 5rem;
-            }
-            
             .hero-btns {
                 flex-direction: column;
-                align-items: stretch;
             }
             
-            .rating-badge {
-                position: relative;
-                right: 0;
-                bottom: 0;
-                margin-top: 2rem;
-                justify-content: center;
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .services, .process, .testimonials, .contact {
-                padding: 5rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            
-            .container {
-                padding: 0 var(--space);
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
+                padding: 4rem 0;
             }
             
             .contact-form {
                 padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.25rem; }
+            h2 { font-size: 1.875rem; }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .services-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
             }
             
             .hero-image img {
@@ -909,25 +885,24 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link" data-en="Home" data-sw="Nyumbani">Home</a></li>
                 <li><a href="#services" class="nav-link" data-en="Services" data-sw="Huduma">Services</a></li>
-                <li><a href="#process" class="nav-link" data-en="Process" data-sw="Mchakato">Process</a></li>
+                <li><a href="#process" class="nav-link" data-en="Our Approach" data-sw="Mbinu Yetu">Our Approach</a></li>
                 <li><a href="#testimonials" class="nav-link" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary" data-en="Book Session" data-sw="Panga Mkutano">Book Session</a></li>
+                <li><a href="#contact" class="btn btn-primary" data-en="Book Consultation" data-sw="Panga Majadiliano">Book Consultation</a></li>
                 
                 <!-- Language Switcher -->
                 <li class="language-switcher">
                     <div class="language-btn" id="languageBtn">
-                        <img src="https://flagcdn.com/w40/gb.png" alt="English" class="language-flag">
+                        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
                         <span id="currentLanguage">EN</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="language-dropdown" id="languageDropdown">
                         <div class="language-option active" data-lang="en">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="language-flag">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="language-flag">
                             <span>English</span>
                         </div>
                         <div class="language-option" data-lang="sw">
-                            <img src="https://flagcdn.com/w40/tz.png" alt="Swahili" class="language-flag">
+                            <img src="https://flagcdn.com/w20/tz.png" alt="Swahili" class="language-flag">
                             <span>Kiswahili</span>
                         </div>
                     </div>
@@ -940,56 +915,38 @@
     <section class="hero" id="home">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1 data-en="Transform Your Mental Wellbeing in Dar es Salaam" data-sw="Badilisha Ustawi Wako wa Kiakili Dar es Salaam">Transform Your Mental Wellbeing in Dar es Salaam</h1>
-                <p data-en="Psychezone International provides premium mental health services with licensed professionals. We offer confidential counseling, psychotherapy, and wellness programs tailored to your needs." data-sw="Psychezone International inatoa huduma bora za afya ya akili na wataalamu walioidhinishwa. Tunatoa ushauri wa siri, tiba ya akili, na programu za ustawi zilizobinafsishwa kulingana na mahitaji yako.">Psychezone International provides premium mental health services with licensed professionals. We offer confidential counseling, psychotherapy, and wellness programs tailored to your needs.</p>
+                <h1 data-en="Holistic Mental Wellness in Dar es Salaam" data-sw="Ustawi wa Kiakili Dar es Salaam">Holistic Mental Wellness in Dar es Salaam</h1>
+                <p data-en="Psychezone International offers compassionate, professional mental health care. Our licensed therapists provide evidence-based therapy in a safe, confidential environment." data-sw="Psychezone International inatoa utunzaji wa afya ya akili wenye huruma na kitaalamu. Wataalamu wetu walioidhinishwa hutoa tiba yenye msingi katika mazingira salama na ya siri.">Psychezone International offers compassionate, professional mental health care. Our licensed therapists provide evidence-based therapy in a safe, confidential environment.</p>
                 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary" data-en="Start Your Journey" data-sw="Anza Safari Yako">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Start Your Journey</span>
+                    <a href="#contact" class="btn btn-primary" data-en="Begin Your Journey" data-sw="Anza Safari Yako">
+                        <i class="fas fa-heart"></i>
+                        <span>Begin Your Journey</span>
                     </a>
-                    <a href="#services" class="btn btn-secondary" data-en="Explore Services" data-sw="Gundua Huduma">
+                    <a href="#services" class="btn btn-secondary" data-en="Our Services" data-sw="Huduma Zetu">
                         <i class="fas fa-arrow-right"></i>
-                        <span>Explore Services</span>
+                        <span>Our Services</span>
                     </a>
                 </div>
                 
-                <div class="rating-badge">
-                    <i class="fas fa-star"></i>
-                    <div class="rating-text">
-                        <strong>5.0</strong>
-                        <span data-en="Excellent Rating" data-sw="Ukadiriaji Bora">Excellent Rating</span>
-                        <span data-en="12+ Client Reviews" data-sw="Tathmini 12+ za Wateja">12+ Client Reviews</span>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">15+</span>
+                        <span class="hero-stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">500+</span>
+                        <span class="hero-stat-label" data-en="Clients Supported" data-sw="Wateja Waliokubaliwa">Clients Supported</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">⭐ 5.0</span>
+                        <span class="hero-stat-label" data-en="Client Rating" data-sw="Ukadiriaji wa Wateja">Client Rating</span>
                     </div>
                 </div>
             </div>
             
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional therapy session">
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label" data-en="Clients Helped" data-sw="Wateja Waliokubaliwa">Clients Helped</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label" data-en="Satisfaction Rate" data-sw="Kiwango cha Kuridhika">Satisfaction Rate</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label" data-en="Support Available" data-sw="Msaada Unaopatikana">Support Available</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Therapy session">
             </div>
         </div>
     </section>
@@ -998,18 +955,23 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Premium Mental Health Services" data-sw="Huduma Bora za Afya ya Akili">Premium Mental Health Services</h2>
-                <p data-en="Comprehensive therapeutic solutions for individuals, families, and organizations in Tanzania." data-sw="Suluhisho kamili za kitiba kwa watu binafsi, familia, na mashirika nchini Tanzania.">Comprehensive therapeutic solutions for individuals, families, and organizations in Tanzania.</p>
+                <h2 data-en="Comprehensive Mental Health Services" data-sw="Huduma Kamili za Afya ya Akili">Comprehensive Mental Health Services</h2>
+                <p data-en="We offer specialized therapeutic approaches tailored to individual needs and circumstances." data-sw="Tunatoa mbinu maalum za kitiba zilizobinafsishwa kulingana na mahitaji ya kibinafsi na hali.">We offer specialized therapeutic approaches tailored to individual needs and circumstances.</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-user-circle"></i>
                     </div>
                     <div class="service-content">
                         <h3 data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</h3>
-                        <p data-en="Personalized one-on-one sessions with licensed therapists to address anxiety, depression, trauma, and life transitions." data-sw="Mikutano ya kibinafsi na wataalamu walioidhinishwa kushughulikia wasiwasi, unyogovu, trauma, na mabadiliko ya maisha.">Personalized one-on-one sessions with licensed therapists to address anxiety, depression, trauma, and life transitions.</p>
+                        <p data-en="One-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions." data-sw="Mikutano ya binafsi inayolenga ukuaji wa kibinafsi, wasiwasi, unyogovu, kupona kwa trauma, na mabadiliko ya maisha.">One-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Personalized treatment plans" data-sw="Mipango ya matibabu iliyobinafsishwa">Personalized treatment plans</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Evidence-based approaches" data-sw="Mbinu zilizothibitishwa">Evidence-based approaches</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Confidential environment" data-sw="Mazingira ya siri">Confidential environment</span></li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -1018,8 +980,13 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</h3>
-                        <p data-en="Strengthen family bonds and improve communication with guided sessions that resolve conflicts and build understanding." data-sw="Kuimarisha uhusiano wa familia na kuboresha mawasiliano kwa mikutano inayoelekezwa inayomaliza migogoro na kujenga uelewano.">Strengthen family bonds and improve communication with guided sessions that resolve conflicts and build understanding.</p>
+                        <h3 data-en="Family & Couples Counseling" data-sw="Ushauri wa Familia na Wenzi">Family & Couples Counseling</h3>
+                        <p data-en="Strengthen relationships, improve communication, and resolve conflicts through guided therapeutic sessions." data-sw="Kuimarisha mahusiano, kuboresha mawasiliano, na kutatua migogoro kupitia mikutano ya tiba inayoelekezwa.">Strengthen relationships, improve communication, and resolve conflicts through guided therapeutic sessions.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Conflict resolution" data-sw="Ufumbuzi wa migogoro">Conflict resolution</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Communication skills" data-sw="Ujuzi wa mawasiliano">Communication skills</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Relationship building" data-sw="Kujenga mahusiano">Relationship building</span></li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -1028,8 +995,13 @@
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</h3>
-                        <p data-en="Enhance workplace mental health through workshops, stress management programs, and employee assistance programs." data-sw="Boresha afya ya akili mahali pa kazi kupitia warsha, programu za usimamizi wa msongo, na programu ya msaada kwa wafanyikazi.">Enhance workplace mental health through workshops, stress management programs, and employee assistance programs.</p>
+                        <h3 data-en="Corporate Mental Wellness" data-sw="Ustawi wa Kiakili wa Kikampuni">Corporate Mental Wellness</h3>
+                        <p data-en="Workshops and programs designed to enhance employee wellbeing and organizational mental health culture." data-sw="Warsha na programu zilizoundwa kuboresha ustawi wa wafanyakazi na utamaduni wa afya ya akili wa shirika.">Workshops and programs designed to enhance employee wellbeing and organizational mental health culture.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Stress management" data-sw="Usimamizi wa msongo">Stress management</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Team building" data-sw="Kujenga timu">Team building</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Leadership coaching" data-sw="Ukocha wa uongozi">Leadership coaching</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1040,24 +1012,24 @@
     <section class="process" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Your Healing Journey" data-sw="Safari Yako ya Uponyaji">Your Healing Journey</h2>
-                <p data-en="A structured approach to mental wellness with proven results." data-sw="Njia iliyopangwa kwa ustawi wa kiakili na matokeo yaliyothibitishwa.">A structured approach to mental wellness with proven results.</p>
+                <h2 data-en="Our Therapeutic Approach" data-sw="Mbinu Yetu ya Kitiba">Our Therapeutic Approach</h2>
+                <p data-en="A structured, compassionate journey toward healing and personal growth." data-sw="Safari iliyopangwa yenye huruma kuelekea uponyaji na ukuaji wa kibinafsi.">A structured, compassionate journey toward healing and personal growth.</p>
             </div>
             
             <div class="process-steps">
                 <div class="process-step">
-                    <h3 data-en="Initial Consultation" data-sw="Majadiliano ya Kwanza">Initial Consultation</h3>
-                    <p data-en="Comprehensive assessment to understand your needs and create a personalized treatment plan." data-sw="Tathmini kamili ya kuelewa mahitaji yako na kuunda mpango wa matibabu uliobinafsishwa.">Comprehensive assessment to understand your needs and create a personalized treatment plan.</p>
+                    <h3 data-en="Initial Assessment" data-sw="Tathmini ya Kwanza">Initial Assessment</h3>
+                    <p data-en="We begin with a comprehensive evaluation to understand your unique needs and goals." data-sw="Tunaanza na tathmini kamili ya kuelewa mahitaji na malengo yako ya kipekee.">We begin with a comprehensive evaluation to understand your unique needs and goals.</p>
                 </div>
                 
                 <div class="process-step">
-                    <h3 data-en="Personalized Therapy" data-sw="Tiba Iliyobinafsishwa">Personalized Therapy</h3>
-                    <p data-en="Regular sessions with your assigned therapist using evidence-based approaches for sustainable results." data-sw="Mikutano ya kawaida na mtaalamu wako aliyepewa kwa kutumia mbinu zilizothibitishwa kwa matokeo endelevu.">Regular sessions with your assigned therapist using evidence-based approaches for sustainable results.</p>
+                    <h3 data-en="Personalized Plan" data-sw="Mpango Uliobinafsishwa">Personalized Plan</h3>
+                    <p data-en="Together, we create a tailored treatment plan using evidence-based therapeutic methods." data-sw="Pamoja, tunaunda mpango wa matibabu uliobinafsishwa kwa kutumia mbinu za kitiba zilizothibitishwa.">Together, we create a tailored treatment plan using evidence-based therapeutic methods.</p>
                 </div>
                 
                 <div class="process-step">
-                    <h3 data-en="Progress Tracking" data-sw="Ufuatiliaji wa Maendeleo">Progress Tracking</h3>
-                    <p data-en="Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes." data-sw="Tathmini endelevu na urekebishaji wa mpango wako wa matibabu ili kuhakikisha matokeo bora.">Continuous evaluation and adjustment of your treatment plan to ensure optimal outcomes.</p>
+                    <h3 data-en="Therapeutic Journey" data-sw="Safari ya Kitiba">Therapeutic Journey</h3>
+                    <p data-en="Regular sessions with continuous support and adjustment based on your progress." data-sw="Mikutano ya kawaida na msaada endelevu na marekebisho kulingana na maendeleo yako.">Regular sessions with continuous support and adjustment based on your progress.</p>
                 </div>
             </div>
         </div>
@@ -1067,14 +1039,14 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Client Success Stories" data-sw="Hadithi za Mafanikio ya Wateja">Client Success Stories</h2>
-                <p data-en="Real experiences from individuals who transformed their lives with our support." data-sw="Uzoefu halisi kutoka kwa watu ambao walibadilisha maisha yao kwa msaada wetu.">Real experiences from individuals who transformed their lives with our support.</p>
+                <h2 data-en="Client Experiences" data-sw="Uzoefu wa Wateja">Client Experiences</h2>
+                <p data-en="Hear from individuals who have found support and transformation through our services." data-sw="Sikiliza kutoka kwa watu ambao wamepata usaidizi na mabadiliko kupitia huduma zetu.">Hear from individuals who have found support and transformation through our services.</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-text" data-en="&quot;After struggling with anxiety for years, the team at Psychezone helped me regain control of my life. The personalized approach made all the difference.&quot;" data-sw="&quot;Baada ya kukabiliana na wasiwasi kwa miaka mingi, timu ya Psychezone ilinisaidia kurudisha udhibiti wa maisha yangu. Mbinu iliyobinafsishwa ilifanya tofauti yote.&quot;">
-                        "After struggling with anxiety for years, the team at Psychezone helped me regain control of my life. The personalized approach made all the difference."
+                    <div class="testimonial-text" data-en="&quot;The team at Psychezone provided me with tools and support that changed my life. I finally understand how to manage my anxiety and live fully.&quot;" data-sw="&quot;Timu ya Psychezone ilinipa zana na msaada ambavyo vilibadilisha maisha yangu. Hatimaye ninaelewa jinsi ya kudhibiti wasiwasi wangu na kuishi kikamilifu.&quot;">
+                        "The team at Psychezone provided me with tools and support that changed my life. I finally understand how to manage my anxiety and live fully."
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">SM</div>
@@ -1086,8 +1058,8 @@
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-text" data-en="&quot;The family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully.&quot;" data-sw="&quot;Mikutano ya ushauri wa familia ilibadilisha uhusiano wetu. Tulijifunza kuwasiliana kwa ufanisi na kutatua migogoro kwa amani.&quot;">
-                        "The family counseling sessions transformed our relationships. We learned to communicate effectively and resolve conflicts peacefully."
+                    <div class="testimonial-text" data-en="&quot;Family counseling saved our relationships. We learned to communicate effectively and understand each other's perspectives.&quot;" data-sw="&quot;Ushauri wa familia uliokoa mahusiano yetu. Tulijifunza kuwasiliana kwa ufanisi na kuelewa mtazamo wa kila mmoja.&quot;">
+                        "Family counseling saved our relationships. We learned to communicate effectively and understand each other's perspectives."
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">JK</div>
@@ -1105,8 +1077,8 @@
     <section class="contact" id="contact">
         <div class="container contact-container">
             <div class="contact-info">
-                <h2 data-en="Begin Your Healing Journey Today" data-sw="Anza Safari Yako ya Uponyaji Leo">Begin Your Healing Journey Today</h2>
-                <p data-en="Take the first step towards better mental health. Our team is ready to support you with compassionate, professional care." data-sw="Chukua hatua ya kwanza kuelekea afya bora ya akili. Timu yetu iko tayari kukusaidia kwa utunzaji wa huruma na kitaalamu.">Take the first step towards better mental health. Our team is ready to support you with compassionate, professional care.</p>
+                <h2 data-en="Start Your Healing Journey" data-sw="Anza Safari Yako ya Uponyaji">Start Your Healing Journey</h2>
+                <p data-en="Reach out today to schedule your initial consultation. Our team is here to support you every step of the way." data-sw="Wasiliana leo kupanga majadiliano yako ya kwanza. Timu yetu iko hapa kukusaidia katika kila hatua.">Reach out today to schedule your initial consultation. Our team is here to support you every step of the way.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
@@ -1114,8 +1086,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
-                            <h4 data-en="Clinic Location" data-sw="Eneo la Kliniki">Clinic Location</h4>
-                            <p>Mabatini Road, Dar es Salaam, Tanzania</p>
+                            <h4 data-en="Our Location" data-sw="Eneo Letu">Our Location</h4>
+                            <p>Mabatini Road, Dar es Salaam</p>
                         </div>
                     </div>
                     
@@ -1125,7 +1097,7 @@
                         </div>
                         <div>
                             <h4 data-en="Working Hours" data-sw="Masaa ya Kazi">Working Hours</h4>
-                            <p data-en="Mon-Sat: 8:00 AM - 6:00 PM" data-sw="Jum-Ijum: 8:00 asubuhi - 6:00 usiku">Mon-Sat: 8:00 AM - 6:00 PM</p>
+                            <p data-en="Monday - Saturday: 8 AM - 6 PM" data-sw="Jumatatu - Jumamosi: 8 asubuhi - 6 usiku">Monday - Saturday: 8 AM - 6 PM</p>
                         </div>
                     </div>
                     
@@ -1134,15 +1106,15 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
-                            <h4 data-en="Contact Channels" data-sw="Njia za Mawasiliano">Contact Channels</h4>
-                            <p data-en="Phone, WhatsApp & Online Booking" data-sw="Simu, WhatsApp & Upangaji Mtandaoni">Phone, WhatsApp & Online Booking</p>
+                            <h4 data-en="Contact Options" data-sw="Chaguo za Mawasiliano">Contact Options</h4>
+                            <p data-en="Phone, WhatsApp, Email & In-person" data-sw="Simu, WhatsApp, Barua pepe & Mkutano wa moja kwa moja">Phone, WhatsApp, Email & In-person</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="contact-form">
-                <h3 data-en="Schedule Your Consultation" data-sw="Panga Majadiliano Yako">Schedule Your Consultation</h3>
+                <h3 data-en="Schedule a Consultation" data-sw="Panga Majadiliano">Schedule a Consultation</h3>
                 <form id="appointmentForm">
                     <div class="form-group">
                         <label for="name" class="form-label" data-en="Full Name" data-sw="Jina Kamili">Full Name</label>
@@ -1161,18 +1133,18 @@
                             <option value="individual" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</option>
                             <option value="family" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</option>
                             <option value="corporate" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</option>
-                            <option value="other" data-en="Other Inquiry" data-sw="Uchunguzi Mwingine">Other Inquiry</option>
+                            <option value="unsure" data-en="Not Sure - Need Guidance" data-sw="Sijui - Nahitaji Mwongozo">Not Sure - Need Guidance</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
                         <label for="message" class="form-label" data-en="Your Message" data-sw="Ujumbe Wako">Your Message</label>
-                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us what you're seeking support with..." data-sw-placeholder="Tuambie unatafuta msaada gani..."></textarea>
+                        <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Tell us what brings you here today..." data-sw-placeholder="Tuambie nini kinakuletea hapa leo..."></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Request Consultation" data-sw="Omba Majadiliano">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Send Request" data-sw="Tuma Ombi">
                         <i class="fas fa-paper-plane"></i>
-                        <span>Request Consultation</span>
+                        <span>Send Request</span>
                     </button>
                 </form>
             </div>
@@ -1186,12 +1158,12 @@
                 <div class="footer-brand">
                     <div class="logo-text">Psychezone International</div>
                     <div class="footer-about">
-                        <p data-en="Leading mental health clinic in Dar es Salaam providing premium counseling and psychotherapy services since 2008." data-sw="Kliniki inayoongoza ya afya ya akili Dar es Salaam inayotoa huduma bora za ushauri na tiba ya akili tangu 2008.">Leading mental health clinic in Dar es Salaam providing premium counseling and psychotherapy services since 2008.</p>
+                        <p data-en="Providing compassionate mental health care in Dar es Salaam since 2008. Licensed professionals, evidence-based approaches." data-sw="Kutoa utunzaji wenye huruma wa afya ya akili Dar es Salaam tangu 2008. Wataalamu walioidhinishwa, mbinu zilizothibitishwa.">Providing compassionate mental health care in Dar es Salaam since 2008. Licensed professionals, evidence-based approaches.</p>
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-link"><i class="fas fa-link"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1201,7 +1173,7 @@
                     <ul>
                         <li><a href="#home" data-en="Home" data-sw="Nyumbani">Home</a></li>
                         <li><a href="#services" data-en="Services" data-sw="Huduma">Services</a></li>
-                        <li><a href="#process" data-en="Our Process" data-sw="Mchakato Wetu">Our Process</a></li>
+                        <li><a href="#process" data-en="Our Approach" data-sw="Mbinu Yetu">Our Approach</a></li>
                         <li><a href="#testimonials" data-en="Testimonials" data-sw="Usahihi">Testimonials</a></li>
                         <li><a href="#contact" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
@@ -1212,9 +1184,9 @@
                     <ul>
                         <li><a href="#" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</a></li>
                         <li><a href="#" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</a></li>
-                        <li><a href="#" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</a></li>
+                        <li><a href="#" data-en="Couples Therapy" data-sw="Tiba ya Wenzi">Couples Therapy</a></li>
+                        <li><a href="#" data-en="Corporate Programs" data-sw="Programu za Kikampuni">Corporate Programs</a></li>
                         <li><a href="#" data-en="Workshops" data-sw="Warsha">Workshops</a></li>
-                        <li><a href="#" data-en="Life Coaching" data-sw="Ukocha wa Maisha">Life Coaching</a></li>
                     </ul>
                 </div>
             </div>
@@ -1226,8 +1198,8 @@
     </footer>
 
     <script>
-        // Professional Language Management System
-        class LanguageManager {
+        // Modern Language and UI Manager
+        class ElegantUI {
             constructor() {
                 this.currentLang = 'en';
                 this.init();
@@ -1235,11 +1207,12 @@
             
             init() {
                 this.bindEvents();
-                this.loadLanguagePreference();
+                this.loadPreferences();
+                this.setupAnimations();
             }
             
             bindEvents() {
-                // Language switcher toggle
+                // Language switcher
                 const languageBtn = document.getElementById('languageBtn');
                 const languageDropdown = document.getElementById('languageDropdown');
                 
@@ -1248,7 +1221,7 @@
                     languageDropdown.classList.toggle('active');
                 });
                 
-                // Close dropdown when clicking outside
+                // Close dropdown on outside click
                 document.addEventListener('click', (e) => {
                     if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
                         languageDropdown.classList.remove('active');
@@ -1258,13 +1231,13 @@
                 // Language selection
                 document.querySelectorAll('.language-option').forEach(option => {
                     option.addEventListener('click', () => {
-                        const selectedLang = option.getAttribute('data-lang');
-                        this.changeLanguage(selectedLang);
+                        const lang = option.getAttribute('data-lang');
+                        this.changeLanguage(lang);
                         languageDropdown.classList.remove('active');
                     });
                 });
                 
-                // Mobile menu toggle
+                // Mobile menu
                 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
                 const navMenu = document.getElementById('navMenu');
                 
@@ -1276,18 +1249,22 @@
                 });
                 
                 // Close mobile menu on link click
-                document.querySelectorAll('.nav-link').forEach(link => {
+                document.querySelectorAll('.nav-link, .btn-primary').forEach(link => {
                     link.addEventListener('click', () => {
                         navMenu.classList.remove('active');
                         mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     });
                 });
+                
+                // Form submission
+                const form = document.getElementById('appointmentForm');
+                if (form) {
+                    form.addEventListener('submit', (e) => this.handleFormSubmit(e));
+                }
             }
             
             changeLanguage(lang) {
                 if (lang === this.currentLang) return;
-                
-                this.currentLang = lang;
                 
                 // Update active language in dropdown
                 document.querySelectorAll('.language-option').forEach(option => {
@@ -1298,103 +1275,177 @@
                 });
                 
                 // Update current language text
-                const currentLanguageText = document.getElementById('currentLanguage');
-                currentLanguageText.textContent = lang.toUpperCase();
+                document.getElementById('currentLanguage').textContent = lang.toUpperCase();
                 
                 // Update HTML lang attribute
                 document.getElementById('htmlTag').setAttribute('lang', lang);
                 
-                // Update all translatable elements
-                this.updateContent();
+                // Update content
+                this.updateContent(lang);
                 
-                // Save preference to localStorage
-                localStorage.setItem('psychezone_lang', lang);
+                // Save preference
+                localStorage.setItem('psychezone_language', lang);
                 
-                // Show subtle notification
-                this.showLanguageNotification(lang);
+                // Show notification
+                this.showNotification(lang === 'en' ? 'Language changed to English' : 'Lugha imebadilishwa kuwa Kiswahili');
+                
+                this.currentLang = lang;
             }
             
-            updateContent() {
+            updateContent(lang) {
+                // Update all translatable elements
                 document.querySelectorAll('[data-en], [data-sw]').forEach(element => {
-                    if (element.hasAttribute(`data-${this.currentLang}`)) {
-                        const text = element.getAttribute(`data-${this.currentLang}`);
+                    if (element.hasAttribute(`data-${lang}`)) {
+                        const text = element.getAttribute(`data-${lang}`);
                         
                         // Handle different element types
                         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                             // Handle placeholders
-                            if (element.hasAttribute(`data-${this.currentLang}-placeholder`)) {
-                                element.setAttribute('placeholder', element.getAttribute(`data-${this.currentLang}-placeholder`));
+                            if (element.hasAttribute(`data-${lang}-placeholder`)) {
+                                element.setAttribute('placeholder', element.getAttribute(`data-${lang}-placeholder`));
                             }
                         } else if (element.tagName === 'OPTION') {
-                            // Handle option text
+                            // Handle select options
                             element.textContent = text;
-                        } else if (element.tagName === 'SPAN' || element.tagName === 'DIV' || element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3' || element.tagName === 'H4' || element.tagName === 'A' || element.tagName === 'BUTTON' || element.tagName === 'LABEL') {
-                            // Handle text content
-                            if (element.children.length === 0) {
+                        } else if (element.tagName === 'SPAN') {
+                            // Handle span elements (especially in buttons)
+                            if (element.parentElement.classList.contains('btn')) {
                                 element.textContent = text;
                             } else {
-                                // Handle elements with children (like buttons with icons)
-                                const span = element.querySelector('span');
-                                if (span) {
-                                    span.textContent = text;
-                                } else {
-                                    element.textContent = text;
-                                }
+                                element.textContent = text;
                             }
+                        } else {
+                            // Handle other elements
+                            element.textContent = text;
                         }
                     }
                 });
                 
-                // Update form placeholders
-                const messageTextarea = document.getElementById('message');
-                if (messageTextarea) {
-                    messageTextarea.setAttribute('placeholder', 
-                        this.currentLang === 'en' 
-                            ? "Tell us what you're seeking support with..." 
-                            : "Tuambie unatafuta msaada gani..."
+                // Update textarea placeholder
+                const textarea = document.getElementById('message');
+                if (textarea) {
+                    textarea.setAttribute('placeholder', 
+                        lang === 'en' 
+                            ? "Tell us what brings you here today..." 
+                            : "Tuambie nini kinakuletea hapa leo..."
                     );
                 }
             }
             
-            loadLanguagePreference() {
-                const savedLang = localStorage.getItem('psychezone_lang');
+            loadPreferences() {
+                const savedLang = localStorage.getItem('psychezone_language');
                 if (savedLang && (savedLang === 'en' || savedLang === 'sw')) {
                     this.changeLanguage(savedLang);
                 }
             }
             
-            showLanguageNotification(lang) {
-                // Create notification element
+            setupAnimations() {
+                // Add scroll animations
+                window.addEventListener('scroll', () => {
+                    const header = document.querySelector('header');
+                    if (window.scrollY > 50) {
+                        header.style.boxShadow = 'var(--shadow)';
+                        header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    } else {
+                        header.style.boxShadow = 'none';
+                        header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    }
+                });
+                
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+                
+                // Add hover effects to service cards
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-8px)';
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0)';
+                    });
+                });
+            }
+            
+            handleFormSubmit(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('name').value;
+                const serviceSelect = document.getElementById('service');
+                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+                
+                // Show success message
+                const message = this.currentLang === 'en'
+                    ? `Thank you, ${name}. We've received your request for ${serviceText}. We'll contact you within 24 hours.`
+                    : `Asante, ${name}. Tumepokea ombi lako la ${serviceText}. Tutawasiliana nawe ndani ya masaa 24.`;
+                
+                this.showNotification(message, 'success');
+                
+                // Reset form
+                e.target.reset();
+                
+                // Update placeholder
+                const textarea = document.getElementById('message');
+                textarea.setAttribute('placeholder', 
+                    this.currentLang === 'en' 
+                        ? "Tell us what brings you here today..." 
+                        : "Tuambie nini kinakuletea hapa leo..."
+                );
+            }
+            
+            showNotification(message, type = 'info') {
+                // Create notification
                 const notification = document.createElement('div');
                 notification.style.cssText = `
                     position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    background: var(--primary);
+                    bottom: 30px;
+                    right: 30px;
+                    background: ${type === 'success' ? 'var(--success)' : 'var(--primary)'};
                     color: white;
-                    padding: 12px 24px;
-                    border-radius: 8px;
+                    padding: 1rem 1.5rem;
+                    border-radius: var(--radius);
                     box-shadow: var(--shadow-lg);
                     z-index: 10000;
                     animation: slideIn 0.3s ease;
+                    max-width: 400px;
                     font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
                 `;
                 
-                notification.textContent = lang === 'en' 
-                    ? 'Language changed to English' 
-                    : 'Lugha imebadilishwa kuwa Kiswahili';
+                notification.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                    <span>${message}</span>
+                `;
                 
                 document.body.appendChild(notification);
                 
-                // Remove after 3 seconds
+                // Remove after 4 seconds
                 setTimeout(() => {
                     notification.style.animation = 'slideOut 0.3s ease';
                     setTimeout(() => {
                         document.body.removeChild(notification);
                     }, 300);
-                }, 3000);
+                }, 4000);
                 
-                // Add CSS for animations
+                // Add animation styles if not present
                 if (!document.querySelector('#notification-styles')) {
                     const style = document.createElement('style');
                     style.id = 'notification-styles';
@@ -1413,154 +1464,9 @@
             }
         }
         
-        // Form Handling
-        class FormHandler {
-            constructor() {
-                this.form = document.getElementById('appointmentForm');
-                this.languageManager = languageManager;
-                this.init();
-            }
-            
-            init() {
-                if (this.form) {
-                    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-                }
-            }
-            
-            handleSubmit(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const name = document.getElementById('name').value;
-                const serviceSelect = document.getElementById('service');
-                const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
-                
-                // Create success message based on current language
-                const messages = {
-                    en: `Thank you ${name}! Your consultation request for ${serviceText} has been received. Our team will contact you within 24 hours.`,
-                    sw: `Asante ${name}! Ombi lako la majadiliano kwa ${serviceText} limepokelewa. Timu yetu itawasiliana nawe ndani ya masaa 24.`
-                };
-                
-                // Show success message
-                this.showSuccessMessage(messages[this.languageManager.currentLang]);
-                
-                // Reset form
-                this.form.reset();
-                
-                // Reset textarea placeholder
-                const messageTextarea = document.getElementById('message');
-                messageTextarea.setAttribute('placeholder', 
-                    this.languageManager.currentLang === 'en' 
-                        ? "Tell us what you're seeking support with..." 
-                        : "Tuambie unatafuta msaada gani..."
-                );
-                
-                // Log submission (in real implementation, send to server)
-                console.log('Form submitted:', { name, service: serviceText });
-            }
-            
-            showSuccessMessage(message) {
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 100px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: var(--success);
-                    color: white;
-                    padding: 16px 32px;
-                    border-radius: 12px;
-                    box-shadow: var(--shadow-xl);
-                    z-index: 10000;
-                    animation: fadeInDown 0.3s ease;
-                    font-weight: 500;
-                    max-width: 500px;
-                    width: 90%;
-                    text-align: center;
-                `;
-                
-                notification.innerHTML = `
-                    <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
-                    ${message}
-                `;
-                
-                document.body.appendChild(notification);
-                
-                // Remove after 5 seconds
-                setTimeout(() => {
-                    notification.style.animation = 'fadeOutUp 0.3s ease';
-                    setTimeout(() => {
-                        document.body.removeChild(notification);
-                    }, 300);
-                }, 5000);
-                
-                // Add CSS for animations if not already present
-                if (!document.querySelector('#success-styles')) {
-                    const style = document.createElement('style');
-                    style.id = 'success-styles';
-                    style.textContent = `
-                        @keyframes fadeInDown {
-                            from { transform: translate(-50%, -20px); opacity: 0; }
-                            to { transform: translate(-50%, 0); opacity: 1; }
-                        }
-                        @keyframes fadeOutUp {
-                            from { transform: translate(-50%, 0); opacity: 1; }
-                            to { transform: translate(-50%, -20px); opacity: 0; }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-            }
-        }
-        
-        // Initialize everything when DOM is loaded
+        // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize language manager
-            window.languageManager = new LanguageManager();
-            
-            // Initialize form handler
-            window.formHandler = new FormHandler();
-            
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('header');
-                if (window.scrollY > 50) {
-                    header.style.boxShadow = 'var(--shadow-lg)';
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
-                } else {
-                    header.style.boxShadow = 'none';
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                }
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Add hover effect to service cards
-            document.querySelectorAll('.service-card').forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'translateY(0) scale(1)';
-                });
-            });
+            window.elegantUI = new ElegantUI();
         });
     </script>
 </body>
