@@ -3,68 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychezone International | Premium Mental Wellness</title>
+    <title>Psychezone International | Premium Mental Health Excellence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ========== NEW PREMIUM COLOR PALETTE ========== */
+        /* Luxury Color Palette */
         :root {
-            /* Main Colors */
-            --primary-deep: #0A2463;
-            --primary-dark: #1E3A8A;
-            --primary-light: #3B82F6;
+            --luxury-navy: #0F1B2D;
+            --navy-light: #1A2B44;
+            --accent-gold: #D4AF37;
+            --gold-light: #F4E4BC;
+            --cream: #FAF8F5;
+            --cream-dark: #F0EDE8;
+            --white: #FFFFFF;
+            --grey-light: #E8E6E1;
+            --grey-medium: #8C8A87;
             
-            /* Accent Colors */
-            --accent-sage: #6B8E6F;
-            --accent-sage-light: #8FBC8F;
-            --accent-cream: #F5F5F0;
-            --accent-warm: #D4A76A;
-            
-            /* Neutral Backgrounds */
-            --bg-light: #FAFAF9;
-            --bg-white: #FFFFFF;
-            --bg-surface: #F8F9FA;
-            
-            /* Text Colors */
-            --text-primary: #1F2937;
-            --text-secondary: #6B7280;
-            --text-light: #9CA3AF;
-            
-            /* Border & Effects */
-            --border-light: #E5E7EB;
-            --border-medium: #D1D5DB;
-            --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-            --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.07);
-            --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-            
-            /* Gradients */
-            --gradient-primary: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
-            --gradient-accent: linear-gradient(135deg, var(--accent-sage), var(--accent-sage-light));
-            --gradient-subtle: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-            
-            /* Transitions */
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            
-            /* Spacing */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --space-3xl: 6rem;
-            
-            /* Border Radius */
-            --radius-sm: 0.5rem;
-            --radius-md: 0.75rem;
-            --radius-lg: 1rem;
-            --radius-xl: 1.5rem;
+            /* Effects */
+            --shadow-subtle: 0 2px 10px rgba(15, 27, 45, 0.05);
+            --shadow-medium: 0 5px 20px rgba(15, 27, 45, 0.1);
+            --shadow-luxury: 0 10px 40px rgba(15, 27, 45, 0.15);
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* ========== BASE STYLES ========== */
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -73,13 +38,12 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--text-primary);
-            background-color: var(--bg-light);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--luxury-navy);
+            background: var(--cream);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -87,115 +51,111 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 600;
-            line-height: 1.2;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-        }
-
-        h1 {
-            font-size: clamp(2.75rem, 5vw, 3.5rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            font-weight: 600;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
             letter-spacing: -0.01em;
         }
 
+        h1 {
+            font-size: clamp(3.5rem, 7vw, 5rem);
+            font-weight: 400;
+            position: relative;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500;
+        }
+
         h3 {
-            font-size: clamp(1.5rem, 3vw, 1.75rem);
+            font-size: clamp(1.75rem, 3.5vw, 2.25rem);
         }
 
         p {
             font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-md);
-            font-weight: 400;
+            color: var(--grey-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
         .container {
-            width: 100%;
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 var(--space-lg);
+            padding: 0 2rem;
         }
 
-        .section {
-            padding: var(--space-3xl) 0;
-        }
-
-        /* ========== HEADER ========== */
-        .site-header {
+        /* Luxury Header */
+        .luxury-header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: var(--bg-white);
+            background: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
+            border-bottom: 1px solid var(--grey-light);
+            padding: 1rem 0;
             transition: var(--transition-smooth);
         }
 
-        .header-container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 0;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
             text-decoration: none;
+            gap: 1rem;
         }
 
-        .logo-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--gradient-primary);
-            border-radius: var(--radius-md);
+        .logo-symbol {
+            width: 45px;
+            height: 45px;
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             font-size: 1.25rem;
-            transition: var(--transition-smooth);
+            font-weight: 700;
         }
 
         .logo-text {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-dark);
-            letter-spacing: -0.01em;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--luxury-navy);
+            letter-spacing: 0.05em;
         }
 
-        /* ========== NAVIGATION ========== */
+        /* Navigation */
         .main-nav {
             display: flex;
             align-items: center;
-            gap: var(--space-xl);
+            gap: 3rem;
         }
 
         .nav-links {
             display: flex;
-            gap: var(--space-lg);
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-link {
             text-decoration: none;
-            color: var(--text-secondary);
+            color: var(--grey-medium);
+            font-size: 0.9rem;
             font-weight: 500;
-            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             position: relative;
-            padding: var(--space-xs) 0;
+            padding: 0.5rem 0;
             transition: var(--transition-smooth);
         }
 
@@ -205,61 +165,58 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
-            background: var(--accent-sage);
+            height: 1px;
+            background: var(--accent-gold);
             transition: var(--transition-smooth);
         }
 
         .nav-link:hover {
-            color: var(--primary-dark);
+            color: var(--luxury-navy);
         }
 
         .nav-link:hover::after {
             width: 100%;
         }
 
-        /* ========== LANGUAGE SELECTOR ========== */
+        /* Language Selector */
         .language-selector {
             position: relative;
         }
 
         .language-toggle {
+            background: none;
+            border: 1px solid var(--grey-light);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            color: var(--luxury-navy);
+            font-size: 0.85rem;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.625rem 1rem;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-sm);
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.875rem;
-            cursor: pointer;
             transition: var(--transition-smooth);
         }
 
         .language-toggle:hover {
-            background: var(--bg-white);
-            border-color: var(--border-medium);
+            border-color: var(--accent-gold);
         }
 
         .language-dropdown {
             position: absolute;
             top: 100%;
             right: 0;
-            background: var(--bg-white);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            min-width: 140px;
-            box-shadow: var(--shadow-elevated);
-            display: none;
-            z-index: 1000;
+            background: var(--white);
+            border: 1px solid var(--grey-light);
+            border-radius: 0.5rem;
+            min-width: 150px;
             margin-top: 0.5rem;
+            display: none;
+            box-shadow: var(--shadow-medium);
         }
 
         .language-dropdown.active {
             display: block;
-            animation: fadeIn 0.2s ease;
+            animation: fadeIn 0.3s ease;
         }
 
         @keyframes fadeIn {
@@ -268,12 +225,11 @@
         }
 
         .language-option {
-            padding: 0.875rem 1rem;
+            padding: 0.8rem 1.2rem;
             cursor: pointer;
             transition: var(--transition-smooth);
-            border-bottom: 1px solid var(--border-light);
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+            border-bottom: 1px solid var(--grey-light);
+            color: var(--grey-medium);
         }
 
         .language-option:last-child {
@@ -281,265 +237,225 @@
         }
 
         .language-option:hover {
-            background: var(--bg-surface);
-            color: var(--primary-dark);
+            background: var(--cream);
+            color: var(--luxury-navy);
         }
 
         .language-option.active {
-            background: rgba(10, 36, 99, 0.05);
-            color: var(--primary-dark);
+            color: var(--luxury-navy);
             font-weight: 600;
         }
 
-        /* ========== BUTTONS ========== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            font-size: 1rem;
+        /* Buttons */
+        .luxury-btn {
+            padding: 1.2rem 2.5rem;
+            background: var(--luxury-navy);
+            color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            border-radius: var(--radius-md);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             cursor: pointer;
             transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
             text-decoration: none;
-            border: 2px solid transparent;
-            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
+        .luxury-btn:hover {
+            background: var(--navy-light);
             transform: translateY(-2px);
             box-shadow: var(--shadow-medium);
         }
 
-        .btn-secondary {
-            background: var(--bg-white);
-            border-color: var(--border-medium);
-            color: var(--text-primary);
+        .luxury-btn-gold {
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
         }
 
-        .btn-secondary:hover {
-            border-color: var(--accent-sage);
-            color: var(--accent-sage);
-            transform: translateY(-2px);
+        .luxury-btn-gold:hover {
+            background: var(--gold-light);
         }
 
-        .btn-accent {
-            background: transparent;
-            border-color: var(--accent-sage);
-            color: var(--accent-sage);
-        }
-
-        .btn-accent:hover {
-            background: var(--accent-sage);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* ========== HERO SECTION ========== */
+        /* Hero Section */
         .hero-section {
-            padding: 12rem 0 8rem;
-            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-surface) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(250, 248, 245, 0.9) 0%, rgba(250, 248, 245, 0.7) 100%);
             position: relative;
             overflow: hidden;
+            padding: 8rem 0;
         }
 
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-2xl);
-            align-items: center;
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: -1;
         }
 
-        .hero-content h1 {
-            margin-bottom: var(--space-lg);
-            line-height: 1.1;
+        .hero-content {
+            max-width: 700px;
+            position: relative;
         }
 
-        .hero-content p {
+        .hero-title {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .hero-description {
             font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 500px;
+            margin-bottom: 3rem;
+            max-width: 600px;
         }
 
         .hero-actions {
             display: flex;
-            gap: var(--space-md);
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-elevated);
-            transition: var(--transition-smooth);
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.02);
-        }
-
-        .accreditation-badge {
-            position: absolute;
-            bottom: -1.5rem;
-            right: -1.5rem;
-            background: var(--bg-white);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-elevated);
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-            max-width: 280px;
-        }
-
-        .accreditation-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-accent);
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        /* ========== STATS SECTION ========== */
+        /* Stats Section */
         .stats-section {
-            background: var(--bg-white);
+            padding: 6rem 0;
+            background: var(--white);
+            position: relative;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-2xl);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .stat-card {
             text-align: center;
-            padding: var(--space-xl);
-            background: var(--bg-surface);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            transition: var(--transition-smooth);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-            border-color: var(--accent-sage-light);
+            padding: 2.5rem;
+            position: relative;
         }
 
         .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-dark);
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: var(--accent-gold);
+            font-family: 'Cormorant Garamond', serif;
             display: block;
-            margin-bottom: var(--space-xs);
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 0.5rem;
+            line-height: 1;
         }
 
         .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--grey-medium);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
         }
 
-        /* ========== SERVICES SECTION ========== */
+        /* Services Section */
         .services-section {
-            background: var(--bg-surface);
+            padding: 8rem 0;
+            background: var(--cream);
         }
 
         .section-header {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto var(--space-2xl);
+            margin: 0 auto 5rem;
         }
 
         .section-header h2 {
-            margin-bottom: var(--space-md);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--accent-gold);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-xl);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
         }
 
         .service-card {
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
+            background: var(--white);
+            border-radius: 1rem;
             overflow: hidden;
-            border: 1px solid var(--border-light);
-            transition: var(--transition-smooth);
-            height: 100%;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-slow);
+            position: relative;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-elevated);
-            border-color: var(--accent-sage-light);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-luxury);
         }
 
-        .service-header {
-            height: 160px;
-            background: var(--gradient-accent);
+        .service-icon {
+            height: 180px;
+            background: var(--luxury-navy);
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--accent-gold);
+            font-size: 3rem;
             position: relative;
             overflow: hidden;
         }
 
-        .service-header::after {
+        .service-icon::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-subtle);
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
             transform: translateX(-100%);
             transition: 0.6s;
         }
 
-        .service-card:hover .service-header::after {
+        .service-card:hover .service-icon::before {
             transform: translateX(100%);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            color: white;
-            z-index: 1;
-        }
-
         .service-content {
-            padding: var(--space-xl);
-        }
-
-        .service-content h3 {
-            margin-bottom: var(--space-sm);
+            padding: 2.5rem;
         }
 
         .service-features {
             list-style: none;
-            margin-top: var(--space-lg);
+            margin-top: 2rem;
         }
 
         .service-features li {
@@ -547,260 +463,257 @@
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 0.75rem;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+            color: var(--grey-medium);
         }
 
         .service-features li i {
-            color: var(--accent-sage);
+            color: var(--accent-gold);
             font-size: 0.875rem;
         }
 
-        /* ========== PROCESS SECTION ========== */
+        /* Process Section */
         .process-section {
-            background: var(--bg-white);
+            padding: 8rem 0;
+            background: var(--white);
         }
 
         .process-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-2xl);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .process-step {
             text-align: center;
-            padding: var(--space-xl);
+            padding: 2rem;
             position: relative;
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-accent);
-            color: white;
+            width: 70px;
+            height: 70px;
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto var(--space-lg);
-            position: relative;
-            z-index: 1;
+            font-weight: 600;
+            margin: 0 auto 2rem;
+            border: 2px solid var(--cream);
         }
 
-        .process-step h3 {
-            margin-bottom: var(--space-sm);
-        }
-
-        /* ========== TESTIMONIALS ========== */
+        /* Testimonials */
         .testimonials-section {
-            background: var(--bg-surface);
+            padding: 8rem 0;
+            background: var(--cream);
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-xl);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonial-card {
-            background: var(--bg-white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            transition: var(--transition-smooth);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .testimonial-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-subtle);
             position: relative;
-            padding-left: var(--space-lg);
         }
 
-        .testimonial-content::before {
+        .testimonial-card::before {
             content: '"';
             position: absolute;
-            left: 0;
-            top: -10px;
-            font-size: 3rem;
-            color: var(--accent-sage-light);
-            opacity: 0.3;
-            font-family: serif;
+            top: -1.5rem;
+            left: 2rem;
+            font-size: 8rem;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
         }
 
         .testimonial-text {
             font-style: italic;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-lg);
-            line-height: 1.7;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--luxury-navy);
         }
 
         .client-info {
             display: flex;
             align-items: center;
-            gap: var(--space-md);
+            gap: 1rem;
         }
 
         .client-avatar {
-            width: 56px;
-            height: 56px;
-            background: var(--gradient-accent);
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             font-weight: 600;
             font-size: 1.25rem;
         }
 
-        /* ========== CONTACT SECTION ========== */
+        /* Contact Section */
         .contact-section {
-            background: var(--bg-white);
+            padding: 8rem 0;
+            background: var(--white);
         }
 
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-2xl);
-            margin-top: var(--space-xl);
+            gap: 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .contact-info {
-            padding-right: var(--space-xl);
+        .contact-info h3 {
+            margin-bottom: 2rem;
         }
 
         .contact-details {
-            margin-top: var(--space-xl);
+            margin-top: 3rem;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-lg);
-            border-bottom: 1px solid var(--border-light);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--grey-light);
         }
 
         .contact-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient-accent);
-            border-radius: var(--radius-md);
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
+            border-radius: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             flex-shrink: 0;
         }
 
         .contact-form {
-            background: var(--bg-surface);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-subtle);
         }
 
         .form-group {
-            margin-bottom: var(--space-md);
+            margin-bottom: 2rem;
         }
 
         .form-label {
             display: block;
-            margin-bottom: var(--space-xs);
+            margin-bottom: 0.5rem;
             font-weight: 600;
-            color: var(--text-primary);
-            font-size: 0.95rem;
+            color: var(--luxury-navy);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .form-control {
             width: 100%;
-            padding: 0.875rem 1rem;
-            border: 1px solid var(--border-medium);
-            border-radius: var(--radius-md);
-            font-family: 'Manrope', sans-serif;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--grey-light);
+            border-radius: 0.5rem;
+            background: var(--white);
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            color: var(--text-primary);
+            color: var(--luxury-navy);
             transition: var(--transition-smooth);
-            background: var(--bg-white);
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-sage);
-            box-shadow: 0 0 0 3px rgba(107, 142, 111, 0.1);
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
         }
 
-        select.form-control {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B8E6F' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            background-size: 16px;
-            padding-right: 2.5rem;
-        }
-
-        /* ========== FOOTER ========== */
-        .site-footer {
-            background: var(--primary-dark);
-            color: white;
-            padding: var(--space-3xl) 0 var(--space-xl);
+        /* Footer */
+        .luxury-footer {
+            background: var(--luxury-navy);
+            color: var(--white);
+            padding: 6rem 0 3rem;
         }
 
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-2xl);
-            margin-bottom: var(--space-2xl);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
         }
 
         .footer-brand .logo-text {
-            color: white;
-            margin-bottom: var(--space-md);
+            color: var(--white);
+            margin-bottom: 1.5rem;
             display: block;
         }
 
         .footer-description {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: var(--space-lg);
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
         }
 
         .social-links {
             display: flex;
-            gap: var(--space-sm);
+            gap: 1rem;
         }
 
         .social-link {
             width: 40px;
             height: 40px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-md);
+            border-radius: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             transition: var(--transition-smooth);
         }
 
         .social-link:hover {
-            background: var(--accent-sage);
+            background: var(--accent-gold);
+            color: var(--luxury-navy);
             transform: translateY(-2px);
         }
 
         .footer-links h4 {
-            color: white;
+            color: var(--white);
             font-size: 1.125rem;
-            margin-bottom: var(--space-lg);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background: var(--accent-gold);
         }
 
         .footer-links ul {
@@ -808,117 +721,96 @@
         }
 
         .footer-links li {
-            margin-bottom: var(--space-sm);
+            margin-bottom: 0.75rem;
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            font-size: 0.95rem;
             transition: var(--transition-smooth);
         }
 
         .footer-links a:hover {
-            color: white;
+            color: var(--accent-gold);
             padding-left: 5px;
         }
 
         .footer-divider {
             height: 1px;
             background: rgba(255, 255, 255, 0.1);
-            margin: var(--space-2xl) 0;
+            margin: 3rem 0;
         }
 
         .copyright {
             text-align: center;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.875rem;
         }
 
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 1024px) {
-            .hero-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: var(--space-2xl);
-            }
-            
-            .hero-section {
-                padding: 10rem 0 6rem;
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .stats-grid,
+            .services-grid,
+            .process-container,
+            .testimonials-grid,
+            .contact-container,
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
             }
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
             .main-nav {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
                 background: none;
                 border: none;
+                color: var(--luxury-navy);
                 font-size: 1.5rem;
-                color: var(--primary-dark);
                 cursor: pointer;
             }
-            
+
             .hero-actions {
                 flex-direction: column;
             }
-            
-            .accreditation-badge {
-                position: relative;
-                right: 0;
-                bottom: 0;
-                margin-top: var(--space-xl);
-                max-width: 100%;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 var(--space-md);
-            }
-            
-            .section {
-                padding: var(--space-2xl) 0;
-            }
-            
-            h1 {
-                font-size: 2.25rem;
-            }
-            
-            h2 {
-                font-size: 1.875rem;
-            }
-            
             .stats-grid,
-            .testimonials-grid {
+            .services-grid,
+            .process-container,
+            .testimonials-grid,
+            .contact-container,
+            .footer-container {
                 grid-template-columns: 1fr;
             }
-            
-            .contact-form {
-                padding: var(--space-lg);
+
+            h1 {
+                font-size: 2.75rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
+    <!-- Luxury Header -->
+    <header class="luxury-header">
         <div class="container">
-            <div class="header-container">
+            <div class="header-inner">
                 <a href="#home" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="logo-text">Psychezone International</div>
+                    <div class="logo-symbol">P</div>
+                    <div class="logo-text">Psychezone</div>
                 </a>
-                
+
                 <nav class="main-nav">
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link" data-en="Home" data-sw="Nyumbani">Home</a></li>
@@ -926,7 +818,7 @@
                         <li><a href="#process" class="nav-link" data-en="Process" data-sw="Mchakato">Process</a></li>
                         <li><a href="#contact" class="nav-link" data-en="Contact" data-sw="Mawasiliano">Contact</a></li>
                     </ul>
-                    
+
                     <div class="language-selector">
                         <button class="language-toggle" id="languageToggle">
                             <span id="currentLanguage">EN</span>
@@ -937,13 +829,13 @@
                             <div class="language-option" data-lang="sw">Kiswahili</div>
                         </div>
                     </div>
-                    
-                    <a href="#contact" class="btn btn-primary" data-en="Book Consultation" data-sw="Panga Usuluhishi">
+
+                    <a href="#contact" class="luxury-btn luxury-btn-gold" data-en="Book Consultation" data-sw="Panga Usuluhishi">
                         <i class="fas fa-calendar-check"></i>
                         <span>Book Consultation</span>
                     </a>
                 </nav>
-                
+
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -953,53 +845,33 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
+        <div class="hero-bg"></div>
         <div class="container">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 data-en="Professional Mental Health Support" data-sw="Usaidizi wa Kitaalamu wa Afya ya Akili">Professional Mental Health Support</h1>
-                    <p data-en="Psychezone International provides expert counseling and psychotherapy through licensed professionals. We offer confidential, evidence-based therapy in a supportive, modern environment." data-sw="Psychezone International inatoa ushauri wa kitaalamu na tiba ya akili kupitia wataalamu walioidhinishwa. Tunatoa tiba ya siri, yenye uthibitisho katika mazingira yenye kusaidia na ya kisasa.">Psychezone International provides expert counseling and psychotherapy through licensed professionals. We offer confidential, evidence-based therapy in a supportive, modern environment.</p>
-                    
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary" data-en="Schedule Appointment" data-sw="Panga Mkutano">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Schedule Appointment</span>
-                        </a>
-                        <a href="#services" class="btn btn-secondary" data-en="Our Services" data-sw="Huduma Zetu">
-                            <i class="fas fa-arrow-right"></i>
-                            <span>Our Services</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Premium Mental Health Excellence" data-sw="Ubora wa Hali ya Juu wa Afya ya Akili">Premium Mental Health Excellence</h1>
+                <p class="hero-description" data-en="Psychezone International delivers expert psychological services through a luxury, confidential approach. Our licensed professionals provide evidence-based therapy in sophisticated, supportive environments designed for optimal wellbeing." data-sw="Psychezone International inatoa huduma za kitaalamu za kisaikolojia kupitia mbinu ya anasa, ya siri. Wataalamu wetu walioidhinishwa hutoa tiba yenye uthibitisho katika mazingira ya kisasa, yenye kusaidia yaliyoundwa kwa ustawi bora.">Psychezone International delivers expert psychological services through a luxury, confidential approach. Our licensed professionals provide evidence-based therapy in sophisticated, supportive environments designed for optimal wellbeing.</p>
                 
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional therapy session">
-                    
-                    <div class="accreditation-badge">
-                        <div class="accreditation-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div>
-                            <strong data-en="Licensed Professionals" data-sw="Wataalamu Walioidhinishwa">Licensed Professionals</strong>
-                            <p style="font-size: 0.875rem; margin-top: 0.25rem;" data-en="15+ years clinical experience" data-sw="Uzoefu wa kliniki wa miaka 15+">15+ years clinical experience</p>
-                        </div>
-                    </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="luxury-btn" data-en="Schedule Consultation" data-sw="Panga Usuluhishi">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Schedule Consultation</span>
+                    </a>
+                    <a href="#services" class="luxury-btn luxury-btn-gold" data-en="Explore Services" data-sw="Chunguza Huduma">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Explore Services</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="section stats-section">
+    <section class="stats-section">
         <div class="container">
-            <div class="section-header">
-                <h2 data-en="Our Commitment to Excellence" data-sw="Ahadi Yetu kwa Ubora">Our Commitment to Excellence</h2>
-                <p data-en="Dedicated to providing quality mental health care with measurable results" data-sw="Imekusudiwa kutoa utunzaji wa ubora wa afya ya akili na matokeo yanayoweza kupimika">Dedicated to providing quality mental health care with measurable results</p>
-            </div>
-            
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-number">15+</span>
-                    <span class="stat-label" data-en="Years Experience" data-sw="Miaka ya Uzoefu">Years Experience</span>
+                    <span class="stat-label" data-en="Years of Excellence" data-sw="Miaka ya Ubora">Years of Excellence</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">500+</span>
@@ -1011,68 +883,62 @@
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label" data-en="Confidential" data-sw="Ya Siri">Confidential</span>
+                    <span class="stat-label" data-en="Confidential Service" data-sw="Huduma ya Siri">Confidential Service</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section services-section" id="services">
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Our Professional Services" data-sw="Huduma Zetu za Kitaalamu">Our Professional Services</h2>
-                <p data-en="Comprehensive mental health services tailored to individual and organizational needs" data-sw="Huduma kamili za afya ya akili zilizobinafsishwa kwa mahitaji ya kibinafsi na ya shirika">Comprehensive mental health services tailored to individual and organizational needs</p>
+                <h2 data-en="Luxury Services" data-sw="Huduma za Anasa">Luxury Services</h2>
+                <p data-en="Exceptional mental health solutions crafted for discerning individuals and organizations" data-sw="Suluhisho bora za afya ya akili zilizotengenezwa kwa watu wenye ufahamu na mashirika">Exceptional mental health solutions crafted for discerning individuals and organizations</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
                     </div>
                     <div class="service-content">
                         <h3 data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</h3>
-                        <p data-en="Personalized one-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions." data-sw="Mikutano ya kibinafsi ya moja kwa moja inayolenga ukuaji wa kibinafsi, wasiwasi, unyogovu, kupona kwa trauma, na mabadiliko ya maisha.">Personalized one-on-one sessions focusing on personal growth, anxiety, depression, trauma recovery, and life transitions.</p>
+                        <p data-en="Personalized one-on-one sessions with licensed psychologists focusing on anxiety, depression, trauma, and personal growth in a confidential setting." data-sw="Mikutano ya kibinafsi ya moja kwa moja na wanasaikolojia walioidhinishwa wakilenga wasiwasi, unyogovu, trauma, na ukuaji wa kibinafsi katika mazingira ya siri.">Personalized one-on-one sessions with licensed psychologists focusing on anxiety, depression, trauma, and personal growth in a confidential setting.</p>
                         <ul class="service-features">
-                            <li><i class="fas fa-check"></i> <span data-en="Personalized treatment plans" data-sw="Mipango ya matibabu iliyobinafsishwa">Personalized treatment plans</span></li>
                             <li><i class="fas fa-check"></i> <span data-en="Evidence-based approaches" data-sw="Mbinu zilizothibitishwa">Evidence-based approaches</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Personalized treatment plans" data-sw="Mipango ya matibabu iliyobinafsishwa">Personalized treatment plans</span></li>
                             <li><i class="fas fa-check"></i> <span data-en="Confidential sessions" data-sw="Mikutano ya siri">Confidential sessions</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</h3>
-                        <p data-en="Professional guidance to strengthen family relationships and improve communication through therapeutic sessions." data-sw="Mwongozo wa kitaalamu wa kuimarisha mahusiano ya familia na kuboresha mawasiliano kupitia mikutano ya kitiba.">Professional guidance to strengthen family relationships and improve communication through therapeutic sessions.</p>
+                        <h3 data-en="Family & Relationship Counseling" data-sw="Ushauri wa Familia na Mahusiano">Family & Relationship Counseling</h3>
+                        <p data-en="Professional guidance to strengthen family dynamics, improve communication, and resolve conflicts through therapeutic interventions and relationship building." data-sw="Mwongozo wa kitaalamu wa kuimarisha mienendo ya familia, kuboresha mawasiliano, na kutatua migogoro kupitia kuingilia kati kwa kitiba na kujenga mahusiano.">Professional guidance to strengthen family dynamics, improve communication, and resolve conflicts through therapeutic interventions and relationship building.</p>
                         <ul class="service-features">
+                            <li><i class="fas fa-check"></i> <span data-en="Family systems therapy" data-sw="Tiba ya mifumo ya familia">Family systems therapy</span></li>
                             <li><i class="fas fa-check"></i> <span data-en="Conflict resolution strategies" data-sw="Mikakati ya ufumbuzi wa migogoro">Conflict resolution strategies</span></li>
                             <li><i class="fas fa-check"></i> <span data-en="Communication skill development" data-sw="Maendeleo ya ujuzi wa mawasiliano">Communication skill development</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Family dynamics assessment" data-sw="Tathmini ya mienendo ya familia">Family dynamics assessment</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="service-content">
-                        <h3 data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</h3>
-                        <p data-en="Comprehensive workplace mental health programs to enhance employee wellbeing and organizational performance." data-sw="Programu kamili za afya ya akili mahali pa kazi kuboresha ustawi wa wafanyikazi na utendaji wa shirika.">Comprehensive workplace mental health programs to enhance employee wellbeing and organizational performance.</p>
+                        <h3 data-en="Corporate Wellness Programs" data-sw="Programu za Ustawi wa Kikampuni">Corporate Wellness Programs</h3>
+                        <p data-en="Comprehensive workplace mental health initiatives designed to enhance employee wellbeing, productivity, and organizational resilience through customized programs." data-sw="Mikakati kamili ya afya ya akili mahali pa kazi iliyoundwa kuboresha ustawi wa wafanyikazi, tija, na ustahimilivu wa shirika kupitia programu zilizobinafsishwa.">Comprehensive workplace mental health initiatives designed to enhance employee wellbeing, productivity, and organizational resilience through customized programs.</p>
                         <ul class="service-features">
                             <li><i class="fas fa-check"></i> <span data-en="Stress management workshops" data-sw="Warsha za usimamizi wa msongo">Stress management workshops</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Leadership development" data-sw="Maendeleo ya uongozi">Leadership development</span></li>
-                            <li><i class="fas fa-check"></i> <span data-en="Team building programs" data-sw="Programu za kujenga timu">Team building programs</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Leadership coaching" data-sw="Ufundishaji wa uongozi">Leadership coaching</span></li>
+                            <li><i class="fas fa-check"></i> <span data-en="Organizational consulting" data-sw="Ushauri wa shirika">Organizational consulting</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1081,70 +947,66 @@
     </section>
 
     <!-- Process Section -->
-    <section class="section process-section" id="process">
+    <section class="process-section" id="process">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Our Professional Process" data-sw="Mchakato Wetu wa Kitaalamu">Our Professional Process</h2>
-                <p data-en="A structured, evidence-based approach to mental health and wellbeing" data-sw="Njia iliyopangwa, yenye uthibitisho kwa afya ya akili na ustawi">A structured, evidence-based approach to mental health and wellbeing</p>
+                <h2 data-en="Our Excellence Process" data-sw="Mchakato Wetu wa Ubora">Our Excellence Process</h2>
+                <p data-en="A refined, evidence-based methodology ensuring effective treatment and exceptional outcomes" data-sw="Njia iliyoboreshwa, yenye uthibitisho inayohakikisha matibabu yenye ufanisi na matokeo bora">A refined, evidence-based methodology ensuring effective treatment and exceptional outcomes</p>
             </div>
             
             <div class="process-container">
                 <div class="process-step">
                     <div class="step-number">01</div>
-                    <h3 data-en="Initial Assessment" data-sw="Tathmini ya Kwanza">Initial Assessment</h3>
-                    <p data-en="Comprehensive evaluation conducted by licensed professionals to understand individual needs and goals." data-sw="Tathmini kamili inayofanywa na wataalamu walioidhinishwa kuelewa mahitaji ya kibinafsi na malengo.">Comprehensive evaluation conducted by licensed professionals to understand individual needs and goals.</p>
+                    <h3 data-en="Comprehensive Assessment" data-sw="Tathmini Kamili">Comprehensive Assessment</h3>
+                    <p data-en="Detailed evaluation by licensed professionals to understand individual needs, establish baselines, and develop personalized treatment objectives." data-sw="Tathmini ya kina na wataalamu walioidhinishwa kuelewa mahitaji ya kibinafsi, kuanzisha viwango vya msingi, na kukuza malengo ya matibabu yaliyobinafsishwa.">Detailed evaluation by licensed professionals to understand individual needs, establish baselines, and develop personalized treatment objectives.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">02</div>
-                    <h3 data-en="Treatment Planning" data-sw="Kupanga Matibabu">Treatment Planning</h3>
-                    <p data-en="Development of personalized treatment plans using evidence-based therapeutic approaches." data-sw="Uundaji wa mipango ya matibabu iliyobinafsishwa kwa kutumia mbinu za kitiba zilizothibitishwa.">Development of personalized treatment plans using evidence-based therapeutic approaches.</p>
+                    <h3 data-en="Personalized Treatment Plan" data-sw="Mpango wa Matibabu Uliobinafsishwa">Personalized Treatment Plan</h3>
+                    <p data-en="Development of customized treatment strategies incorporating evidence-based therapeutic modalities and measurable goals for progress tracking." data-sw="Ukuzaji wa mikakati ya matibabu iliyobinafsishwa ikijumuisha njia za kitiba zilizothibitishwa na malengo yanayoweza kupimika kwa ufuatiliaji wa maendeleo.">Development of customized treatment strategies incorporating evidence-based therapeutic modalities and measurable goals for progress tracking.</p>
                 </div>
                 
                 <div class="process-step">
                     <div class="step-number">03</div>
-                    <h3 data-en="Progress Evaluation" data-sw="Tathmini ya Maendeleo">Progress Evaluation</h3>
-                    <p data-en="Regular assessment and adjustment of treatment plans to ensure optimal outcomes and client satisfaction." data-sw="Tathmini ya kawaida na marekebisho ya mipango ya matibabu kuhakikisha matokeo bora na kuridhika kwa mteja.">Regular assessment and adjustment of treatment plans to ensure optimal outcomes and client satisfaction.</p>
+                    <h3 data-en="Progress & Outcome Evaluation" data-sw="Tathmini ya Maendeleo na Matokeo">Progress & Outcome Evaluation</h3>
+                    <p data-en="Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks." data-sw="Ufuatiliaji wa kawaida wa ufanisi wa matibabu, marekebisho ya mikakati inapohitajika, na kupima matokeo dhidi ya viwango vya kiwango vilivyowekwa.">Regular assessment of treatment effectiveness, adjustment of strategies as needed, and measurement of outcomes against established benchmarks.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section testimonials-section">
+    <section class="testimonials-section">
         <div class="container">
             <div class="section-header">
                 <h2 data-en="Client Experiences" data-sw="Uzoefu wa Wateja">Client Experiences</h2>
-                <p data-en="Feedback from clients who have benefited from our professional mental health services" data-sw="Maoni kutoka kwa wateja ambao wamefaidika na huduma zetu za kitaalamu za afya ya akili">Feedback from clients who have benefited from our professional mental health services</p>
+                <p data-en="Feedback from individuals and organizations who have experienced our premium mental health services" data-sw="Maoni kutoka kwa watu binafsi na mashirika ambao wamepata huduma zetu za hali ya juu za afya ya akili">Feedback from individuals and organizations who have experienced our premium mental health services</p>
             </div>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text" data-en="&quot;The professional approach at Psychezone made a significant difference in managing my anxiety. The evidence-based techniques and structured sessions provided the tools I needed.&quot;" data-sw="&quot;Mbinu ya kitaalamu huko Psychezone ilifanya tofauti kubwa katika kudhibiti wasiwasi wangu. Mbinu zilizothibitishwa na mikutano iliyopangwa zilitoa zana nilizohitaji.&quot;">
-                            "The professional approach at Psychezone made a significant difference in managing my anxiety. The evidence-based techniques and structured sessions provided the tools I needed."
-                        </div>
+                    <div class="testimonial-text" data-en="&quot;The professional approach and evidence-based techniques at Psychezone provided me with effective tools to manage anxiety. The structured sessions and measurable progress tracking made a significant difference.&quot;" data-sw="&quot;Mbinu ya kitaalamu na mbinu zilizothibitishwa huko Psychezone zilinipa zana zenye ufanisi za kudhibiti wasiwasi. Mikutano iliyopangwa na ufuatiliaji wa maendeleo yanayoweza kupimika ilifanya tofauti kubwa.&quot;">
+                        "The professional approach and evidence-based techniques at Psychezone provided me with effective tools to manage anxiety. The structured sessions and measurable progress tracking made a significant difference."
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">SM</div>
                         <div>
                             <h4>Sarah M.</h4>
-                            <p data-en="Anxiety Management" data-sw="Usimamizi wa Wasiwasi">Anxiety Management</p>
+                            <p data-en="Anxiety Management Program" data-sw="Programu ya Usimamizi wa Wasiwasi">Anxiety Management Program</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="testimonial-text" data-en="&quot;Our family benefited greatly from the professional counseling services. The structured approach helped us communicate better and resolve conflicts effectively.&quot;" data-sw="&quot;Familia yetu ilifaidika sana na huduma za ushauri za kitaalamu. Mbinu iliyopangwa ilitusaidia kuwasiliana vizuri na kutatua migogoro kwa ufanisi.&quot;">
-                            "Our family benefited greatly from the professional counseling services. The structured approach helped us communicate better and resolve conflicts effectively."
-                        </div>
+                    <div class="testimonial-text" data-en="&quot;Our organization's wellness program developed by Psychezone International resulted in measurable improvements in employee satisfaction and productivity. The professional approach and data-driven outcomes were impressive.&quot;" data-sw="&quot;Programu ya ustawi ya shirika letu iliyotengenezwa na Psychezone International ilisababisha uboreshaji unaoweza kupimika wa kuridhika kwa wafanyikazi na tija. Mbinu ya kitaalamu na matokeo yanayoendeshwa na data yalikuwa ya kuvutia.&quot;">
+                        "Our organization's wellness program developed by Psychezone International resulted in measurable improvements in employee satisfaction and productivity. The professional approach and data-driven outcomes were impressive."
                     </div>
                     <div class="client-info">
                         <div class="client-avatar">JK</div>
                         <div>
                             <h4>Juma K.</h4>
-                            <p data-en="Family Therapy" data-sw="Tiba ya Familia">Family Therapy</p>
+                            <p data-en="Corporate Director" data-sw="Mkurugenzi wa Kampuni">Corporate Director</p>
                         </div>
                     </div>
                 </div>
@@ -1153,17 +1015,17 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
+    <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Contact Our Office" data-sw="Wasiliana na Ofisi Yetu">Contact Our Office</h2>
-                <p data-en="Schedule a consultation with our professional team to discuss your mental health needs" data-sw="Panga usuluhishi na timu yetu ya kitaalamu kujadili mahitaji yako ya afya ya akili">Schedule a consultation with our professional team to discuss your mental health needs</p>
+                <h2 data-en="Contact Our Consultancy" data-sw="Wasiliana na Usuluhishi Wetu">Contact Our Consultancy</h2>
+                <p data-en="Schedule a consultation with our professional team to discuss your mental health needs and explore our premium services" data-sw="Panga usuluhishi na timu yetu ya kitaalamu kujadili mahitaji yako ya afya ya akili na kuchunguza huduma zetu za hali ya juu">Schedule a consultation with our professional team to discuss your mental health needs and explore our premium services</p>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 data-en="Office Information" data-sw="Taarifa ya Ofisi">Office Information</h3>
-                    <p data-en="Our professional clinic is located in Dar es Salaam with convenient hours to accommodate busy schedules." data-sw="Kliniki yetu ya kitaalamu iko Dar es Salaam na masaa rahisi ya kukabiliana na ratiba zilizojaa.">Our professional clinic is located in Dar es Salaam with convenient hours to accommodate busy schedules.</p>
+                    <h3 data-en="Consultancy Information" data-sw="Taarifa ya Usuluhishi">Consultancy Information</h3>
+                    <p data-en="Our premium facility in Dar es Salaam provides a professional, confidential environment for mental health consultations and therapeutic sessions." data-sw="Kituo chetu cha hali ya juu huko Dar es Salaam kinatoa mazingira ya kitaalamu, ya siri kwa usuluhishi wa afya ya akili na mikutano ya kitiba.">Our premium facility in Dar es Salaam provides a professional, confidential environment for mental health consultations and therapeutic sessions.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -1171,9 +1033,9 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 data-en="Location" data-sw="Mahali">Location</h4>
+                                <h4 data-en="Professional Facility" data-sw="Kituo cha Kitaalamu">Professional Facility</h4>
                                 <p>Mabatini Road, Dar es Salaam</p>
-                                <small style="color: var(--text-secondary);" data-en="Professional clinic setting" data-sw="Mazingira ya kliniki ya kitaalamu">Professional clinic setting</small>
+                                <small style="color: var(--grey-medium);" data-en="Modern, confidential setting" data-sw="Mazingira ya kisasa, ya siri">Modern, confidential setting</small>
                             </div>
                         </div>
                         
@@ -1182,9 +1044,9 @@
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div>
-                                <h4 data-en="Office Hours" data-sw="Masaa ya Ofisi">Office Hours</h4>
-                                <p data-en="Monday - Saturday: 8:00 AM - 6:00 PM" data-sw="Jumatatu - Jumamosi: 8:00 asubuhi - 6:00 usiku">Monday - Saturday: 8:00 AM - 6:00 PM</p>
-                                <small style="color: var(--text-secondary);" data-en="Appointments available" data-sw="Mikutano inapatikana">Appointments available</small>
+                                <h4 data-en="Consultation Hours" data-sw="Masaa ya Usuluhishi">Consultation Hours</h4>
+                                <p data-en="Monday - Saturday: 8:00 AM - 7:00 PM" data-sw="Jumatatu - Jumamosi: 8:00 asubuhi - 7:00 jioni">Monday - Saturday: 8:00 AM - 7:00 PM</p>
+                                <small style="color: var(--grey-medium);" data-en="By appointment" data-sw="Kwa mkutano">By appointment</small>
                             </div>
                         </div>
                         
@@ -1193,8 +1055,8 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
-                                <h4 data-en="Contact" data-sw="Mawasiliano">Contact</h4>
-                                <p data-en="Phone, WhatsApp, Email & In-person consultations" data-sw="Simu, WhatsApp, Barua pepe na usuluhishi wa moja kwa moja">Phone, WhatsApp, Email & In-person consultations</p>
+                                <h4 data-en="Contact Options" data-sw="Chaguo za Mawasiliano">Contact Options</h4>
+                                <p data-en="Phone, secure messaging, email, and in-person consultations" data-sw="Simu, ujumbe salama, barua pepe, na usuluhishi wa moja kwa moja">Phone, secure messaging, email, and in-person consultations</p>
                             </div>
                         </div>
                     </div>
@@ -1209,7 +1071,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="form-label" data-en="Phone Number" data-sw="Nambari ya Simu">Phone Number</label>
+                            <label for="phone" class="form-label" data-en="Contact Number" data-sw="Nambari ya Mawasiliano">Contact Number</label>
                             <input type="tel" id="phone" class="form-control" required>
                         </div>
                         
@@ -1226,10 +1088,10 @@
                         
                         <div class="form-group">
                             <label for="message" class="form-label" data-en="Additional Information" data-sw="Taarifa ya Ziada">Additional Information</label>
-                            <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Please provide any relevant information..." data-sw-placeholder="Tafadhali toa taarifa yoyote inayofaa..."></textarea>
+                            <textarea id="message" class="form-control" rows="4" placeholder="" data-en-placeholder="Please provide any relevant information about your needs or preferences..." data-sw-placeholder="Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako au upendeleo..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-en="Submit Request" data-sw="Tuma Ombi">
+                        <button type="submit" class="luxury-btn" style="width: 100%;" data-en="Submit Request" data-sw="Tuma Ombi">
                             <i class="fas fa-paper-plane"></i>
                             <span>Submit Request</span>
                         </button>
@@ -1240,12 +1102,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="luxury-footer">
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <div class="logo-text">Psychezone International</div>
-                    <p class="footer-description" data-en="Providing professional mental health services in Dar es Salaam since 2008. Licensed therapists offering evidence-based care in a modern clinical setting." data-sw="Kutoa huduma za kitaalamu za afya ya akili Dar es Salaam tangu 2008. Waganga walioidhinishwa wakitowa utunzaji wenye uthibitisho katika mazingira ya kliniki ya kisasa.">Providing professional mental health services in Dar es Salaam since 2008. Licensed therapists offering evidence-based care in a modern clinical setting.</p>
+                    <div class="logo-text">Psychezone</div>
+                    <p class="footer-description" data-en="Providing premium mental health services in Dar es Salaam since 2008. Licensed professionals offering evidence-based care in modern, confidential settings." data-sw="Kutoa huduma za hali ya juu za afya ya akili Dar es Salaam tangu 2008. Wataalamu walioidhinishwa wakitowa utunzaji wenye uthibitisho katika mazingira ya kisasa, ya siri.">Providing premium mental health services in Dar es Salaam since 2008. Licensed professionals offering evidence-based care in modern, confidential settings.</p>
                     
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -1266,13 +1128,13 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-en="Services" data-sw="Huduma">Services</h4>
+                    <h4 data-en="Premium Services" data-sw="Huduma za Hali ya Juu">Premium Services</h4>
                     <ul>
                         <li><a href="#" data-en="Individual Therapy" data-sw="Tiba ya Kibinafsi">Individual Therapy</a></li>
                         <li><a href="#" data-en="Family Counseling" data-sw="Ushauri wa Familia">Family Counseling</a></li>
                         <li><a href="#" data-en="Corporate Wellness" data-sw="Ustawi wa Kikampuni">Corporate Wellness</a></li>
-                        <li><a href="#" data-en="Workshops" data-sw="Warsha">Workshops</a></li>
-                        <li><a href="#" data-en="Professional Training" data-sw="Mafunzo ya Kitaalamu">Professional Training</a></li>
+                        <li><a href="#" data-en="Professional Workshops" data-sw="Warsha za Kitaalamu">Professional Workshops</a></li>
+                        <li><a href="#" data-en="Consultation Services" data-sw="Huduma za Usuluhishi">Consultation Services</a></li>
                     </ul>
                 </div>
             </div>
@@ -1280,14 +1142,14 @@
             <div class="footer-divider"></div>
             
             <div class="copyright">
-                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved." data-sw="Haki zote zimehifadhiwa.">All rights reserved.</span></p>
+                <p>&copy; 2023 Psychezone International. <span data-en="All rights reserved. Professional confidentiality assured." data-sw="Haki zote zimehifadhiwa. Usiri wa kitaalamu umehakikishiwa.">All rights reserved. Professional confidentiality assured.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Clean, Professional Language Manager
-        class ProfessionalUI {
+        // Luxury UI Manager
+        class LuxuryUI {
             constructor() {
                 this.currentLang = 'en';
                 this.init();
@@ -1296,8 +1158,8 @@
             init() {
                 this.bindEvents();
                 this.loadPreferences();
-                this.setupAnimations();
                 this.setupMobileMenu();
+                this.setupAnimations();
             }
             
             bindEvents() {
@@ -1359,20 +1221,13 @@
                     nav.style.top = '100%';
                     nav.style.left = '0';
                     nav.style.right = '0';
-                    nav.style.background = 'var(--bg-white)';
-                    nav.style.padding = 'var(--space-xl)';
+                    nav.style.background = 'var(--cream)';
+                    nav.style.padding = '2rem';
                     nav.style.flexDirection = 'column';
-                    nav.style.alignItems = 'flex-start';
-                    nav.style.gap = 'var(--space-lg)';
-                    nav.style.boxShadow = 'var(--shadow-elevated)';
-                    nav.style.borderTop = '1px solid var(--border-light)';
-                    
-                    const navLinks = document.querySelector('.nav-links');
-                    if (navLinks) {
-                        navLinks.style.flexDirection = 'column';
-                        navLinks.style.alignItems = 'flex-start';
-                        navLinks.style.gap = 'var(--space-md)';
-                    }
+                    nav.style.alignItems = 'center';
+                    nav.style.gap = '2rem';
+                    nav.style.boxShadow = 'var(--shadow-medium)';
+                    nav.style.borderTop = '1px solid var(--grey-light)';
                 });
             }
             
@@ -1399,14 +1254,6 @@
                 // Save preference to localStorage
                 localStorage.setItem('psychezone_lang', lang);
                 
-                // Show professional notification
-                this.showNotification(
-                    lang === 'en' 
-                        ? 'Language updated to English' 
-                        : 'Lugha imesasishwa kuwa Kiswahili',
-                    'info'
-                );
-                
                 this.currentLang = lang;
             }
             
@@ -1423,7 +1270,7 @@
                         } else if (element.tagName === 'OPTION') {
                             element.textContent = text;
                         } else if (element.tagName === 'SPAN') {
-                            if (element.parentElement.classList.contains('btn')) {
+                            if (element.parentElement.classList.contains('luxury-btn')) {
                                 element.textContent = text;
                             } else {
                                 element.textContent = text;
@@ -1441,8 +1288,8 @@
                 if (textarea) {
                     textarea.setAttribute('placeholder', 
                         lang === 'en' 
-                            ? 'Please provide any relevant information...' 
-                            : 'Tafadhali toa taarifa yoyote inayofaa...'
+                            ? 'Please provide any relevant information about your needs or preferences...' 
+                            : 'Tafadhali toa taarifa yoyote inayofaa kuhusu mahitaji yako au upendeleo...'
                     );
                 }
             }
@@ -1457,7 +1304,7 @@
             setupAnimations() {
                 // Header scroll effect
                 window.addEventListener('scroll', () => {
-                    const header = document.querySelector('.site-header');
+                    const header = document.querySelector('.luxury-header');
                     if (window.scrollY > 50) {
                         header.style.boxShadow = 'var(--shadow-medium)';
                     } else {
@@ -1481,7 +1328,7 @@
                 // Observe cards for animation
                 document.querySelectorAll('.service-card, .stat-card, .process-step, .testimonial-card').forEach(card => {
                     card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
+                    card.style.transform = 'translateY(30px)';
                     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                     observer.observe(card);
                 });
@@ -1497,21 +1344,13 @@
                 
                 // Show success message
                 const message = this.currentLang === 'en'
-                    ? `Thank you ${name}. Your consultation request for ${serviceText} has been received. Our office will contact you within 24 hours.`
-                    : `Asante ${name}. Ombi lako la usuluhishi kwa ${serviceText} limepokelewa. Ofisi yetu itawasiliana nawe ndani ya masaa 24.`;
+                    ? `Thank you ${name}. Your consultation request for ${serviceText} has been received. Our professional team will contact you within 24 hours.`
+                    : `Asante ${name}. Ombi lako la usuluhishi kwa ${serviceText} limepokelewa. Timu yetu ya kitaalamu itawasiliana nawe ndani ya masaa 24.`;
                 
                 this.showNotification(message, 'success');
                 
                 // Reset form
                 e.target.reset();
-                
-                // Update placeholder text
-                const textarea = document.getElementById('message');
-                textarea.setAttribute('placeholder', 
-                    this.currentLang === 'en' 
-                        ? 'Please provide any relevant information...' 
-                        : 'Tafadhali toa taarifa yoyote inayofaa...'
-                );
             }
             
             showNotification(message, type = 'info') {
@@ -1521,13 +1360,13 @@
                     position: fixed;
                     bottom: 30px;
                     right: 30px;
-                    background: ${type === 'success' ? 'var(--accent-sage)' : 'var(--primary-dark)'};
-                    color: white;
-                    padding: 1rem 1.5rem;
-                    border-radius: var(--radius-md);
-                    box-shadow: var(--shadow-elevated);
+                    background: ${type === 'success' ? 'var(--accent-gold)' : 'var(--luxury-navy)'};
+                    color: ${type === 'success' ? 'var(--luxury-navy)' : 'var(--white)'};
+                    padding: 1.25rem 1.75rem;
+                    border-radius: 0.5rem;
+                    box-shadow: var(--shadow-luxury);
                     z-index: 10000;
-                    animation: slideIn 0.3s ease;
+                    animation: slideIn 0.4s ease;
                     max-width: 400px;
                     font-weight: 500;
                     display: flex;
@@ -1542,13 +1381,13 @@
                 
                 document.body.appendChild(notification);
                 
-                // Remove after 4 seconds
+                // Remove after 5 seconds
                 setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.3s ease';
+                    notification.style.animation = 'slideOut 0.4s ease';
                     setTimeout(() => {
                         document.body.removeChild(notification);
-                    }, 300);
-                }, 4000);
+                    }, 400);
+                }, 5000);
                 
                 // Add animation styles if not present
                 if (!document.querySelector('#notification-styles')) {
@@ -1556,12 +1395,12 @@
                     style.id = 'notification-styles';
                     style.textContent = `
                         @keyframes slideIn {
-                            from { transform: translateX(100%); opacity: 0; }
-                            to { transform: translateX(0); opacity: 1; }
+                            from { transform: translateX(100%) translateY(20px); opacity: 0; }
+                            to { transform: translateX(0) translateY(0); opacity: 1; }
                         }
                         @keyframes slideOut {
-                            from { transform: translateX(0); opacity: 1; }
-                            to { transform: translateX(100%); opacity: 0; }
+                            from { transform: translateX(0) translateY(0); opacity: 1; }
+                            to { transform: translateX(100%) translateY(20px); opacity: 0; }
                         }
                     `;
                     document.head.appendChild(style);
@@ -1571,7 +1410,7 @@
         
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            window.professionalUI = new ProfessionalUI();
+            window.luxuryUI = new LuxuryUI();
         });
     </script>
 </body>
